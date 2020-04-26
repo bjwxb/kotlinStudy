@@ -1,0 +1,69 @@
+ext{
+    buildToolsVersion = "29.0.1"
+    minSdkVersion = 21
+    targetSdkVersion = 29
+    compileSdkVersion = 29
+    supportLibVersion = "28.0.0"
+    archLifecycleVersion = "1.1.1"
+    archRoomVersion = "1.1.0"
+    retrofitVersion = "2.3.0"
+
+
+
+    dependencies = [
+            "multidex":"com.android.support:multidex:1.0.1",
+
+            "zxing": "com.google.zxing:core:3.3.0",
+            "gson":"com.google.code.gson:gson:2.8.2",
+            "gson-convert":"com.squareup.retrofit2:converter-gson:2.8.0",
+            "protobuf": "com.google.protobuf:protobuf-java:2.6.1",
+
+            "butterknife":"com.jakewharton:butterknife:10.2.1",
+            "butterknife-compiler":"com.jakewharton:butterknife-compiler:10.2.1",
+            "greendao":"org.greenrobot:greendao:3.2.0",
+            "greendao-helper":"com.github.yuweiguocn:GreenDaoUpgradeHelper:v2.1.0",
+            "eventbus":"org.greenrobot:eventbus:3.0.0",
+            "glide":"com.github.bumptech.glide:glide:4.9.0",
+            "joda-time":"joda-time:joda-time:2.9.4",
+            "jsbridge":"com.github.lzyzsd:jsbridge:1.0.4",
+
+            "retrofit":"com.squareup.retrofit2:retrofit:2.8.1",
+            "rxjava":"io.reactivex.rxjava3:rxjava:3.0.2",
+            "rxandroid":"io.reactivex.rxjava3:rxandroid:3.0.0",
+            "rxbinding":"com.jakewharton.rxbinding3:rxbinding-material:3.1.0",
+            "rxpermissions":"com.github.tbruyelle:rxpermissions:0.10.2",
+
+            "BaseRecyclerViewAdapterHelper":"com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30",
+            "flow-layout":"com.nex3z:flow-layout:1.2.2",
+            "photoview":"com.bm.photoview:library:1.4.1",
+            "StatusLayout":"com.github.chenpengfei88:StatusLayout:1.0",
+            "wechat_share":"com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+",
+
+            "MagicIndicator": 'com.github.hackware1993:MagicIndicator:1.5.0',
+            //==================云信 start====================
+            "im-basesdk": 'com.netease.nimlib:basesdk:6.4.0',
+            // 音视频和互动白板服务需要
+            "im-nrtc": 'com.netease.nimlib:nrtc:6.4.0',
+            // 音视频需要
+            "im-avchat": 'com.netease.nimlib:avchat:6.4.0',
+            // 聊天室需要
+            "im-chatroom": 'com.netease.nimlib:chatroom:6.4.0',
+            // 互动白板服务需要
+            //api 'com.netease.nimlib:rts:6.4.0'
+            // 全文检索服务需要
+            "im-lucene": 'com.netease.nimlib:lucene:6.4.0',
+            // 小米、华为、魅族、fcm 推送
+            "im-push": 'com.netease.nimlib:push:6.4.0',
+            //==================云信end===============
+            //toast
+            "DToast": 'com.github.Dovar66:DToast:1.1.5',
+
+            "SmartRefreshLayout": 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7',
+            "SmartRefreshHeader": 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4-7',
+
+            //饺子视频播放器
+            "jzvd": 'cn.jzvd:jiaozivideoplayer:7.0.5',
+            //
+            "swipebacklayout": 'me.imid.swipebacklayout.lib:library:1.1.0',
+    ]
+}
