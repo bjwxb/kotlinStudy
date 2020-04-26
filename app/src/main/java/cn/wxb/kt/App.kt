@@ -1,5 +1,6 @@
 package cn.wxb.kt
 
+import android.app.Activity
 import android.app.Application
 
 /**
@@ -9,6 +10,7 @@ import android.app.Application
  * date: 2020/4/25 22:43
  */
 class App : Application() {
+    private var allActivities : HashSet<Activity>? = null;
 
     /**
      * object 关键字可以表达两种含义：一种是对象表达式,另一种是 对象声明。
