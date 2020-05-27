@@ -13,10 +13,7 @@ import retrofit2.http.*
  */
 interface HomeService {
 
-    //获取授权token
-    @FormUrlEncoded
-    @POST(Constant.URL.OAUTH_TOKEN)
-    fun getToken(@FieldMap map: Map<String, String>): Observable<LoginToken>
+
 
 //    //登录后获取医生相关信息
 //    @GET(Constant.URL.DOCTOR_USER)

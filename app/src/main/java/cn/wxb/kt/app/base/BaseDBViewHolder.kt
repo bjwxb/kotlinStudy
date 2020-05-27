@@ -12,7 +12,7 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
  * 日期: 2020/4/30 15:13
  */
 @Suppress("UNCHECKED_CAST")
-class BaseDBViewHoder<BD : ViewDataBinding>(val view: View) : BaseViewHolder(view) {
+class BaseDBViewHolder<BD : ViewDataBinding>(val view: View) : BaseViewHolder(view) {
 
     fun getDataBinding(): BD {
         return view.getTag(R.id.BaseQuickAdapter_databinding_support) as BD

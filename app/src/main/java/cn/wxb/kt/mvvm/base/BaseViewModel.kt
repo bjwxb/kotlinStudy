@@ -7,6 +7,7 @@ import cn.wxb.kt.mvvm.event.Message
 import cn.wxb.kt.mvvm.event.SingleLiveEvent
 import cn.wxb.kt.mvvm.network.ExceptionHandle
 import cn.wxb.kt.mvvm.network.ResponseThrowable
+import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.Utils
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.Flow
@@ -124,6 +125,7 @@ open class BaseViewModel : AndroidViewModel(Utils.getApp()), LifecycleObserver{
             try {
                 success(block())
             } catch (e: Throwable) {
+                e.printStackTrace()
                 error(ExceptionHandle.handleException(e))
             } finally {
                 complete()
@@ -144,6 +146,7 @@ open class BaseViewModel : AndroidViewModel(Utils.getApp()), LifecycleObserver{
             try {
                 block()
             } catch (e: Throwable) {
+                e.printStackTrace()
                 error(ExceptionHandle.handleException(e))
             } finally {
                 complete()

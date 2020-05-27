@@ -1,6 +1,9 @@
 package cn.wxb.kt.mvvm.network
 
 import android.util.MalformedJsonException
+import cn.wxb.kt.network.entity.LoginToken
+import com.blankj.utilcode.util.LogUtils
+import com.google.gson.Gson
 import com.google.gson.JsonParseException
 import org.json.JSONException
 import retrofit2.HttpException
@@ -20,7 +23,14 @@ object ExceptionHandle {
     fun handleException(e: Throwable):ResponseThrowable{
         val ex: ResponseThrowable
         if (e is HttpException){
-            ex = ResponseThrowable(Error.HTTP_ERROR, e)
+            val error = e.response()?.errorBody()?.string()
+            LogUtils.e(error)
+            if (null != error){
+                val loginToken = Gson().fromJson(error, LoginToken::class.java)
+                ex = ResponseThrowable(loginToken.error_description, e)
+            } else {
+                ex = ResponseThrowable(Error.HTTP_ERROR, e)
+            }
         } else if (e is JsonParseException ||
                 e is JSONException ||
                 e is ParseException ||

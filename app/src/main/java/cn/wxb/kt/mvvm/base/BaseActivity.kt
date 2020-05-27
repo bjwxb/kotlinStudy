@@ -11,6 +11,7 @@ import cn.wxb.kt.mvvm.event.Message
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
 import com.afollestad.materialdialogs.lifecycle.lifecycleOwner
+import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ToastUtils
 import java.lang.reflect.ParameterizedType
 
@@ -49,10 +50,15 @@ abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompa
     private fun initViewDataBinding() {
         val cls =
                 (javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[1] as Class<*>
+        LogUtils.e("${ViewDataBinding::class.java}************ ${cls} *************")
         if (ViewDataBinding::class.java != cls && ViewDataBinding::class.java.isAssignableFrom(cls)) {
             mBinding = DataBindingUtil.setContentView(this, layoutId())
             mBinding?.lifecycleOwner = this
-        } else setContentView(layoutId())
+            LogUtils.e("------------------- ${cls}")
+        } else {
+            LogUtils.e("===============================")
+            setContentView(layoutId())
+        }
         createViewModel()
     }
 
@@ -84,7 +90,7 @@ abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompa
         if (dialog == null) {
             dialog = MaterialDialog(this)
                     .cancelable(false)
-                    .cornerRadius(8f)
+                    .cornerRadius(6f)
                     .customView(R.layout.loading_dialog, noVerticalPadding = true)
                     .lifecycleOwner(this)
                     .maxWidth(R.dimen.dp_120)

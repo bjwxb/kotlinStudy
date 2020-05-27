@@ -41,8 +41,7 @@ abstract class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> : Fragment
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        val cls =
-                (javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[1] as Class<*>
+        val cls = (javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[1] as Class<*>
         if (ViewDataBinding::class.java != cls && ViewDataBinding::class.java.isAssignableFrom(cls)) {
             mBinding = DataBindingUtil.inflate(inflater, layoutId(), container, false)
             return mBinding?.root

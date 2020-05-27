@@ -2,6 +2,7 @@ package cn.wxb.kt
 
 import android.app.Activity
 import android.app.Application
+import cn.wxb.manager.ActivityManager
 
 /**
  * description:
@@ -21,12 +22,14 @@ class App : Application() {
      */
     companion object {
         //lateinit---它告诉编译器，这个变量会被初始化，并且不会为null，但是在声明这里，我暂时还不知道什么时候会被初始化。
-        lateinit var app:Application
+        private lateinit var app:Application
+        fun getInstance() = app
     }
 
     override fun onCreate() {
         super.onCreate()
         app = this;
+        registerActivityLifecycleCallbacks(ActivityManager.getInstance())
         //RetrofitUtils.init()
     }
 }
