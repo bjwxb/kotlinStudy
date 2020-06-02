@@ -7,6 +7,7 @@ import cn.wxb.kt.mvvm.base.BaseViewModel
 import cn.wxb.kt.network.api.LoginService
 import cn.wxb.kt.network.entity.DoctorBean
 import cn.wxb.kt.network.entity.LoginToken
+import cn.wxb.kt.network.entity.PatientInfo
 import cn.wxb.kt.util.InjectorUtil
 import cn.wxb.kt.util.RetrofitClient
 import com.blankj.utilcode.util.LogUtils
@@ -19,9 +20,13 @@ import com.blankj.utilcode.util.LogUtils
  */
 class LoginViewModel : BaseViewModel(){
 
-    var count = 0;
+    var count:MutableLiveData<Int> = MutableLiveData(0);
     //变量初始化方法1  立即初始化
     var phone : MutableLiveData<String> = MutableLiveData("")
+
+    fun addCount(value:Int){
+        this.count.value = value
+    }
 
     fun modifyPhone(phone: String){
         this.phone.value = phone
@@ -33,22 +38,13 @@ class LoginViewModel : BaseViewModel(){
 
     private val mLoginToken = MutableLiveData<LoginToken>()
 
-    private val mDoctorBean = MutableLiveData<BaseResult<DoctorBean>>()
+    private val mPatientInfo = MutableLiveData<BaseResult<PatientInfo>>()
 
-    fun getLoginToken(map:Map<String, String>): MutableLiveData<BaseResult<DoctorBean>>{
+    fun getLoginToken(map:Map<String, String>):MutableLiveData<BaseResult<PatientInfo>>{
         launchGo({
             mLoginToken.value = loginRepository.getLoginToken(map)
-
-            mDoctorBean.value = loginRepository.getDoctorInfo()
-        })
-        return mDoctorBean
+            mPatientInfo.value = loginRepository.getPatientInfo()
+        }, isShowDialog = true)
+        return mPatientInfo
     }
-
-    fun getDoctorBean(): MutableLiveData<BaseResult<DoctorBean>>{
-        launchGo({
-            mDoctorBean.value = loginRepository.getDoctorInfo()
-        })
-        return mDoctorBean
-    }
-
 }

@@ -48,29 +48,28 @@ abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompa
      * DataBinding
      */
     private fun initViewDataBinding() {
-        val cls =
-                (javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[1] as Class<*>
-        LogUtils.e("${ViewDataBinding::class.java}************ ${cls} *************")
+        //获取参数类型列表-》【BaseViewModel, ViewDataBinding】的第二个元素
+        val cls = (javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[1] as Class<*>
+        //判断是否自定义了ViewDataBinding
         if (ViewDataBinding::class.java != cls && ViewDataBinding::class.java.isAssignableFrom(cls)) {
             mBinding = DataBindingUtil.setContentView(this, layoutId())
             mBinding?.lifecycleOwner = this
-            LogUtils.e("------------------- ${cls}")
         } else {
-            LogUtils.e("===============================")
             setContentView(layoutId())
         }
         createViewModel()
     }
-
 
     /**
      * 注册 UI 事件
      */
     private fun registorDefUIChange() {
         viewModel.defUI.showDialog.observe(this, Observer {
+            LogUtils.e("ffffffffffffffffffffffffff")
             showLoading()
         })
         viewModel.defUI.dismissDialog.observe(this, Observer {
+            LogUtils.e("ttttttttttttttttttttttttttt")
             dismissLoading()
         })
         viewModel.defUI.toastEvent.observe(this, Observer {
@@ -89,13 +88,15 @@ abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompa
     private fun showLoading() {
         if (dialog == null) {
             dialog = MaterialDialog(this)
-                    .cancelable(false)
-                    .cornerRadius(6f)
-                    .customView(R.layout.loading_dialog, noVerticalPadding = true)
+                    .cancelable(true)
+                    .cornerRadius(5f)
+                    .customView(R.layout.loading_dialog)
                     .lifecycleOwner(this)
-                    .maxWidth(R.dimen.dp_120)
+                    .maxWidth(R.dimen.dp_100)
         }
-        dialog?.show()
+        runOnUiThread {
+            dialog?.show()
+        }
 
     }
 
@@ -103,7 +104,9 @@ abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompa
      * 关闭等待框
      */
     private fun dismissLoading() {
-        dialog?.run { if (isShowing) dismiss() }
+        runOnUiThread {
+            dialog?.run { if (isShowing) dismiss() }
+        }
     }
 
 

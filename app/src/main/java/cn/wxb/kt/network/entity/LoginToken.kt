@@ -12,17 +12,10 @@ import androidx.room.PrimaryKey
  */
 @Entity(tableName = "LoginToken")
 data class LoginToken(
-    @ColumnInfo(name = "access_token")
     var access_token : String,
-    var token_type : String,
-    @ColumnInfo(name = "refresh_token")
     var refresh_token : String,
-    var scope : String,
-    @ColumnInfo(name = "uid")
     var uid : String,
-    var error : String,
-    var error_description : String,
-    var status : String
+    var error_description : String?
 ) {
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0

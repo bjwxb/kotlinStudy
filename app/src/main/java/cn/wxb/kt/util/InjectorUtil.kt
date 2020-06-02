@@ -15,6 +15,6 @@ object InjectorUtil {
     fun getLoginRepository() = LoginRepository.getInstance(
         LoginNetwork.getInstance(),
         XzlDatabase.getInstance().loginTokenLocalData(), //token本地存储
-        XzlDatabase.getInstance().doctorBeanLocalData()//医生信息本地存储
+        XzlDatabase.getInstance().patientInfoLocalData()//患者信息本地存储
     )
 }

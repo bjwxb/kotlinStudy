@@ -12,8 +12,8 @@ object Constant {
     object URL {
         //login token
         const val OAUTH_TOKEN = "oauth/token"
-        //获取医生信息
-        const val DOCTOR_USER = "doctor/user"
+        //获取患者信息
+        const val PATIENT_INFO = "patient/init"
         //获取患者列表
         const val DOCTOR_PATIENT_LIST = "doctor/user/patient"
         //临床试验项目列表

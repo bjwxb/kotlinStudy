@@ -5,8 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 
 import cn.wxb.kt.R
+import cn.wxb.kt.databinding.FragmentMineBinding
+import cn.wxb.kt.ui.home.viewmodel.MineViewModel
+import cn.wxb.kt.widget.CustomObserver
+import com.blankj.utilcode.util.LogUtils
+import com.blankj.utilcode.util.ToastUtils
+import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_mine.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -19,15 +32,13 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class MineFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    private lateinit var viewModel:MineViewModel
+    private lateinit var mBinding:FragmentMineBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
         }
     }
 
@@ -35,13 +46,31 @@ class MineFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mine, container, false)
+        viewModel = ViewModelProvider(this)[MineViewModel::class.java]
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mine, container, false)
+        mBinding.vm =viewModel
+        mBinding.lifecycleOwner = this
+        lifecycle.addObserver(CustomObserver("mine"))
+        return mBinding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        init(view)
+    }
+
+    fun init(view:View){
+        tvMineContent.setOnClickListener {
+            viewModel.updateTitle("ok")
+        }
+        tvTitle.setOnClickListener {
+            viewModel.updateTitle("python")
+        }
+        viewModel.title.observe(viewLifecycleOwner, Observer {
+            //ToastUtils.showShort(viewModel.title.value)
+        })
     }
 
     companion object {
-
         fun newInstance() = MineFragment()
-
     }
 }

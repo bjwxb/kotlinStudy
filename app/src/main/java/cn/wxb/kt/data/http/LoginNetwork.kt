@@ -15,7 +15,7 @@ class LoginNetwork {
 
     suspend fun getLoginToken(map: Map<String, String>) = mService.getToken(map)
 
-    suspend fun getDoctorBean() = mService.getDoctorUser()
+    suspend fun getPatientInfo() = mService.getPatientInfo()
 
     companion object {
         private var network: LoginNetwork? = null

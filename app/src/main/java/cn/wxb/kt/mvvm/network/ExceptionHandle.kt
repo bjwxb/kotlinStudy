@@ -24,10 +24,14 @@ object ExceptionHandle {
         val ex: ResponseThrowable
         if (e is HttpException){
             val error = e.response()?.errorBody()?.string()
-            LogUtils.e(error)
             if (null != error){
                 val loginToken = Gson().fromJson(error, LoginToken::class.java)
-                ex = ResponseThrowable(loginToken.error_description, e)
+                val errorDesc = loginToken.error_description
+                if (null != errorDesc){
+                    ex = ResponseThrowable(errorDesc, e)
+                } else {
+                    ex = ResponseThrowable(Error.HTTP_ERROR, e)
+                }
             } else {
                 ex = ResponseThrowable(Error.HTTP_ERROR, e)
             }

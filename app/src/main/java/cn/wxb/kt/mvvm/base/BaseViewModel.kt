@@ -1,5 +1,6 @@
 package cn.wxb.kt.mvvm.base
 
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.viewModelScope
@@ -51,13 +52,20 @@ open class BaseViewModel : AndroidViewModel(Utils.getApp()), LifecycleObserver{
             complete: suspend CoroutineScope.() -> Unit = {},
             isShowDialog: Boolean = true
     ) {
-        if (isShowDialog) defUI.showDialog.call()
+        if (isShowDialog) {
+            defUI.showDialog.call()
+        }
         launchUI {
             handleException(
-                    withContext(Dispatchers.IO) { block },
+                    withContext(Dispatchers.IO) {
+                        block
+                    },
                     { error(it) },
                     {
-                        defUI.dismissDialog.call()
+                        if (isShowDialog){
+                            defUI.dismissDialog.call()
+                            LogUtils.e("111111111111111111111")
+                        }
                         complete()
                     }
             )
@@ -92,7 +100,11 @@ open class BaseViewModel : AndroidViewModel(Utils.getApp()), LifecycleObserver{
                         error(it)
                     },
                     {
-                        defUI.dismissDialog.call()
+                        if (isShowDialog){
+                            defUI.dismissDialog.call()
+                            LogUtils.e("dddddddddddddddddddddddd")
+                        }
+
                         complete()
                     }
             )

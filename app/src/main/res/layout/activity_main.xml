@@ -16,11 +16,15 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"/>
-        <FrameLayout
-            android:id="@+id/flContainerMedic"
+
+        <TextView
+            android:id="@+id/tvName"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_height="@dimen/dp_44"
+            android:background="@color/colorAccent"
+            android:textColor="@color/md_divider_light_theme"
+            android:text="@{vm.name}"
+            android:gravity="center"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,6 +48,15 @@
                 android:background="?attr/selectableItemBackground"
                 android:layout_height="match_parent"
                 android:text="服药"/>
+
+            <TextView
+                android:id="@+id/tvMine"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="match_parent"
+                android:text="我的"/>
         </LinearLayout>
 
     </LinearLayout>

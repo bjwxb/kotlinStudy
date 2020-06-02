@@ -5,6 +5,7 @@ import cn.wxb.kt.common.Constant
 import cn.wxb.kt.network.entity.BaseResponse
 import cn.wxb.kt.network.entity.DoctorBean
 import cn.wxb.kt.network.entity.LoginToken
+import cn.wxb.kt.network.entity.PatientInfo
 import io.reactivex.rxjava3.core.Observable
 import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded
@@ -29,6 +30,6 @@ interface LoginService {
     fun getToken2(@FieldMap map: Map<String, String>): Observable<LoginToken>
 
     //    //登录后获取医生相关信息
-    @GET(Constant.URL.DOCTOR_USER)
-    suspend fun getDoctorUser(): BaseResult<DoctorBean>
+    @GET(Constant.URL.PATIENT_INFO)
+    suspend fun getPatientInfo(): BaseResult<PatientInfo>
 }

@@ -1,10 +1,10 @@
 package cn.wxb.kt.ui.home.viewmodel
 
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
+import cn.wxb.kt.data.db.XzlDatabase
+import cn.wxb.kt.data.repo.MainRepository
 import cn.wxb.kt.mvvm.base.BaseViewModel
-import com.blankj.utilcode.util.LogUtils
+import cn.wxb.kt.network.entity.PatientInfo
 
 /**
  * 描述:
@@ -15,8 +15,21 @@ import com.blankj.utilcode.util.LogUtils
 class MainViewModel : BaseViewModel(){
     val name:MutableLiveData<String> = MutableLiveData()
 
+    val mPatientInfo:MutableLiveData<PatientInfo> = MutableLiveData()
+
     init {
         name.value = "Hello World"
+    }
+
+    val mainRepository by lazy {
+        MainRepository.getInstance(XzlDatabase.getInstance().patientInfoLocalData())
+    }
+//
+    fun getPatientInfo():MutableLiveData<PatientInfo>{
+        launchGo({
+            mPatientInfo.value = mainRepository.getPatientInfo()
+        })
+        return mPatientInfo
     }
 
     override fun onCleared() {

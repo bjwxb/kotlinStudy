@@ -15,6 +15,7 @@ import cn.wxb.kt.mvvm.event.Message
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
 import com.afollestad.materialdialogs.lifecycle.lifecycleOwner
+import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ToastUtils
 import java.lang.reflect.ParameterizedType
 
@@ -44,6 +45,7 @@ abstract class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> : Fragment
         val cls = (javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[1] as Class<*>
         if (ViewDataBinding::class.java != cls && ViewDataBinding::class.java.isAssignableFrom(cls)) {
             mBinding = DataBindingUtil.inflate(inflater, layoutId(), container, false)
+            mBinding?.lifecycleOwner = this
             return mBinding?.root
         }
         return inflater.inflate(layoutId(), container, false)
@@ -72,9 +74,21 @@ abstract class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> : Fragment
      * 是否需要懒加载
      */
     private fun onVisible() {
+        if (lifecycle.currentState == Lifecycle.State.STARTED && !isFirst){
+            show()
+        }
+
         if (lifecycle.currentState == Lifecycle.State.STARTED && isFirst) {
             lazyLoadData()
             isFirst = false
+        }
+
+    }
+
+    //fragment通过add，show，hide方式时，此回调生效
+    override fun onHiddenChanged(hidden: Boolean) {
+        if(!hidden){
+            show()
         }
     }
 
@@ -83,14 +97,21 @@ abstract class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> : Fragment
      */
     open fun lazyLoadData() {}
 
+    //fragment显示在前台
+    open fun show(){
+
+    }
+
     /**
      * 注册 UI 事件
      */
     private fun registorDefUIChange() {
         viewModel.defUI.showDialog.observe(viewLifecycleOwner, Observer {
+            LogUtils.e("qqqqqqqqqqqqqqqqqqqqqqqqq")
             showLoading()
         })
         viewModel.defUI.dismissDialog.observe(viewLifecycleOwner, Observer {
+            LogUtils.e("wwwwwwwwwwwwwwwwwwwww")
             dismissLoading()
         })
         viewModel.defUI.toastEvent.observe(viewLifecycleOwner, Observer {
@@ -110,9 +131,9 @@ abstract class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> : Fragment
         if (dialog == null) {
             dialog = context?.let {
                 MaterialDialog(it)
-                        .cancelable(false)
-                        .cornerRadius(8f)
-                        .customView(R.layout.loading_dialog, noVerticalPadding = true)
+                        .cancelable(true)
+                        .cornerRadius(5f)
+                        .customView(R.layout.loading_dialog)
                         .lifecycleOwner(this)
                         .maxWidth(R.dimen.dp_120)
             }

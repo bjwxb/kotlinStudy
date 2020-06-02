@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <variable
             name="vm"
             type="cn.wxb.kt.ui.home.viewmodel.MainViewModel" />
-
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnModifyVm"
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpContent"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_44"
-            android:text="修改vm值" />
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
-        <TextView
-            android:id="@+id/tvContent"
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tlMenu"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="medic page" />
-
+            android:layout_height="@dimen/dp_50"
+            app:tabIndicator="@null"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextColor="@color/md_divider_dark_theme"/>
     </LinearLayout>
 </layout>
