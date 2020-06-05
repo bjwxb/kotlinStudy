@@ -65,11 +65,9 @@ abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompa
      */
     private fun registorDefUIChange() {
         viewModel.defUI.showDialog.observe(this, Observer {
-            LogUtils.e("ffffffffffffffffffffffffff")
             showLoading()
         })
         viewModel.defUI.dismissDialog.observe(this, Observer {
-            LogUtils.e("ttttttttttttttttttttttttttt")
             dismissLoading()
         })
         viewModel.defUI.toastEvent.observe(this, Observer {

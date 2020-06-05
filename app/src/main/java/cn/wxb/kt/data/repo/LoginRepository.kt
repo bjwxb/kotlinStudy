@@ -24,6 +24,7 @@ class LoginRepository(private val netWork: LoginNetwork,
 
     suspend fun getLoginToken(map:Map<String, String>): LoginToken {
         val token = netWork.getLoginToken(map)
+        loginTokenLocalData.deleteAll()
         loginTokenLocalData.insertData(token)
         return token
     }

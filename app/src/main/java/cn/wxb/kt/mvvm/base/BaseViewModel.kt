@@ -64,7 +64,6 @@ open class BaseViewModel : AndroidViewModel(Utils.getApp()), LifecycleObserver{
                     {
                         if (isShowDialog){
                             defUI.dismissDialog.call()
-                            LogUtils.e("111111111111111111111")
                         }
                         complete()
                     }
@@ -102,7 +101,6 @@ open class BaseViewModel : AndroidViewModel(Utils.getApp()), LifecycleObserver{
                     {
                         if (isShowDialog){
                             defUI.dismissDialog.call()
-                            LogUtils.e("dddddddddddddddddddddddd")
                         }
 
                         complete()

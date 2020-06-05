@@ -7,6 +7,7 @@ import cn.wxb.kt.databinding.FragmentHomeBinding
 import cn.wxb.kt.mvvm.base.BaseFragment
 import cn.wxb.kt.ui.home.activity.PatientListActivity
 import cn.wxb.kt.ui.home.viewmodel.MainViewModel
+import cn.wxb.kt.ui.mine.activity.MineOrderActivity
 import com.blankj.utilcode.util.LogUtils
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -48,7 +49,8 @@ class HomeFragment : BaseFragment<MainViewModel, FragmentHomeBinding>() {
         }
 
         tvContent.setOnClickListener {
-            PatientListActivity.actionStart(activity!!)
+//            PatientListActivity.actionStart(activity!!)
+            MineOrderActivity.actionStart(activity!!)
         }
     }
 

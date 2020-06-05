@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="cn.wxb.kt.network.entity.ProjectInfo" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingEnd="@dimen/dp_15"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:background="@drawable/bg_corner_cro_item"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10">
+                <ImageView
+                    android:id="@+id/iv_cro_group"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:src="@drawable/ic_cro_group"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:contentDescription="@string/app_name"/>
+
+                <TextView
+                    android:id="@+id/tv_cro_title"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/c_181818"
+                    android:minHeight="@dimen/dp_18"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@+id/iv_cro_group"
+                    android:layout_height="wrap_content"
+                    android:text="@{item.projectName}"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_f8f8f7"
+                android:padding="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <!--  临床试验机构  -->
+                <TextView
+                    android:id="@+id/tv_cro_organ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/c_181818"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:text="@{item.organizationName}"/>
+
+                <!--  医生  -->
+                <TextView
+                    android:id="@+id/tv_cro_doctor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/c_181818"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:text="@{item.upperDoctorName}"/>
+                <!--  临床试验机构  -->
+                <TextView
+                    android:id="@+id/tv_cro_verify_organ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/c_181818"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:text="认可检查机构：机构机构机构机构"/>
+
+
+                <View style="@style/DividerHor"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:layout_marginBottom="@dimen/dp_12"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_start_time_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/start_time"
+                        android:textSize="@dimen/sp_10"
+                        android:textColor="@color/c_999999"/>
+
+                    <TextView
+                        android:id="@+id/tv_start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="2019.10.10"
+                        android:maxLength="10"
+                        android:layout_below="@+id/tv_start_time_tip"
+                        android:textSize="@dimen/sp_15"
+                        android:text="@{String.valueOf(item.startAt)}"
+                        android:textColor="@color/c_999999"/>
+
+                    <TextView
+                        android:id="@+id/tv_end_time_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/end_time"
+                        android:textSize="@dimen/sp_10"
+                        android:layout_alignBottom="@+id/tv_start_time_tip"
+                        android:layout_alignStart="@+id/tv_end_time"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/c_999999"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:id="@+id/tv_end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="10"
+                        tools:text="2020.09.20"
+                        android:minWidth="@dimen/dp_72"
+                        android:layout_below="@+id/tv_end_time_tip"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/c_999999"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_cro_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_start_time_tip"
+                        android:layout_centerHorizontal="true"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_cro_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/sp_12"
+                            android:textColor="@color/cro_over"
+                            android:text="已结束 | 130天"/>
+
+                        <TextView style="@style/DividerHor"
+                            android:layout_width="@dimen/dp_100"
+                            android:layout_height="1px"
+                            android:layout_marginTop="@dimen/dp_6"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View style="@style/DividerHor"
+            android:id="@+id/view_divider"
+            android:layout_height="@dimen/dp_8"
+            android:background="@color/bg_color"/>
+
+    </LinearLayout>
+</layout>

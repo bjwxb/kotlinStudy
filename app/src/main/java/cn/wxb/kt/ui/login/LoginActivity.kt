@@ -31,7 +31,7 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
             map["grant_type"] = "password"
             map["device_token"] = "1111111111111111111"
             map["username"] = "13651269612"
-            map["password"] = "111111"
+            map["password"] = "123456"
             map["device_type"] = "android"
 
             viewModel.getLoginToken(map).observe(this, Observer {

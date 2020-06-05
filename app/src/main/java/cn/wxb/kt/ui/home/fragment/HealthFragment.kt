@@ -5,45 +5,33 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.ViewDataBinding
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.viewpager2.widget.ViewPager2
 
 import cn.wxb.kt.R
+import cn.wxb.kt.mvvm.base.BaseFragment
+import cn.wxb.kt.mvvm.base.NoViewModel
+import cn.wxb.kt.ui.home.adapter.VpMainRvAdapter
+import kotlinx.android.synthetic.main.fragment_health.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [HealthFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class HealthFragment : Fragment() {
+class HealthFragment : BaseFragment<NoViewModel, ViewDataBinding>() {
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
+    override fun layoutId() = R.layout.fragment_health
+
+    override fun initView(savedInstanceState: Bundle?) {
+        initVp()
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_health, container, false)
+    private fun initVp(){
+        val list = mutableListOf<String>("python", "kotlin", "java")
+        vpTestRv.adapter = VpMainRvAdapter(list)
+        vpTestRv.orientation = ViewPager2.ORIENTATION_VERTICAL
     }
+
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HealthFragment.
-         */
         @JvmStatic
         fun newInstance() =
             HealthFragment().apply {
@@ -51,4 +39,6 @@ class HealthFragment : Fragment() {
                 }
             }
     }
+
+
 }

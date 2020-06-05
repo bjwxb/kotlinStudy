@@ -15,7 +15,8 @@ class HeaderInterceptor : Interceptor {
         val original = chain.request()
         if (original.url().toString().contains("v0/oauth/token")) {
             val request = original.newBuilder()
-                .addHeader("Authorization", "Basic ZG9jdG9yX3dlYjo=")
+                    //Basic ZG9jdG9yX3dlYjo= 醫生端
+                .addHeader("Authorization", "Basic cGF0aWVudF9hcHA6")
                 .build()
             return chain.proceed(request)
         } else if (original.url().toString().contains("v0/")) {

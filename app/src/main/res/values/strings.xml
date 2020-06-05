@@ -3,4 +3,1346 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--通用文案-->
+    <!--<string name="app_name">心之力</string>-->
+    <string name="app_home_name">心之力</string>
+
+    <string name="tab_chat">对话</string>
+    <string name="tab_home">首页</string>
+    <string name="tab_medicine">服药</string>
+    <string name="tab_notice">互动</string>
+    <string name="tab_health">达标</string>
+    <string name="tab_user">我的</string>
+    <string name="am">上午</string>
+    <string name="pm">下午</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="days">天</string>
+    <string name="yesterday">昨天</string>
+    <string name="today">今天</string>
+    <string name="tomorrow">明天</string>
+    <string name="now">现在服药</string>
+    <string name="date">日期</string>
+    <string name="next">下一步</string>
+
+    <string name="remain">剩余:</string>
+    <string name="hour">小时</string>
+    <string name="min">分钟</string>
+    <string name="continues">继续</string>
+    <string name="back">返回</string>
+    <string name="check">核实</string>
+    <string name="has_eat">已服</string>
+    <string name="edit">编辑</string>
+    <string name="modify">修改</string>
+    <string name="delete">删除</string>
+    <string name="add">添加</string>
+    <string name="finish">完成</string>
+    <string name="save">保存</string>
+    <string name="setting">设置</string>
+    <string name="prompt">提示</string>
+    <string name="sure">确定</string>
+    <string name="confirm">确认</string>
+    <string name="call">呼叫</string>
+    <string name="think_again">再想想</string>
+    <string name="upload">上传</string>
+    <string name="submit">提交</string>
+    <string name="close">关闭</string>
+    <string name="cancel">取消</string>
+    <string name="reset">重置</string>
+    <string name="photography">拍照</string>
+    <string name="select_from_gallery">从相册选择</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="none">无</string>
+    <string name="more">更多</string>
+    <string name="know">知道了</string>
+    <string name="i_know">我知道了</string>
+    <string name="to_look">去看看</string>
+    <string name="tips">温馨提示</string>
+    <string name="pay_success">支付成功</string>
+    <string name="pay_fail">支付失败</string>
+    <string name="pay_cancel">取消支付</string>
+    <string name="open_ble">去开启</string>
+    <string name="important_info">重要信息</string>
+    <string name="empty_data">暂无数据</string>
+    <string name="no_record">无记录</string>
+    <string name="day_no_record">此日无记录</string>
+    <string name="upload_success">上传成功</string>
+    <string name="bind_doctor_success">医生绑定成功！</string>
+    <string name="unbind_doctor_success">医生解约成功！</string>
+    <string name="unbind_doctor_fail">医生解约失败！</string>
+    <string name="bind_doctor_fail">医生绑定失败！</string>
+    <string name="bind_doctor_already">您已经绑定该医生</string>
+    <string name="bind_doctor_is_consultation_doctor">当前医生是会诊医生</string>
+    <string name="bind_doctor_diff_department">不能更换为不同科室医生</string>
+    <string name="save_success">保存成功</string>
+    <string name="update_success">修改成功</string>
+    <string name="update_fail">修改失败</string>
+    <string name="delete_success">删除成功</string>
+    <string name="delete_fail">删除失败</string>
+    <string name="add_success">添加成功</string>
+    <string name="add_fail">添加失败</string>
+    <string name="no_more_data">没有更多数据</string>
+    <string name="new_line_str">\n</string>
+    <string name="nation_han">汉族</string>
+    <string name="till">至</string>
+    <string name="send">发送</string>
+    <string name="callback">回拨</string>
+    <string name="notifyTitle">提示</string>
+    <string name="notifyMsg">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。</string>
+    <string name="gpsNotifyMsg">当前应用需要打开定位功能。\n\n请点击\"设置\"-\"定位服务\"-打开定位功能。</string>
+
+    <string name="male">男</string>
+    <string name="female">女</string>
+
+    <string name="start_time">开始时间</string>
+    <string name="end_time">结束时间</string>
+    <string name="expect_end_time">预计结束</string>
+
+    <string name="married">已婚</string>
+    <string name="unmarried">未婚</string>
+    <string name="has_dead">丧偶</string>
+
+    <string name="edu_junior">初中及以下</string>
+    <string name="edu_senior">高中或中专</string>
+    <string name="edu_college">大专</string>
+    <string name="edu_university">本科</string>
+    <string name="edu_postgraduate">硕士</string>
+    <string name="edu_learned_scholar">博士</string>
+
+    <string name="spouse">配偶</string>
+    <string name="child">子女</string>
+    <string name="other">其他</string>
+
+    <string name="double_click_to_exit">再按一次返回键退出心之力</string>
+    <string name="select_time_overstep_tip">选择的时间不能超过当前时间</string>
+    <string name="select_time_overstep_tip_2">开始时间不能大于结束时间</string>
+    <string name="select_time_overstep_tip_3">上传日期不能大于当前时间</string>
+    <string name="keep_records_tip">坚持记录哦</string>
+
+    <!--**************************************************************************************-->
+
+    <!--异常提示-->
+    <string name="exception_current_network_disable">网络链接已断开</string>
+    <string name="exception_refresh_to_load">刷新看看</string>
+    <string name="exception_network_connect">网络异常，请检查网络设置</string>
+    <string name="exception_request_server">服务器异常</string>
+    <string name="exception_login_expire_tip">登录超时，请重新登录</string>¬
+    <string name="exception_force_offline_tip">您已在其他设备登录</string>
+    <string name="exception_time_not_synchronized">手机时间异常，请设置系统时间为最新时间</string>
+    <string name="exception_invalid_url">无效的Url地址</string>
+    <string name="exception_resolve">json解析异常</string>
+    <string name="exception_power_on_tip">请去设置里打开相应权限，否则不能正常使用APP</string>
+
+    <!--**************************************************************************************-->
+
+    <!--注册页面-->
+    <string name="register_common_phone_num">您的常用手机号码</string>
+    <string name="register_phone_num">手机号码</string>
+    <string name="register_phone_num_prefix">+86</string>
+    <string name="register_read_and_agree">阅读并同意</string>
+    <string name="register_user_agreement">《用户协议及隐私条款》</string>
+    <string name="register_send_identify_code">发送验证码</string>
+    <string name="register_phone_format_error">请输入正确手机号</string>
+
+    <!--验证码页面-->
+    <string name="identify_input_6_identify_code">请输入6位验证码</string>
+    <string name="identify_send_code_success">验证码已发送成功</string>
+    <string name="identify_resend_identify_code_interval">秒后可重新发送</string>
+    <string name="identify_resend_identify_code">重新发送</string>
+    <string name="identify_identify_code">验证码</string>
+
+    <!--创建登录密码页面-->
+    <string name="build_create_password">请输入您的密码</string>
+    <string name="build_create_password_tip">6-20位字母或数字</string>
+    <string name="build_register_and_login">注册并登录</string>
+
+    <!--登录页面-->
+    <string name="launch_app_tip_1">您身边的医疗管理专家</string>
+    <string name="login_user_register">新用户注册</string>
+    <string name="login_user_password">密码</string>
+    <string name="login_forget_user_password">忘记密码</string>
+    <string name="login_input_phone_num">请输入手机号码</string>
+    <string name="login_input_right_phone_num">请输入正确的手机号码</string>
+    <string name="login_input_user_card_id">请输入就诊人身份号码</string>
+    <string name="login_input_correct_user_card_id">请输入正确的身份证号码</string>
+    <string name="login_input_password">请输入密码</string>
+    <string name="login_phone_or_password_error">手机号或密码错误</string>
+    <string name="login_password_error">密码错误</string>
+    <string name="login_user_login">登录</string>
+    <string name="welcome_user_login">您好，欢迎登录！</string>
+    <string name="welcome_user_login_tip_1">注册/登录即代表已阅读并同意</string>
+    <string name="welcome_user_login_tip_2">没有账号？</string>
+    <string name="welcome_user_login_tip_3">创建一个</string>
+    <string name="welcome_user_login_tip_4">创建账号</string>
+    <string name="welcome_user_login_tip_5">手机登录</string>
+    <string name="welcome_user_login_tip_6">您身边的慢病管理专家</string>
+
+    <!--忘记密码页面-->
+    <string name="forget_your_register_phone_num">您的注册手机号码</string>
+    <string name="forget_reset_password">重置密码</string>
+    <string name="forget_input_new_password">请输入您的新密码</string>
+
+    <!--微信登陆-->
+    <string name="wx_login_input_code">请输入验证码</string>
+    <string name="wx_user_registered">手机号%1$s已经注册,患者姓名为%2$s请输入验证码绑定当前微信</string>
+    <string name="wx_user_un_register">手机号%1$s</string>
+    <!--**************************************************************************************-->
+
+    <!--首页-->
+    <string name="home_user_name">心友%1$s</string>
+    <string name="home_say_hello">%1$s，%2$s</string>
+    <string name="home_medic_rate">服药完成率</string>
+    <string name="home_current_medic">目前用药</string>
+    <string name="home_ask_doctor">问医生</string>
+    <string name="home_ask_doctor_answer">医患对话</string>
+    <string name="home_upload_document">上传单据</string>
+    <string name="home_data_remind">提醒</string>
+    <string name="home_doctor_advice">医生提醒</string>
+    <string name="home_health_news">健康资讯</string>
+    <string name="home_around_recommend">周边推荐</string>
+    <string name="home_nurse">护士上门</string>
+    <string name="home_book_visit">预约就诊</string>
+    <string name="select_all">全选</string>
+    <string name="select_all_cancel">取消全选</string>
+    <string name="delete_num">删除(%1$d)</string>
+    <string name="home_formula">合格次数/总次数=服药完成率</string>
+    <string name="home_bind_box">已存在绑定设备，请解绑后重试</string>
+    <string name="home_welcome_tip">花少量的钱，看最好的医生</string>
+    <string name="home_welcome_hospital_tip">心之力医院</string>
+    <string name="title_dialog_consultation_detail">会诊单</string>
+    <string name="remind_behavior">cn.xinzhili.core.ui.home.behavior.TransferRemindBehavior</string>
+    <string name="logo_behavior">cn.xinzhili.core.ui.home.behavior.TransferLogoBehavior</string>
+    <string name="appbar_layout_behavior">cn.xinzhili.core.ui.home.behavior.AppbarLayoutCustomBehavior</string>
+    <string name="home_user_plus_tip_1">服药,积分</string>
+    <string name="home_user_plus_tip_2">回答医生问题,积分</string>
+    <string name="home_user_plus_tip_3">上传化验单,积分</string>
+    <string name="medicine_all_eat">全部已服</string>
+    <string name="medicine_all_not_eat">全部未服</string>
+    <string name="medicine_partly_eat">部分已服</string>
+    <string name="medicine_next_time">下次服药</string>
+    <string name="medicine_has_missed">错过服药</string>
+    <string name="medicine_to_eat">视频服药</string>
+
+    <string name="home_poi_hospital">医院</string>
+    <string name="home_poi_examination">体检</string>
+    <string name="home_poi_drugstore">药店</string>
+    <string name="home_poi_address">地址：</string>
+    <string name="home_poi_telephone">电话：</string>
+    <string name="location_fail">定位失败</string>
+    <string name="home_scan_medic_code">扫描商品码</string>
+    <string name="home_scan_qr_code">扫描二维码</string>
+    <string name="city_select">选择城市</string>
+    <string name="home_notify_tip_1">重要提示</string>
+    <string name="home_notify_tip_2">关闭通知将无法获取服药提醒！</string>
+    <string name="home_notify_tip_3">去设置</string>
+    <string name="home_notify_tip_4">设备电量过低，请及时充电</string>
+    <string name="home_notify_tip_5">药盒电量不足%1$s,请及时充电!</string>
+    <string name="home_notify_tip_6">该服药了!</string>
+    <string name="home_notify_tip_7">为确保设备正常使用\n请开启蓝牙功能</string>
+    <string name="home_select_doctor_service">选择医生服务</string>
+
+    <string name="ble_notify_is_open">心之力App想访问您的蓝牙</string>
+    <!--**************************************************************************************-->
+
+    <!--服药-->
+    <string name="medicine_medicine_state">服药状态</string>
+    <string name="medicine_medicine_advice">服药计划</string>
+    <string name="medicine_medicine_list">服药单</string>
+    <string name="medicine_history">历史</string>
+    <string name="medicine_medicine_add">填药</string>
+    <string name="medicine_no_medicine_state">暂无服药计划</string>
+    <string name="medicine_no_medicine_list">暂无服药计划</string>
+    <string name="medicine_create_plan_tip">点击右上角“填药”新建服药计划</string>
+    <string name="medicine_operate">操作</string>
+    <string name="medicine_operate_success">操作成功</string>
+    <string name="medicine_delete_plan_tip">是否删除该服药计划？</string>
+    <string name="medicine_fill_success_tip">填药成功</string>
+    <string name="medicine_fill_cancel">取消填药</string>
+    <string name="medicine_fill_tip_1">所选药品与药仓中原有药品不同\n是否清空并重新添加？</string>
+    <string name="medicine_fill_tip_5">前药品与药盒内药品不一致\n请确认后再填药</string>
+    <string name="medicine_fill_tip_2">删除后，将无法收到原服药提醒</string>
+    <string name="medicine_fill_tip_3">该药品已存在</string>
+    <string name="medicine_fill_tip_4">是否修改其服药计划</string>
+    <string name="machine_not_support_ble">此设备不支持蓝牙功能</string>
+    <string name="machine_not_found">未发现该药盒设备</string>
+    <string name="machine_found_and_connect">发现该药盒设备开始绑定</string>
+    <string name="machine_connect_fail">药盒绑定失败</string>
+    <string name="machine_connect_success">药盒链接成功</string>
+    <string name="machine_send_fail">药盒发送失败</string>
+    <string name="machine_send_time_out">药盒发送超时</string>
+    <string name="machine_connected_fail">药盒链接失败</string>
+    <string name="machine_service_init_fail">药盒服务无法启动</string>
+    <string name="machine_connected_time_out">药盒链接超时</string>
+    <string name="machine_data_exception">药盒数据异常</string>
+    <string name="machine_box_net_wakeup_success">药盒网络开启成功</string>
+    <string name="machine_box_net_wakeup_fail">药盒网络开启失败</string>
+    <string name="ble_start_up_success">蓝牙开启成功</string>
+    <string name="ble_start_off_tip">请您开启蓝牙功能，以保证设备正常使用</string>
+    <string name="machine_box_is_binding">正在绑定,请稍后</string>
+    <string name="machine_box_is_unbinding">开始解绑,请稍后</string>
+    <string name="ble_open_and_operator">请打开蓝牙再进行操作</string>
+    <string name="machine_box_is_binded">此设备已被绑定</string>
+    <string name="machine_descript_book">药品说明书</string>
+    <string name="machine_box_is_not_taget">这个设备不是目标蓝牙设备</string>
+    <string name="medic_fill_tip_1">建议您将胶囊填入大药仓</string>
+    <string name="medic_box_code">号仓</string>
+    <string name="medic_fill_box_tip_1">建议您将药片填入小药仓</string>
+    <string name="medic_fill_box_tip_2">建议您将胶囊填入大药仓</string>
+    <string name="medic_dose_format_1">片剂</string>
+    <string name="medic_dose_format_2">胶囊剂</string>
+    <string name="medic_confirm_clear_tip_1">是否已将该仓药品清空?</string>
+    <string name="medic_confirm_clear_tip_2">请您务必清空，以免造成服药错误！</string>
+    <string name="medic_confirm_clear_all">已确认清空</string>
+    <string name="medic_out_of_box">仓外</string>
+    <string name="medic_box_connect_fail">药盒通讯失败，请稍后重试</string>
+    <string name="medic_box_shake_on">震动开</string>
+    <string name="medic_box_shake_off">震动关</string>
+    <string name="medic_confirm_clear_box">请清空药仓!</string>
+
+    <!--服药历史-->
+    <string name="medicine_today_no_history">此日无服药记录</string>
+    <string name="medicine_two_weeks">2周</string>
+    <string name="medicine_one_mouth">1月</string>
+    <string name="medicine_full_screen">全屏</string>
+    <string name="medicine_trend_chart">总览</string>
+    <string name="medicine_medicine_summary">服药总览</string>
+    <string name="medicine_medicine_name">药名</string>
+    <string name="medicine_medicine_dose">剂量</string>
+    <string name="medicine_medicine_time">时间</string>
+
+    <!-- 扫描条形码 -->
+    <string name="medicine_add_in_medicine">填药</string>
+    <string name="medicine_add_medicine">添加用药</string>
+    <string name="medicine_scan_add_medicine">扫码填药</string>
+    <string name="select_one_summary">请选择规格</string>
+    <string name="medicine_medicine_code">商品码</string>
+    <string name="scan_box_bottom_tip">将二维码/商品码放入框内，即可自动扫描</string>
+    <string name="scan_medic_bottom_tip">将商品商品码放入框内，即可自动扫描</string>
+    <string name="scan_medic_box_bottom_tip">将二维码放入框内，即可自动扫描</string>
+    <string name="medicine_scan_failed_tip">扫失败?</string>
+    <string name="medicine_scan_help_tip">扫描药盒上“69”开头的商品码</string>
+    <string name="medicine_invalid_medicine_code">无效的商品码</string>
+    <string name="medicine_invalid_doctor_code">无效医生二维码</string>
+    <string name="medicine_invalid_medicine_add_tip">请勿将胰岛素加入到智能药盒中</string>
+    <string name="scan">扫一扫</string>
+    <string name="insulin">胰岛素</string>
+    <string name="medic_scan_again">重新扫描</string>
+    <string name="medic_scan_input">手动输入</string>
+    <string name="medic_scan_failed_title">扫码失败?</string>
+    <string name="medic_scan_failed_tip">未识别到正确的“69”开头商品码，手动输入药品名、国药准字号、进口药品注册证号添加服药计划？</string>
+    <string name="medic_box_imei_tip">请输入药盒IMEI编码</string>
+    <string name="medic_box_imei_tip1">请输入正确的药盒IMEI编码</string>
+
+
+    <!-- 添加、编辑服药医嘱 -->
+    <string name="medicine_input_key_word">药品名/国药准字号/进口药品注册证号/药品ID</string>
+    <string name="medicine_medicine_not_found">未查找到相关药品</string>
+    <string name="medicine_add_customer_plan">去设置自定义服药计划</string>
+    <string name="medicine_all_search_history">清空历史搜索</string>
+    <string name="medicine_add_medicine_plan">添加服药计划</string>
+    <string name="medicine_edit_medicine_plan">编辑服药计划</string>
+    <string name="medicine_common_medicine_name">通用名</string>
+    <string name="medicine_every_piece_dose">单位规格</string>
+    <string name="medicine_input_dose_hint">请输入剂量</string>
+    <string name="medicine_plan_format">规格:</string>
+    <string name="medicine_unit_mg">mg(毫克)</string>
+    <string name="medicine_unit_g">g(克)</string>
+    <string name="medicine_unit_ml">ml(毫升)</string>
+    <string name="medicine_unit_eng_mg">mg</string>
+    <string name="medicine_unit_eng_g">g</string>
+    <string name="medicine_unit_eng_ml">ml</string>
+    <string name="medicine_unit_iu">iu</string>
+    <string name="medicine_unit_eng_iu">iu</string>
+    <string name="medicine_unit_ug">ug（微克)</string>
+    <string name="medicine_unit_eng_ug">ug</string>
+    <string name="medicine_unit_wu">WU(万iu)</string>
+    <string name="medicine_unit_eng_wu">WU</string>
+    <string name="medicine_unit_pieces">片</string>
+    <string name="medicine_unit_pellet">粒</string>
+    <string name="medicine_unit_pocket">袋</string>
+    <string name="medicine_unit_pill">丸</string>
+    <string name="medicine_unit_sum">个</string>
+    <string name="medicine_unit_ul">UL</string>
+    <string name="medicine_unit_other">其它</string>
+    <string name="medicine_unit_eng_other">other</string>
+    <string name="medicine_unit_eng_line">-</string>
+    <string name="medicine_dose_multiply">× </string>
+    <string name="medicine_add_medic_reminder">服药计划</string>
+    <string name="medicine_add_medic_info">药品信息</string>
+    <string name="medicine_add_reminder">第四次服药时间和剂量</string>
+    <string name="medicine_dialog_add_reminder">添加服药计划</string>
+    <string name="medicine_dialog_edit_reminder">编辑服药计划</string>
+    <string name="medicine_frequency">服药频率</string>
+    <string name="medicine_every_day">每天</string>
+    <string name="medicine_temporary">临时</string>
+    <string name="medicine_qd_alt_day">隔天</string>
+    <string name="medicine_dosage_type">种</string>
+    <string name="medicine_dose">服药剂量</string>
+    <string name="medicine_time">服药时间</string>
+    <string name="medicine_time_occupied">该服药时间已被占用</string>
+    <string name="medicine_must_remain_one_reminder">请至少保持一条服药提醒</string>
+    <string name="medicine_input_dose_tip">请输入药品剂量</string>
+    <string name="medicine_dose_cannot_be_zero">单位规格不能为0</string>
+    <string name="medicine_input_wrong_dose">规格数据错误</string>
+    <string name="medicine_cancel_add_plan_tip">确认放弃添加服药计划?</string>
+    <string name="medicine_cancel_edit_plan_tip">确认放弃编辑服药计划?</string>
+    <string name="medicine_alarm_info_tip1">如下情况您将错过服药提醒</string>
+    <string name="medicine_alarm_info_tip2">· 本机关机</string>
+    <string name="medicine_alarm_info_tip3">· 本应用未设置为开机自启动</string>
+    <string name="medicine_alarm_info_tip4">不再提示</string>
+    <string name="medicine_search_info_tip">*请输入药品名或国药准字号(进口药品注册证号)</string>
+    <string name="medicine_add_medic_fail">服药计划添加失败</string>
+    <string name="medicine_add_medic_count_fail">服药剂量错误</string>
+    <string name="medicine_add_medic_data_exception">该数据异常，无法操作!</string>
+    <string name="medicine_data_exception_default">3片</string>
+    <string name="medicine_select_reminder_tip">服药间隔应大于3小时</string>
+    <string name="medicine_operator_reminder_tip">语音转换中，请3秒后重试</string>
+
+    <string name="please_add_medic_plan">请添加服药计划</string>
+    <string name="please_edit_medic_plan">请编辑服药计划</string>
+
+    <string name="medicine_has_eaten">已服</string>
+    <string name="medicine_not_int_box">非药仓</string>
+    <string name="medicine_check_detail">该服药了</string>
+    <string name="medicine_sure_check_detail">确认服药</string>
+    <string name="medicine_sure_to_box_check">去药仓服药</string>
+    <string name="medicine_double_click_to_unlock">双击解锁进入心之力</string>
+
+    <!--**************************************************************************************-->
+
+    <!-- 消息 -->
+    <string name="have_a_new_message">您有一条新消息</string>
+    <string name="doctor_reminder_title">医生指示</string>
+    <string name="app_remind_read_detail">阅读全文</string>
+    <string name="app_remind_look_for_detail">查看详情</string>
+    <string name="app_remind_to_fill_in">去填写</string>
+    <string name="app_remind_side_effect">药物副作用</string>
+    <string name="check_new_medic_list">查看新服药单</string>
+    <string name="stop_medic_plan">【停用】</string>
+    <string name="ajust_medic_plan">【调整】</string>
+    <string name="add_medic_plan_title">【新增用药】</string>
+    <string name="add_medic_dose">【新增剂量】</string>
+    <string name="delete_medic_dose">【停用剂量】</string>
+    <string name="add_medic_plan_content_1">剂量为%1$s</string>
+    <string name="add_medic_plan_content_2">服药时间为%1$s</string>
+    <string name="edit_medic_plan_dosage_content_1">%1$s→%2$s,</string>
+    <string name="edit_medic_plan_time_content_1">%1$s→%2$s</string>
+    <string name="notice_upload_document">重新上传</string>
+    <string name="app_sys_tip">系统提示</string>
+    <string name="app_sys_tip_2">系统提醒</string>
+    <string name="app_new_user_tip">温馨提示</string>
+    <string name="consultation_continue">继续会诊</string>
+    <string name="consultation_cancel">取消会诊</string>
+    <string name="bind_doctor_result">绑定医生结果</string>
+    <string name="consultation_cancel_done">会诊已取消</string>
+    <string name="agree">同意</string>
+    <string name="agreed">已同意</string>
+    <string name="refuse">不同意</string>
+    <string name="reject">拒绝</string>
+    <string name="rejected">已拒绝</string>
+    <string name="notice_side_effect">您好，根据您的服药副作用反馈，做出如下药物调整：</string>
+    <string name="consult_dialog_notice1">点击“确定”后，本次会诊将不可操作</string>
+    <string name="consult_dialog_notice2">直至下次发起新会诊</string>
+    <string name="notice_doctor_consulation">会诊</string>
+    <string name="notice_doctor_consulation_answer">会诊对话</string>
+    <string name="notice_doctor_consulation_list">会诊单</string>
+    <string name="no_message_content">暂无消息</string>
+    <string name="notice_consultation_request">【会诊请求】:</string>
+    <string name="notice_consultation_purpose">【会诊目的】:</string>
+    <string name="notice_consultation_role_1">(患者)</string>
+    <string name="notice_consultation_role_2">(运营)</string>
+    <string name="notice_consultation_role_3">(医助)</string>
+    <string name="notice_consultation_role_4">(医生)</string>
+    <string name="notice_consultation_role_5">(会诊医生)</string>
+    <string name="consult_hospital_name">心之力医院</string>
+    <string name="consult_pool_name">会诊池</string>
+    <string name="consult_doctor_can_work">24小时内会诊</string>
+    <string name="consult_doctor_can_work_half_day">12小时内会诊</string>
+    <string name="consult_doctor_no_work">暂不会诊</string>
+    <string name="consult_doctor_money">%1$s元/次</string>
+    <string name="doctor_reminder_medic">用药调整:</string>
+    <string name="doctor_reminder_tip">达标值调整:</string>
+    <string name="doctor_consultation_reminder_tip">会诊结果:</string>
+    <string name="doctor_record_update">档案更新</string>
+
+
+    <!-- 蓝牙药盒 -->
+    <string name="medic_box_num">仓号</string>
+    <string name="medic_record_morning">早</string>
+    <string name="medic_record_noon">中</string>
+    <string name="medic_record_night">晚</string>
+    <string name="medic_eat_history">服药历史</string>
+    <string name="medic_calculate_form">服药完成率计算公式</string>
+    <string name="have_new_history">有新记录</string>
+    <string name="seven_day_complete">七日服药达标</string>
+    <string name="confirm_unbind_medic_box">药盒解绑后将无法提醒,请确认是否解绑</string>
+    <string name="not_have_medic_box">暂无设备</string>
+    <string name="to_collect_medic_box">扫码绑定</string>
+    <string name="to_collect_medic_box_again">重新绑定设备</string>
+    <string name="unbinding_medic_box_success">成功解除绑定设备</string>
+    <string name="unbinding_medic_box_fail">解除绑定设备失败</string>
+    <string name="get_medic_box_data_fail">获取用户药盒数据失败</string>
+    <string name="set_unbind_medic_box">解除绑定</string>
+    <string name="medic_box_display_name">便携智能终端</string>
+    <string name="medic_box_cell_not_enough">号仓药量不足</string>
+    <string name="medic_delete_medic_plan_fail">删除服药计划失败</string>
+    <string name="medic_box_connecting_tip">药盒正在连接中,请稍后</string>
+
+
+    <!-- 绑定药盒 -->
+    <string name="bind_auto_kit">绑定智能药盒</string>
+    <string name="bind_medic_box_success">已连接</string>
+    <string name="bind_medic_box_fail">未连接</string>
+    <string name="no_kit_add_plan">暂不绑定</string>
+    <string name="click_open_blue">点击开启</string>
+    <string name="blue_no_open">蓝牙未开启</string>
+    <string name="open_blue_bind_box">开启蓝牙绑定药盒</string>
+    <string name="search_box_tip1">正在搜索药盒</string>
+    <string name="search_box_tip2">请将药盒贴近手机</string>
+    <string name="search_box_again">点击重新搜索</string>
+    <string name="please_search_box_again">请重新搜索</string>
+    <string name="search_box_fail">搜索失败</string>
+    <string name="please_select_medic_box">请选择设备</string>
+    <string name="please_select_unit_strength">请选择单位规格：</string>
+    <string name="please_select_medic_strength">请选择药品规格：</string>
+    <string name="please_select_specific">请选择包装规格：</string>
+    <string name="please_select_medic_company">请选择厂家：</string>
+    <string name="collect_medic_box_fail">连接设备失败</string>
+    <string name="not_have_medic_plan">无</string>
+    <string name="medic_box_no_code">/</string>
+    <string name="select_medic_box_num">请选择添药仓号</string>
+    <string name="portable_medic_box">智能便携药盒</string>
+    <string name="home_medic_box">智能家庭药盒</string>
+    <string name="select_success">选中</string>
+    <string name="sure_to_bind">确认绑定</string>
+    <string name="sure_to_free_manager">免费管理</string>
+    <string name="sure_to_bind_doctor">是否绑定该医生？</string>
+    <string name="bind_doctor_tips">绑定后将由该医生为您提供服务</string>
+    <string name="bind_success">药盒绑定成功</string>
+    <string name="bind_fail">药盒绑定失败</string>
+    <string name="bind_time_out">药盒绑定超时</string>
+    <string name="bind_ing">正在绑定</string>
+    <string name="medic_box_over_plus_power">剩余电量: </string>
+    <string name="medic_box_start_tip">设备开启联网中\n请耐心等待</string>
+    <string name="confirm_remove_agree">直接解约</string>
+    <string name="select_higher_doctor">选择上级医生</string>
+    <string name="select_lower_doctor">选择下级医生</string>
+    <string name="home_higher_doctor">上级医生</string>
+    <string name="home_lower_doctor">下级医生</string>
+    <string name="change_doctor_pay">重新购买</string>
+    <string name="change_higher_doctor_ask">是否确定解约医生？</string>
+    <string name="remove_agree_done">解约后</string>
+    <string name="confirm_remove_agree_tip_1">解约后,系统将返还您剩余管理费用的%1$s</string>
+    <string name="confirm_remove_agree_tip_2">继续享受管理需重新购买服务</string>
+    <string name="confirm_return_pay_title">确认补全/退还差价?</string>
+    <string name="confirm_alone_manage_price">独立管理费用:%1$s</string>
+    <string name="confirm_other_manage_price">做%1$s费用:%2$s</string>
+    <string name="confirm_different_price">差价计算:((独立管理费用-做%1$s费用)/365)*剩余管理天数</string>
+    <string name="confirm_select_no_doctor">当前无可选择%1$s,请联系您的服务机构。</string>
+    <string name="change_bind_doctor">换绑医生</string>
+    <string name="change_bind_doctor_tip">您已绑定了%1$s医生，是否解约？若您解约，您解约该医生剩余的费用将于15个工作日内退还到指定账户</string>
+
+    <!-- 药盒设置 -->
+    <string name="menu_set_kit_title">药盒设置</string>
+    <string name="set_kit_power">药盒电量</string>
+    <string name="set_kit_find">寻找药盒</string>
+    <string name="set_kit_voice">药盒声音</string>
+    <string name="set_kit_quake">药盒震动</string>
+    <string name="set_unbind_kit">解除绑定药盒</string>
+    <string name="box_close_first">请务必确认需填药品的正确性。</string>
+    <string name="box_close_second">将确认药品填入对应药仓并关闭药仓盖。</string>
+    <string name="box_open_first">请按照灯光提示，打开对应的药仓盖。</string>
+    <string name="box_open_second">如该药仓已存在其他药品，请您清空！</string>
+    <string name="box_horizontal_lay_tip">操作中，请水平放置药盒！</string>
+    <string name="third_box_close_first">请务必确认需填药品的正确性。</string>
+    <string name="third_box_close_second">请关闭%1$s号仓。</string>
+    <string name="third_box_open_first">请按指示灯提示，按下开盖按钮打开%1$s号仓</string>
+    <string name="third_box_open_second">(请先确认药盒安全锁已开)</string>
+
+    <!-- 下拉刷新 -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">释放刷新</string>
+    <string name="xlistview_header_hint_loading">正在刷新...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">加载更多</string>
+    <string name="xlistview_footer_hint_ready">释放加载...</string>
+    <string name="xlistview_footer_hint_loading">正在加载...</string>
+
+    <!--**************************************************************************************-->
+
+    <!--健康-->
+    <string name="please_swipe_adjust_data">请左右滑动调整您的数据</string>
+    <string name="full_screen">全屏</string>
+    <string name="health_sugar_history">血糖历史</string>
+    <string name="health_health_condition">健康</string>
+    <string name="health_risk_evaluate">风险评估</string>
+    <string name="health_medicine_rate">用药达标</string>
+    <string name="health_life_rate">生活达标</string>
+    <string name="health_pressure_record">血压记录</string>
+    <string name="health_history_record">历史记录</string>
+    <string name="health_last_record">最后一次记录</string>
+    <string name="health_recent_record">最近七天记录</string>
+    <string name="health_recent_bp_record">最近七次记录</string>
+    <string name="health_recent_hr_record">最近七天心率记录</string>
+    <string name="health_pressure_last_pressure">%1$s/%2$s</string>
+    <string name="health_empty_data">——</string>
+    <string name="health_pressure_unit">mmHg</string>
+    <string name="health_sugar_unit">mmol/L</string>
+    <string name="health_rate_unit">次/分</string>
+    <string name="health_step_unit">步</string>
+    <string name="health_step_standard">达标值：8000</string>
+    <string name="health_pressure_standard_empty">达标值：130/80</string>
+    <string name="health_pressure_standard">达标值：%1$d/%2$d</string>
+    <string name="health_sugar_standard_empty">达标值： - - </string>
+    <string name="health_sugar_standard">达标值：%1$s-%2$s</string>
+    <string name="health_rate_standard_empty">达标值：60-100</string>
+    <string name="health_rate_standard">达标值：%1$d-%2$d</string>
+    <string name="health_index_standard">达标值：%1$s-%2$s</string>
+    <string name="health_pressure_high">收缩压</string>
+    <string name="health_pressure_low">舒张压</string>
+    <string name="health_heart_rate">心率</string>
+    <string name="health_change_to_pressure">血压</string>
+    <string name="health_change_to_rate">心率</string>
+    <string name="health_index_state">%1$s%2$s</string>
+    <string name="health_state_pressure_normal">血压正常</string>
+    <string name="health_state_pressure_high">血压偏高</string>
+    <string name="health_state_pressure_low">血压偏低</string>
+    <string name="health_state_rate_normal">心率正常</string>
+    <string name="health_state_rate_high">心率偏高</string>
+    <string name="health_state_rate_low">心率偏低</string>
+    <string name="health_state_sugar_normal">血糖正常</string>
+    <string name="health_state_sugar_high">血糖偏高</string>
+    <string name="health_state_sugar_low">血糖偏低</string>
+    <string name="health_sugar_empty_error">血糖不能为0</string>
+    <string name="health_pressure_history_to">至</string>
+    <string name="health_state_normal">正常</string>
+    <string name="health_state_low">偏低</string>
+    <string name="health_state_high">偏高</string>
+    <string name="health_manual_record">手动记录</string>
+    <string name="health_manual_upload">手动上传</string>
+    <string name="health_measure_date">请调整测量日期</string>
+    <string name="health_measure_time">测量时间</string>
+    <string name="health_measure_period">请选择测量时段</string>
+    <string name="health_pressure_measure_error">收缩压必须大于舒张压</string>
+    <string name="health_title_blood_pressure">血压</string>
+    <string name="health_title_heart_rate">心率</string>
+    <string name="health_title_blood_sugar">血糖</string>
+    <string name="health_title_blood_fat">血脂</string>
+    <string name="health_title_uric_acid">尿酸</string>
+    <string name="health_title_uric_acid_history">尿酸历史</string>
+    <string name="health_title_blood_fat_history">血脂历史</string>
+    <string name="health_title_sport">运动</string>
+    <string name="health_title_meal">饮食</string>
+    <string name="health_title_sleep">睡眠</string>
+    <string name="health_sugar_before_breakfast">空腹</string>
+    <string name="health_sugar_after_breakfast">早餐后</string>
+    <string name="health_sugar_before_launch">午餐前</string>
+    <string name="health_sugar_after_launch">午餐后</string>
+    <string name="health_sugar_before_dinner">晚餐前</string>
+    <string name="health_sugar_after_dinner">晚餐后</string>
+    <string name="health_sugar_before_sleep">睡前</string>
+    <string name="health_base_replace_rate">基础代谢率</string>
+    <string name="health_base_sleep">睡眠情况</string>
+    <string name="health_base_sleep_quality">睡眠质量</string>
+    <string name="health_heat_intake">热量摄入值</string>
+    <string name="health_replace_rate_unit">千卡</string>
+    <string name="health_diet_detail">饮食情况</string>
+    <string name="health_sleep_detail">睡眠情况</string>
+    <string name="health_today_steps">今日步数</string>
+    <string name="health_today_steps_standard">达标值：8000</string>
+    <string name="health_sport_detail">运动情况</string>
+    <string name="health_dont_support_pedometer">设备不支持计步</string>
+    <string name="health_steps_finished">达标</string>
+    <string name="health_steps_unfinished">未达标</string>
+    <string name="health_steps_normal">合格</string>
+    <string name="health_steps_abnormal">不合格</string>
+    <string name="health_risk_coronary_heart">冠心病</string>
+    <string name="health_risk_brain_stroke">脑卒中</string>
+    <string name="health_risk_bleed">出血</string>
+    <string name="health_risk_gout">痛风</string>
+    <string name="health_rate_bp">血压</string>
+    <string name="health_rate_hr">心率</string>
+    <string name="health_rate_bs">血糖</string>
+    <string name="health_rate_cholesterol">总胆固醇</string>
+    <string name="health_rate_triglyceride">甘油三酯</string>
+    <string name="health_rate_ldlc_cn">低密度脂蛋白</string>
+    <string name="health_rate_ldlc">LDL-C</string>
+    <string name="health_rate_uric_acid">尿酸</string>
+    <string name="health_rate_sport">运动</string>
+    <string name="health_rate_diet">饮食</string>
+    <string name="health_title_rate_name">项目</string>
+    <string name="health_title_rate_standard">达标值</string>
+    <string name="health_title_rate_value">实际值</string>
+    <string name="health_condition_sport_regular">规律运动</string>
+    <string name="health_condition_sport_patterns">运动方式</string>
+    <string name="health_condition_sport_duration">运动时长</string>
+    <string name="health_condition_sport_strength">运动强度</string>
+    <string name="health_condition_sport_rate">运动后心率</string>
+    <string name="health_condition_yes">有</string>
+    <string name="health_condition_no">无运动后监测心率</string>
+    <string name="health_regular_yes">有</string>
+    <string name="health_regular_no">无</string>
+    <string name="health_condition_diet_pig">有猪肉、%1$s</string>
+    <string name="health_condition_diet_mainFood">主食</string>
+    <string name="health_condition_diet_meat">肉类</string>
+    <string name="health_condition_diet_vegetable">蔬菜</string>
+    <string name="health_condition_diet_oil">油</string>
+    <string name="health_condition_diet_salt">食用盐</string>
+    <string name="health_condition_diet_salt_2">盐</string>
+    <string name="health_condition_diet_egg">蛋黄</string>
+    <string name="health_condition_diet_egg_2">鸡蛋</string>
+    <string name="health_condition_diet_fruit">水果</string>
+    <string name="health_condition_diet_milk">奶</string>
+    <string name="health_condition_diet_braingut">动物脑内脏</string>
+    <string name="health_sport_update">上传运动情况</string>
+    <string name="health_diet_update">上传饮食情况</string>
+    <string name="health_sleep_update">上传睡眠情况</string>
+    <string name="health_sleep_update_tip_1">自感优</string>
+    <string name="health_sleep_update_tip_2">自感良</string>
+    <string name="health_sleep_update_tip_3">自感差</string>
+    <string name="health_sleep_update_tip_4">有打鼾</string>
+    <string name="health_sleep_update_tip_5">无打鼾</string>
+    <string name="health_sleep_update_tip_6">有憋气憋醒</string>
+    <string name="health_sleep_update_tip_7">无憋气憋醒</string>
+    <string name="health_sleep_update_tip_8">是</string>
+    <string name="health_sleep_update_tip_9">否</string>
+    <string name="health_sleep_update_tip_10">是</string>
+    <string name="health_sleep_update_tip_11">否</string>
+
+    <string name="health_sleep_suffocating_often">经常</string>
+    <string name="health_sleep_suffocating_occasionally">偶尔</string>
+    <string name="health_sleep_suffocating_no">无</string>
+
+    <string name="health_sleep_snoring_serious">重</string>
+    <string name="health_sleep_snoring_light">轻</string>
+    <string name="health_sleep_snoring_no">无</string>
+    <string name="health_last_test">最后一次记录</string>
+    <string name="blood_uric_acid">血尿酸</string>
+
+
+    <!--**************************************************************************************-->
+
+    <!--我的-->
+    <string name="user_bmi_index">BMI:&#160;</string>
+    <string name="user_pay_result">至&#160;%1$s到期</string>
+    <string name="user_bmi_index_empty">暂无</string>
+    <string name="user_click_to_pay">购买服务</string>
+    <string name="user_click_to_call">咨询</string>
+    <string name="user_my_diagnose">我的诊断</string>
+    <string name="user_my_check">化验检查</string>
+    <string name="user_my_medicine">用药历史</string>
+    <string name="user_my_doctor">我的医生</string>
+    <string name="user_doctor_detail">医生详情</string>
+    <string name="user_my_relatives">我的亲友</string>
+    <string name="user_my_book_visit">实体医院就诊预约</string>
+    <string name="user_my_book_visit_history">预约历史</string>
+    <string name="user_my_settings">系统设置</string>
+    <string name="user_create_diagnose">医生建档</string>
+    <string name="user_my_device">设备管理</string>
+    <string name="user_name_certification">实名认证</string>
+    <string name="user_book_service">陪诊服务</string>
+    <string name="user_doctor_team">医生团队</string>
+    <string name="user_consulate_doctor">会诊医生</string>
+    <string name="user_select_doctor">选择医生</string>
+    <string name="user_qr_code_url">我的二维码</string>
+    <string name="user_show_id">患者ID: </string>
+    <string name="user_order_list">我的订单</string>
+    <string name="user_order_list_detail">订单详情</string>
+    <string name="user_order_list_desc">慢病管理服务</string>
+    <string name="user_order_all">全部</string>
+    <string name="user_order_undone">未完成</string>
+    <string name="user_order_done">已完成</string>
+    <string name="user_order_refund">退款</string>
+    <string name="user_order_number">订单编号:</string>
+    <string name="user_order_total">合计: ￥</string>
+    <string name="user_order_cancel">取消订单</string>
+    <string name="user_order_to_pay">去支付</string>
+    <string name="user_order_to_write">填写病情</string>
+    <string name="user_order_to_check">查看病情</string>
+    <string name="user_order_list_done">已完成</string>
+    <string name="user_order_list_working">进行中</string>
+    <string name="user_order_had_received">已接单</string>
+    <string name="user_order_list_cancel">已取消</string>
+    <string name="user_order_pending_pay">待支付</string>
+    <string name="user_order_list_cancel_confirm">确认取消订单?</string>
+    <string name="user_order_list_complete_confirm">此订单已确认完成?</string>
+    <string name="user_order_list_status_under_way">进行中</string>
+    <string name="user_order_list_status_to_be_paid">待支付</string>
+    <string name="user_order_list_status_receipt">已接单</string>
+    <string name="user_order_list_status_canceled">已取消</string>
+    <string name="user_order_list_status_completed">已完成</string>
+    <string name="user_order_list_status_refused">已拒绝</string>
+    <string name="user_order_list_status_refunding">退款中</string>
+    <string name="user_order_list_status_refund">退款成功</string>
+    <string name="user_order_list_channel_we_chat">微信</string>
+    <string name="user_order_list_channel_ali_pay">支付宝</string>
+
+    <string name="user_order_list_info_con_left_0">会诊医生:</string>
+    <string name="user_order_list_info_con_left_1">级别科室:</string>
+    <string name="user_order_list_info_con_left_2">所属机构:</string>
+    <string name="user_order_list_info_con_left_3">服务类型:</string>
+    <string name="user_order_list_info_con_left_4">服务时限:</string>
+
+    <string name="user_order_list_info_vip_left_0">服务医生:</string>
+    <string name="user_order_list_info_vip_left_1">级别科室:</string>
+    <string name="user_order_list_info_vip_left_2">所属机构:</string>
+    <string name="user_order_list_info_vip_left_3">服务类型:</string>
+    <string name="user_order_list_info_vip_left_4">服务到期日:</string>
+
+    <string name="user_order_list_info_media_left_0">预约医生:</string>
+    <string name="user_order_list_info_media_left_1">预约就诊机构:</string>
+    <string name="user_order_list_info_media_left_2">就诊医生级别:</string>
+    <string name="user_order_list_info_media_left_3">就诊预约时间:</string>
+    <string name="user_order_list_info_media_left_4">就诊时间段:</string>
+
+
+    <string name="user_order_list_info_book_left_0">预约就诊机构:</string>
+    <string name="user_order_list_info_book_left_1">就诊医生级别:</string>
+    <string name="user_order_list_info_book_left_2">就诊意向时间:</string>
+    <string name="user_order_list_info_book_left_3">就诊人员:</string>
+    <string name="user_order_list_info_book_left_4">期望就诊时间:</string>
+
+    <string name="user_order_list_info_left_5">订单合计:</string>
+    <string name="user_order_list_info_left_6">活动优惠:</string>
+    <string name="user_order_list_info_left_7">运费:</string>
+    <string name="user_order_list_info_left_8">实付金额:</string>
+    <string name="user_order_list_info_left_9">订单编号:</string>
+    <string name="user_order_list_info_left_10">下单时间:</string>
+    <string name="user_order_list_info_left_11">支付方式:</string>
+    <string name="user_order_list_info_left_12">支付交易单号:</string>
+    <string name="user_order_list_info_left_13">电话客服:</string>
+    <string name="user_order_list_info_left_14">上级医生费用:</string>
+    <string name="user_order_list_info_left_15">下级医生费用:</string>
+    <string name="user_order_list_info_left_16">退款总金额:</string>
+    <string name="user_order_list_info_left_17">退回%1$s:</string>
+    <string name="user_order_list_info_left_18">退款编号:</string>
+    <string name="user_order_list_info_left_19">服务医生费用:</string>
+    <string name="user_order_list_info_left_20">上级医生:</string>
+    <string name="user_order_list_info_left_21">下级医生:</string>
+    <string name="user_order_list_info_left_22">退款总金额:</string>
+    <string name="user_order_list_info_left_23">服务时长:</string>
+    <string name="user_order_list_info_left_24">服务费用:</string>
+    <string name="user_order_list_info_left_25">退款编号:</string>
+
+    <!--语音视频-->
+    <string name="voice_video_service_tip">该功能绑定医生后方可使用</string>
+    <string name="voice_video_service_self">独立管理</string>
+    <string name="voice_user_service_price">语音: %1$s元/10分钟</string>
+    <string name="video_user_service_price">视频: %1$s元/10分钟</string>
+    <string name="voice_service_order">语音预约</string>
+    <string name="video_service_order">视频预约</string>
+    <string name="voice_video_service_price">%1$s元/10分钟</string>
+
+    <string name="user_service_limit_one_day">服务即将到期，如需继续使用请点击【购买服务】，否则停止服务</string>
+    <string name="user_service_limited">您的服务已到期，如需继续使用请点击【购买服务】</string>
+
+
+    <!--预约就诊-->
+    <string name="user_send_visit">预约医院门诊就诊</string>
+    <string name="btn_user_send_visit">预约就诊(门诊)</string>
+    <string name="user_cancel_visit">取消就诊</string>
+    <string name="user_confirm_cancel_visit">确认取消就诊？</string>
+    <string name="user_confirm_cancel_visit_tip">取消后,再次预约需要重新发送请求</string>
+    <string name="user_confirm_cancel">确定取消</string>
+    <string name="user_select_order_visit_doctor">请选择预约医生</string>
+    <string name="user_select_order_my_doctor">我的签约医生</string>
+    <string name="user_select_order_other_doctor">其他医生</string>
+    <string name="user_select_order_hospital">选择医院</string>
+    <string name="user_select_technical_office">选择科室</string>
+    <string name="user_select_order_time">选择预约时间</string>
+    <string name="user_visit_order_time">预约时间: </string>
+    <string name="user_visit_order_fail">预约失败</string>
+    <string name="user_visit_order_success">预约成功</string>
+    <string name="user_visit_order_ing">预约中</string>
+    <string name="user_visit_order_doctor_success">预约就诊成功</string>
+    <string name="user_visit_order_doctor_tip">该医生暂不出诊!</string>
+
+    <!--预约服务-->
+    <string name="is_selected">已选</string>
+    <string name="is_selected_money_start">元起</string>
+    <string name="user_book_visit">陪诊服务</string>
+    <string name="user_book_visit_together">陪同就诊</string>
+    <string name="user_book_server_content">服务内容</string>
+    <string name="user_book_visit_doctor_level">就诊医生级别</string>
+    <string name="user_book_visit_processor">主任医师</string>
+    <string name="user_book_visit_associate">副主任医师</string>
+    <string name="user_book_visit_time">就诊意向时间</string>
+    <string name="user_book_visit_people">选择就诊人员</string>
+    <string name="user_book_visit_people_own">本人</string>
+    <string name="user_book_visit_people_other">其他人</string>
+    <string name="user_book_visit_one_three_day">1-3个工作日</string>
+    <string name="user_book_visit_four_seven_day">4-7个工作日</string>
+    <string name="user_book_visit_info_input">必填</string>
+    <string name="user_book_visit_select_input">选填</string>
+    <string name="user_book_visit_input_comment">如有特殊要求请留言</string>
+    <string name="is_split_mark">午,</string>
+
+    <string name="user_book_visit_info_tip_0">姓名</string>
+    <string name="user_book_visit_info_tip_1">身份证号码</string>
+    <string name="user_book_visit_info_tip_2">医保类型</string>
+    <string name="user_book_visit_info_tip_3">联系电话</string>
+    <string name="user_book_visit_info_tip_4">备注联系电话</string>
+    <string name="user_book_visit_info_tip_5">患者情况自述</string>
+    <string name="user_book_visit_info_tip_6">期望就诊时间</string>
+    <string name="user_book_visit_info_tip_7">备注</string>
+    <string name="user_book_visit_info_tip_8">提供北京知名三甲医院副高及以上尊享看诊服务。服务内容:\n・诊前咨询\n・精准分诊\n・专家看诊预约\n・就医陪诊(4小时)\n・服药计划解读\n・诊后指导和回访\n\n
+    健康管理顾问一对一陪诊，服务包括：\n1)贴心服务:排队取号、排队缴费、代约检查、代取检查结果、取药等;\n2）专业服务:病情确认、问题记录、协助与医生交流、服药计划记录、服药计划解读等</string>
+
+    <!--期望预约就诊时间-->
+    <string name="user_book_visit_select_time">期望预约就诊时间</string>
+    <string name="user_book_visit_person_name">请输入就诊人姓名</string>
+    <string name="user_book_visit_choose_time">选择期望就诊时间</string>
+    <string name="user_book_visit_choose_time_tip">期望就诊时间范围内尽量优先安排您指定的就诊时间\n如遇时间不符则安排其他就诊时间，尽请谅解。</string>
+
+    <!--服务支付-->
+    <string name="pay_deal_doctor">服务医生</string>
+    <string name="pay_service">服务支付</string>
+    <string name="confirm_pay_service">确认支付</string>
+    <string name="confirm_pay_after">稍后付费</string>
+    <string name="confirm_pay_free">免费试用</string>
+    <string name="confirm_pay_free_user">免费试用中</string>
+    <string name="try_out_half_month">免费试用15天</string>
+    <string name="try_out_one_month">免费试用一个月</string>
+    <string name="try_out_three_month">免费试用三个月</string>
+    <string name="try_out_free_for_life">终身免费</string>
+    <string name="try_out_free_status">免费中</string>
+    <string name="confirm_payment">已缴</string>
+    <string name="over_and_unpaid">逾期未缴费</string>
+    <string name="pay_total_price">总计  ￥%1$s元</string>
+    <string name="pay_vip_year_title">年度VIP服务</string>
+    <string name="pay_vip_half_year_title">半年VIP服务</string>
+    <string name="pay_vip_quarter_title">季度VIP服务</string>
+    <string name="pay_vip_month_title">月度VIP服务</string>
+    <string name="pay_12_consultation_service">12h内回复会诊</string>
+    <string name="pay_24_consultation_service">24h内回复会诊</string>
+    <string name="pay_remain_vip_year_service">剩余费用:（年费/365）*剩余天数</string>
+    <string name="pay_remain_vip_half_year_service">剩余费用:（半年费/183）*剩余天数</string>
+    <string name="pay_remain_vip_quarter_service">剩余费用:（季费/90）*剩余天数</string>
+    <string name="pay_remain_vip_month_service">剩余费用:（月费/30）*剩余天数</string>
+
+
+    <string name="pay_info_tip_1">选择服务类型</string>
+    <string name="pay_info_tip_2">购买须知</string>
+    <string name="pay_info_tip_3">点击确认支付，即代表已阅读并同意</string>
+    <string name="pay_info_tip_4">《用户服务协议》</string>
+    <string name="pay_info_tip_5">您还未购买此服务,该功能付费后开通\n请前往\"我的\"付费。</string>
+    <string name="pay_info_tip_6">此模块部分功能付费后开通,请前往\"我的\"付费。</string>
+
+    <!-- 个人信息 -->
+    <string name="user_info">个人信息</string>
+    <string name="user_edit_portrait">头像</string>
+    <string name="user_name">姓名</string>
+    <string name="user_wechat">微信</string>
+    <string name="user_gender">性别</string>
+    <string name="user_qr_code">二维码</string>
+    <string name="user_phone">手机号码</string>
+    <string name="user_birthday">出生日期</string>
+    <string name="user_id_card">身份证号</string>
+    <string name="user_address">所在地区</string>
+    <string name="user_nation">民族</string>
+    <string name="user_nation_hint">输入民族</string>
+    <string name="user_marriage">婚姻状况</string>
+    <string name="user_education">文化程度</string>
+    <string name="user_height">身高</string>
+    <string name="user_bmi">BMI</string>
+    <string name="user_weight">体重</string>
+    <string name="user_waistline">腰围</string>
+    <string name="user_bank_code">银行卡号</string>
+    <string name="user_card_bank">持卡银行</string>
+    <string name="user_select_card_bank">请选择持卡银行</string>
+    <string name="user_input_your_name">请输入真实姓名</string>
+    <string name="user_input_detail_addr">请输入详细地址</string>
+    <string name="user_whether_save_info">是否保存当前所做的更改？</string>
+    <string name="user_name_empty_error">请输入姓名</string>
+    <string name="user_edit_address">编辑地址</string>
+    <string name="user_select_address">选择地区</string>
+    <string name="user_select_address_hint">请选择地区</string>
+    <string name="user_detail_address">详细地址</string>
+    <string name="user_detail_address_hint">街道门牌号</string>
+    <string name="user_empty_select">请选择</string>
+    <string name="user_empty_input">未填项</string>
+    <string name="user_empty_input_2">未填写</string>
+    <string name="user_empty_input_bank_code">请填写收款时所用的银行卡号</string>
+    <string name="user_empty_input_user_id_card">请填写你的身份证号码</string>
+    <string name="user_empty_select_card_bank">请选择你的持卡银行</string>
+    <string name="user_empty_must_input">必填项</string>
+    <string name="user_text_count">%1$d/80</string>
+    <string name="dialog_select_sex">请选择性别</string>
+    <string name="dialog_select_pay">请选择支付方式</string>
+    <string name="dialog_select_marriage">请选择婚姻状况</string>
+    <string name="dialog_select_education">请选择文化程度</string>
+    <string name="dialog_select_height">请选择身高</string>
+    <string name="dialog_select_weight">请选择体重</string>
+    <string name="dialog_select_waistline">请选择腰围</string>
+    <string name="dialog_select_birthday">请选择出生日期</string>
+    <string name="dialog_select_relative_birthday">请选择亲友出生日期</string>
+    <string name="dialog_select_relative">请选择亲友关系</string>
+    <string name="dialog_select_meare_date">请选择测量日期</string>
+    <string name="dialog_select_meare_time">请选择测量时间</string>
+    <string name="dialog_select_date">请选择查看日期</string>
+    <string name="user_wechat_un_bind">未绑定</string>
+    <string name="user_wechat_binded">已绑定</string>
+
+    <!--检验检查-->
+    <string name="user_document_my_test">化验单</string>
+    <string name="user_document_my_check">检查单</string>
+    <string name="user_document_count">%1$d张</string>
+    <string name="user_document_max_count">999+张</string>
+    <string name="user_document_delete_all">全部删除</string>
+    <string name="user_document_no_history">暂无上传单据</string>
+    <string name="user_delete_title">是否删除已选单据?</string>
+    <string name="user_delete_msg">删除后，将无法恢复</string>
+    <string name="user_document_upload">上传新单据</string>
+    <string name="user_document_to_review">待审核</string>
+    <string name="user_document_no_access">未通过</string>
+    <string name="user_document_invalid">不合格</string>
+    <string name="user_document_valid">合格</string>
+    <string name="user_document_blurring">不清晰</string>
+    <string name="user_document_photo">照片</string>
+    <string name="user_document_only_nine">您可单次上传9张单据</string>
+    <string name="user_diagnose_photo">病历照片</string>
+    <string name="user_choose_photo">请选择照片</string>
+    <string name="user_photo_album">相册</string>
+    <string name="user_photo_photo">相机胶卷</string>
+    <string name="user_photo_preview">预览</string>
+    <string name="user_photo_ok_progress">上传(%1$d)</string>
+    <string name="user_photo_all">所有图片</string>
+    <string name="user_photo_image_count">%1$d张</string>
+    <string name="user_photo_over_max_count">最多只能选择%1$d张照片</string>
+    <string name="user_photo_preview_progress">%1$d/%2$d</string>
+    <string name="user_photo_take_photo_error">拍照失败，请检查相机权限是否开启</string>
+    <string name="user_photo_confirm_sdcard">请确认已经插入SD卡！</string>
+    <string name="select_delete_pic">请选择需要删除的单据</string>
+    <string name="all_media">图片和视频</string>
+    <string name="preview">预览</string>
+    <string name="all_video">所有视频</string>
+
+    <!--我的亲友-->
+    <string name="user_tip_no_relative">暂无亲友</string>
+    <string name="user_relative_count_enough">亲友数量超出上限</string>
+    <string name="user_tip_add_relative">点击右上角“添加”一个亲友</string>
+    <string name="user_relative_add_relative">添加亲友</string>
+    <string name="user_relative_edit_relative">编辑亲友</string>
+    <string name="user_relative_whether_delete">确定删除亲友？</string>
+    <string name="user_relative_name_hint">请输入姓名</string>
+    <string name="user_relative_relationship">亲友关系</string>
+    <string name="user_relative_not_choose">未选择</string>
+    <string name="user_relative_notification_content">通知内容</string>
+    <string name="user_relative_sms_notification">短信通知</string>
+    <string name="user_relative_review_notify">复查消息</string>
+    <string name="user_relative_mas_notify">服药提醒</string>
+    <string name="user_relative_pushplan_notify">调整用药</string>
+    <string name="user_relative_choose_notification">通知内容</string>
+    <string name="user_relative_notification_title">通知内容说明</string>
+    <string name="user_relative_notification_img">图示</string>
+    <string name="user_relative_notification1">[复查消息]医生推送的复查提醒及复查反馈消息</string>
+    <string name="user_relative_notification2">[服药提醒]医生推送的服药提醒消息</string>
+    <string name="user_relative_notification3">[调整用药]医生调整用药的消息</string>
+    <string name="user_relative_tip_1">患者漏服/未服药物</string>
+    <string name="user_relative_tip_1_1">1天</string>
+    <string name="user_relative_tip_1_2">2天</string>
+    <string name="user_relative_tip_1_3">3天及以上</string>
+    <string name="user_relative_tip_2">医生调药提醒</string>
+    <string name="user_relative_tip_2_1">调整用药时</string>
+    <string name="user_relative_tip_2_2">调整3天及以上患者仍未修改</string>
+    <string name="user_relative_tip_3">关键指标异常</string>
+    <string name="user_relative_tip_3_1">结构化的关键指标有异常时</string>
+    <string name="user_relative_tip_4">复查提醒</string>
+    <string name="user_relative_tip_4_1">患者到期复查的前3天</string>
+    <string name="user_relative_tip_5">用药副作用</string>
+    <string name="user_relative_tip_5_1">患者初次使用一种新药，提醒副作用</string>
+    <string name="user_relative_tip_6">达标值调整</string>
+    <string name="user_relative_tip_6_1">医生对患者的达标值进行调整</string>
+    <string name="user_relative_tip_7">续费提醒</string>
+    <string name="user_relative_tip_7_1">患者服务期到期前1个月/1周/3天/已到期</string>
+    <string name="user_relative_tip_8">新增诊断提醒</string>
+    <string name="user_relative_tip_8_1">患者有需要前往医院进行确诊的时候</string>
+    <string name="user_relative_tip_9">医生主动服药计划</string>
+    <string name="user_relative_tip_9_1">医生给患者主动发送服药计划</string>
+
+    <!--设置-->
+    <string name="user_reset_password">重置密码</string>
+    <string name="user_old_password">旧密码</string>
+    <string name="user_old_password_hint">请输入旧密码</string>
+    <string name="user_new_password">输入新密码</string>
+    <string name="user_new_password_hint">请输入新密码</string>
+    <string name="user_confirm_password">确认新密码</string>
+    <string name="user_confirm_password_hint">请再次输入新密码</string>
+    <string name="user_old_password_error">旧密码错误</string>
+    <string name="user_password_format_error">密码格式错误</string>
+    <string name="user_password_differ_error">两次输入密码不相同，请重新输入</string>
+    <string name="user_reset_password_the_same_error">新密码不能和旧密码相同</string>
+    <string name="user_submit_new_password">提交新密码</string>
+    <string name="user_current_version">当前版本</string>
+    <string name="user_about_us">关于我们</string>
+    <string name="user_user_agreement">用户服务协议条款</string>
+    <string name="user_official_account">微信公众号：心之力服务号</string>
+    <string name="user_app_agreement">使用条款和隐私协议</string>
+    <string name="user_app_telephone">服务热线:010-68005697</string>
+    <string name="user_app_copyright">杭州翼心信息科技有限公司  版权所有</string>
+    <string name="user_app_copyright_code">Copyright © 2016-2018 XZL. All Rights Reserved.</string>
+    <string name="user_logout">退出登录</string>
+    <string name="user_logout_tip">退出登录?</string>
+    <string name="user_app_update_start">立即升级</string>
+    <string name="user_app_update_now">开始安装</string>
+    <string name="user_app_update_pause">暂停升级</string>
+    <string name="user_app_update_ing">继续升级</string>
+    <string name="user_app_new_version">已经是最新版本了</string>
+
+    <!--药盒相关-->
+    <string name="medic_box_unuse">不可选</string>
+    <string name="medic_box_selected">已选中</string>
+    <string name="medic_box_out_of">不填入药仓</string>
+    <string name="medic_box_ensure_in">确定选中</string>
+    <string name="medic_box_pill_many">药量过多</string>
+    <string name="medic_box_pill_less">药量过低</string>
+    <string name="medic_box_pill_many_tip">智能设备检测到您添加的药量过多，请减少部分药量以保持智能硬件正常工作</string>
+    <string name="medic_box_pill_less_tip">%1$s号仓药量过低，请及时补充药量</string>
+    <string name="medic_box_pill_many_operator">已减少药量</string>
+    <string name="medic_box_pill_less_operator">已补充药量</string>
+    <string name="medic_box_pill_num">号</string>
+    <string name="medic_box_not_eat">暂未服药</string>
+    <string name="medic_box_eaten">我已服药</string>
+    <string name="medic_box_control_volume">音量调整</string>
+    <string name="medic_box_plan_remind_confirm_content">智能设备检测到您%1$s服药计划中%2$s药仓药量变化异常，确认已正确服药？</string>
+
+    <string name="not_buy_service">暂未购买服务</string>
+
+    <string name="book_service_title_register">门诊陪诊</string>
+
+    <!--陪诊服务-->
+    <string name="book_service_title_register_tip">全流程的门诊陪诊就诊解决方案</string>
+    <string name="book_service_title_hospital">住院陪诊</string>
+    <string name="book_service_title_hospital_tip">贴心的住院陪诊、精细的治疗管家</string>
+    <string name="book_service_title_nurse">护士上门</string>
+    <string name="book_service_title_nurse_tip">上门抽血、打针、换药、置管、拔管…</string>
+    <string name="book_service_title_top_service">高端服务</string>
+    <string name="book_service_title_top_service_tip">尊贵、舒适的高端就诊体验</string>
+    <string name="tip_wait_moment_service">该服务敬请期待</string>
+    <string name="third_tip_closed">此页面由第三方提供,请注意保护个人信息</string>
+
+    <string name="nurse_partner">yixinxinxikeji</string>
+
+    <!--护士上门, 挂号陪诊-->
+    <string name="nurse_partner_key">17F25V7n226P2a08</string>
+    <string name="ali_oos_img_resize">\?x-oss-process=image/auto-orient,1/resize,m_lfit,w_%1$d,h_%2$d</string>
+
+    <!--阿里云图片裁剪参数-->
+    <string name="verify_code_title">获取验证码</string>
+
+    <!--人机验证码-->
+    <string name="verify_code_tip">请输入图片中出现的人机识别码</string>
+    <string name="verify_code_input_error">识别码填写错误,请重新填写</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="bind_doctor">绑定医生</string>
+    <string name="bind_doctor_list_title">您已经绑定了以下医生，\n确定要换绑么？</string>
+
+    <!--医患绑定-->
+    <string name="selected_bind_doctor_hospital">请选择%1$s医生所在的医院</string>
+    <string name="dialog_bind_doctor_tip">该服务暂时免费使用,到期后,如果您需要更多服务,请点击我的页面的【购买服务】选择更多的服务</string>
+    <string name="input_doctor_id_title">请输入医生识别码绑定医生</string>
+    <string name="input_doctor_id_tip">请输入您要绑定的医生识别码</string>
+    <string name="input_doctor_id_error_tip">请输入正确的医生识别码</string>
+    <string name="input_doctor_id">输入医生识别码绑定医生</string>
+    <string name="user_id">本人识别码:</string>
+    <string name="tip_scan_input_search">扫不出来？请至少填写一项进行搜索</string>
+
+    <!--扫一扫填药-->
+    <string name="tip_medic_name">药品名（选填）</string>
+    <string name="tip_gb_number">国药准字号（选填）</string>
+    <string name="tip_imported_medic_number">进口药品注册证号（选填）</string>
+    <string name="click_to_scan">扫码请点击</string>
+    <string name="title_selected_doctor_time">选择预约时间</string>
+
+    <!--选择预约时间-->
+    <string name="order_time_top_tip">仅可预约未来三天， 医生会在预约时间段联系您</string>
+    <string name="already_full">已满</string>
+    <string name="time_out_consultation">暂不接诊</string>
+    <string name="order_all_numbers_tip">预约时段共%1$d人</string>
+    <string name="audio_order_tip">音频订单已完成，请确认订单</string>
+    <string name="video_order_tip">视频订单已完成，请确认订单</string>
+    <string name="title_patient_description">问题描述</string>
+
+    <!--患者问题描述-->
+    <string name="order_time_again">重新预约</string>
+    <string name="patient_condition_info">病情描述</string>
+    <string name="add_patient_pic">添加图片</string>
+    <string name="check_patient_pic">查看图片</string>
+    <string name="patient_condition_no_content">暂无内容</string>
+    <string name="tip_upload_pic">您上传的图片仅对解答问题的医生可见</string>
+    <string name="hint_patient_condition_info">为了医生更准确的诊断您的问题，请尽可能详细描述预约问题，如有检查报告等尽量上传。</string>
+    <string name="title_pay_order">支付订单</string>
+
+    <!--支付订单-->
+    <string name="total_money">合计:</string>
+    <string name="order_time">预约时间:</string>
+    <string name="order_type">预约类型:</string>
+    <string name="order_cost">预约费用:</string>
+    <string name="order_service_number">数量:</string>
+    <string name="elicition_more">买前必读</string>
+    <string name="elicition_more_info">1.服务流程：医生会在您预约的时间段与您连线，请务必在此时间内，保持APP在线。\n2.若医生发起沟通，您未接通，可回拨，回拨入口与预约入口一致，若双方未再次沟通，不予退款。\n3.医生在预约时间段未联系您，则全额退款。</string>
+    <string name="selected_pay_type">选择支付方式</string>
+    <string name="wechat_pay_type">微信支付</string>
+    <string name="alipay_pay_type">支付宝</string>
+    <string name="title_unknown_medic_feedback">未知药品反馈</string>
+
+    <!--未知药品反馈-->
+    <string name="tip_unkonwn_medic_picture">请将您的药品拍照上传，最多可上传9张</string>
+    <string name="tip_camera_add">添加照片</string>
+    <string name="unknown_medic">未知药品</string>
+    <string name="unknown">未知</string>
+    <string name="voice_lattice_title">语音文字发送中,请不要离开</string>
+
+    <!--文字语音-->
+    <string name="text_sending">文字发送中...</string>
+    <string name="text_send_success">文字发送成功</string>
+    <string name="text_send_fail">文字发送失败</string>
+    <string name="voice_sending">语音发送中...</string>
+    <string name="voice_send_success">语音发送成功</string>
+    <string name="voice_send_fail">语音发送失败</string>
+    <string name="tip_province_selected">请选择省</string>
+
+    <!-- 省市区选择 -->
+    <string name="tip_city_selected">请选择市</string>
+    <string name="tip_region_selected">请选择区</string>
+    <!--  我的病历 -->
+    <string name="title_my_diagnose">我的病历</string>
+    <string name="tab_name_my_diagnose">我的诊断</string>
+    <string name="tab_name_my_analysis">化验检查</string>
+    <string name="tab_name_my_picture">我的图片</string>
+    <string name="diagnose_my_bill">我的单据</string>
+    <string name="diagnose_basic_info">基本信息</string>
+    <string name="other_diagnosis">其它诊断</string>
+    <string name="four_metabolic_diseases">四大代谢疾病</string>
+    <string name="medical_history">家族史&#160;吸烟史&#160;饮酒史&#160;过敏史</string>
+    <string name="patient_height">身高: %1$s</string>
+    <string name="patient_weight">体重: %1$s</string>
+    <string name="patient_waist">腰围:&#160; %1$s</string>
+    <string name="patient_bmi">BMI:&#160; %1$s</string>
+    <string name="patient_address">详细地址:&#160; %1$s</string>
+
+    <string name="item_high_blood_pressure_illness">1.高血压</string>
+    <string name="item_diabetes_illness">2.糖尿病</string>
+    <string name="item_high_blood_fat_illness">3.高脂血症</string>
+    <string name="item_high_uric_acid_illness">4.高尿酸血症</string>
+
+    <string name="item_other_nephrotic_illness">1.肾功能不全</string>
+    <string name="item_other_renal_artery_stenosis">2.肾动脉狭窄</string>
+    <string name="item_other_sleep_apnea">3.睡呼吸眠暂停综合症</string>
+    <string name="item_other_duodenal_ulcer">4.胃-十二指肠溃疡</string>
+    <string name="item_other_pylori_illness">5.幽门螺杆菌感染</string>
+
+
+    <string name="item_family_history">1.家族史:</string>
+    <string name="item_smoking_history">2.吸烟史:</string>
+    <string name="item_peer_illness_history">3.饮酒史:</string>
+    <string name="item_allergy_history">4.过敏史:</string>
+
+    <string name="item_father">父亲</string>
+    <string name="item_mother">母亲</string>
+    <string name="item_brother">兄妹</string>
+    <string name="no_illness">无</string>
+    <string name="diagnosis_patinet_illness_cure_status">治愈情况:</string>
+    <string name="diagnosis_patinet_illness_cure">治愈</string>
+    <string name="diagnosis_patinet_illness_not_cure">未治愈</string>
+    <string name="diagnosis_patinet_illness_unknow">不详</string>
+    <string name="diagnosis_patient_not_illness">未患此病</string>
+    <string name="diagnosis_patient_not_smoking">无吸烟史</string>
+    <string name="diagnosis_patient_not_allergy">无</string>
+    <string name="time_unknown">时间不详</string>
+    <string name="hospital_unknown">医院不详</string>
+    <string name="size_unknown">尺寸不详</string>
+    <!--    我的病历 end-->
+
+    <!--    我的积分 start-->
+    <string name="user_credit_score_title">我的积分</string>
+
+    <string name="user_credit_score_not_enough_change">不足10元,无法提现</string>
+    <string name="credit_score">积分</string>
+    <string name="credit_score_change">兑换</string>
+    <string name="user_bind_card">去绑定</string>
+    <string name="user_to_change">确认兑换</string>
+    <string name="user_today_get_score">今日获得积分:%1$s</string>
+    <string name="user_to_change_result">可折现: ￥%1$s</string>
+    <string name="user_to_credit_score_rule">积分规则</string>
+    <string name="user_to_change_rule">兑换规则</string>
+    <string name="user_current_change_activity">当前兑换活动</string>
+    <string name="user_current_change_activity_rule"> %1$s积分=1元</string>
+    <string name="user_change_history">兑换历史</string>
+    <string name="user_current_change_money">您当前的积分%1$s,可兑换￥%2$s</string>
+    <string name="user_has_not_bind_card">您还未绑定银行卡</string>
+    <string name="user_data_init_ing">数据初始化中,请稍后...</string>
+    <string name="user_credit_score_change_success">兑换成功\n将于72小时内到账</string>
+    <string name="user_to_credit_score_content">1、在对话中回答医生的问题，每日可获得1积分;\n注: 回答单句超过5个字算作有效回答;\n2、每日吃药打卡,通过药盒服药
+    或在服药页面手动核实，每次可获得1积分，单日最多3积分；\n3、在对话中上传自己的化验单/检查单,护士审核合格后可获得1积分，单日最多5积分</string>
+    <string name="user_to_change_rule_content">兑换规则请以兑换活动为准</string>
+    <string name="user_current_has_no_change_activity">当前暂无兑换活动</string>
+    <string name="user_current_has_no_change_history">当前暂无兑换历史</string>
+    <string name="user_current_user_score">使用了%1$s积分</string>
+    <string name="user_current_get_money">兑换了%1$s元人民币</string>
+
+    <!--    我的积分 end-->
+
+    <!--    绑定医生 start-->
+    <string name="user_bind_doctor_title">绑定医生</string>
+    <string name="user_bind_doctor_bottom_tip">扫描医生二维码: 绑定医生</string>
+    <string name="user_input_doctor_id_title">输入医生识别码: 绑定医生</string>
+    <!--    绑定医生 end-->
+
+    <!-- 临床试验调查表 -->
+    <string name="cro_inquiry_received_time">收到调查表时间：</string>
+    <string name="cro_inquiry_submit_time">提交调查表时间：</string>
+    <string name="status_over">已结束</string>
+    <string name="special_over">提前结束</string>
+    <string name="early_exit">提前退出</string>
+    <string name="title_early_over">提前结束</string>
+    <string name="tip_operator">操作人:&#160;&#160;&#160;&#160;</string>
+    <string name="tip_operator_over_time">结束时间:&#160;&#160;&#160;&#160;</string>
+    <string name="cro_auto_over_time">自动结束时间:</string>
+    <string name="tip_cro_over">*</string>
+    <string name="tip_cro_over_cause">提前结束原因:</string>
+    <string name="cro_over_input_limit">%1$d/100</string>
+    <string name="hint_over_cause">请输入提前结束原因</string>
+
+    <!-- 开始服药 -->
+    <string name="start_take_medic_title">开始服药</string>
+    <string name="take_medic_action_success">完成服药</string>
+    <!-- 开始服药 -->
+
+
+    <!-- 实名认证 -->
+    <string name="user_name_certification_title">身份证正面照片(人像面)</string>
+    <string name="user_name_certification_tip">请上传身份证正面照片</string>
+    <string name="user_real_name">真实姓名</string>
+    <string name="user_card_num">身份证号</string>
+    <string name="user_name_certification_next">下一步，人脸采集</string>
+    <string name="user_name_certification_tip_0">请检查真实姓名与身份证号无误后进入下一步人脸采集</string>
+    <!-- 实名认证 -->
+
+    <!-- 人脸验证 -->
+    <string name="user_face_validation_title">人脸验证</string>
+    <string name="user_touch_to_focus">触摸屏幕对焦</string>
+    <string name="user_photo_crop_fail">裁剪失败</string>
+    <string name="user_photo_no_flash">该设备不支持闪光灯</string>
+    <string name="user_check_name_id_card_correct">请检查身份证号与姓名是否正确</string>
+    <string name="user_face_validation_tip">请将身份证四角与人像轮廓对准</string>
+    <!-- 人脸验证 -->
+
+
+    <!-- 新功能引导页 -->
+    <string name="new_feature_guide_content">提醒类消息在对话这里了！\n如您有急症，系统也会通过识别语言\n并及时提醒您就医！
+
+</string>
+
+    <string-array name="calendar_week">
+        <item>日</item>
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+    </string-array>
 </resources>

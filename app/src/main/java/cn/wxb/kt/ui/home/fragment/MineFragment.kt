@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider
 import cn.wxb.kt.R
 import cn.wxb.kt.databinding.FragmentMineBinding
 import cn.wxb.kt.ui.home.viewmodel.MineViewModel
+import cn.wxb.kt.ui.mine.activity.PatientCroListActivity
 import cn.wxb.kt.widget.CustomObserver
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ToastUtils
@@ -50,7 +51,7 @@ class MineFragment : Fragment() {
         mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mine, container, false)
         mBinding.vm =viewModel
         mBinding.lifecycleOwner = this
-        lifecycle.addObserver(CustomObserver("mine"))
+//        lifecycle.addObserver(CustomObserver("mine"))
         return mBinding.root
     }
 
@@ -61,6 +62,7 @@ class MineFragment : Fragment() {
     fun init(view:View){
         tvMineContent.setOnClickListener {
             viewModel.updateTitle("ok")
+            PatientCroListActivity.actionStart(activity!!)
         }
         tvTitle.setOnClickListener {
             viewModel.updateTitle("python")
