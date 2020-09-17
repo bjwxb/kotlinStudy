@@ -64,6 +64,7 @@ dependencies {
 
     //androidx
     api rootProject.ext.androidxs
+    implementation 'androidx.paging:paging-runtime:2.1.2'
     api 'androidx.viewpager2:viewpager2:1.1.0-alpha01'
     //material-dialogs
     api rootProject.ext.dependencies["material-dialogs-core"]

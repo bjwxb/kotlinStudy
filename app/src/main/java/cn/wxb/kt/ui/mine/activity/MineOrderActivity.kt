@@ -16,6 +16,7 @@ import cn.wxb.kt.ui.mine.viewmodel.MineOrderViewModel
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.chad.library.adapter.base.listener.OnItemClickListener
+import com.chad.library.adapter.base.loadmore.SimpleLoadMoreView
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_mine_order.*
 
@@ -23,6 +24,7 @@ class MineOrderActivity : BaseActivity<MineOrderViewModel, ViewDataBinding>(), S
     private var list = mutableListOf<OrderApiInfo>()
     private var page = 1
     private val pageSize = "10"
+
     private val adapter by lazy {
         OrderListAdapter(list)
     }
@@ -46,8 +48,10 @@ class MineOrderActivity : BaseActivity<MineOrderViewModel, ViewDataBinding>(), S
         adapter.loadMoreModule.setOnLoadMoreListener {
             getData()
         }
+        //adapter.loadMoreModule.loadMoreView = SimpleLoadMoreView()
         rvOrderList.adapter = adapter
         rvOrderList.layoutManager = LinearLayoutManager(this)
+
 
         adapter.setOnItemClickListener { adapter, view, position ->
             run {
@@ -58,9 +62,7 @@ class MineOrderActivity : BaseActivity<MineOrderViewModel, ViewDataBinding>(), S
         viewModel.mOrderBean.observe(this, Observer {
             it.orderApiInfo?.let {
                 LogUtils.e(Gson().toJson(it))
-                LogUtils.e("${list.size} -------${page}-------- ${it.size}")
                 list.addAll(it)
-                LogUtils.e("${list.size} ========${page}========= ${it.size}")
             }
 
             swipeRefresh.isRefreshing = false

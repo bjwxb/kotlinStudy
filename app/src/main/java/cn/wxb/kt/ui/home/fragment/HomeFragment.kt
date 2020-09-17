@@ -9,6 +9,7 @@ import cn.wxb.kt.ui.home.activity.PatientListActivity
 import cn.wxb.kt.ui.home.viewmodel.MainViewModel
 import cn.wxb.kt.ui.mine.activity.MineOrderActivity
 import com.blankj.utilcode.util.LogUtils
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
@@ -44,6 +45,9 @@ class HomeFragment : BaseFragment<MainViewModel, FragmentHomeBinding>() {
     }
 
     private fun init(){
+        viewModel.mPatientInfo.observe(this, Observer {
+            LogUtils.e(Gson().toJson(it))
+        })
         btnModifyVmValue.setOnClickListener {
             viewModel.name.value = "java"
         }

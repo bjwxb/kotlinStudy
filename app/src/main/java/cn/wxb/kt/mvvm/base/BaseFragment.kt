@@ -1,5 +1,6 @@
 package cn.wxb.kt.mvvm.base
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -36,6 +37,12 @@ abstract class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> : Fragment
 
     private var dialog: MaterialDialog? = null
 
+    lateinit var mContext:Context
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        this.mContext = context
+    }
 
     override fun onCreateView(
             inflater: LayoutInflater,

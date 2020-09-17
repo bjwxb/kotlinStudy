@@ -15,8 +15,6 @@ open class BaseApplication : Application() {
 
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
-        MVVM.install(GlobalConfig().apply {
-            viewModelFactory = ViewModelFactory()
-        })
+        MVVM.install(GlobalConfig())
     }
 }

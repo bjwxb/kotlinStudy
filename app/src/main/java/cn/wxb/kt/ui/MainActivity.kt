@@ -14,6 +14,7 @@ import cn.wxb.kt.ui.home.viewmodel.MainViewModel
 import cn.wxb.kt.widget.CustomObserver
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ToastUtils
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -40,8 +41,6 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
     override fun initView(savedInstanceState: Bundle?) {
         lifecycle.addObserver(CustomObserver())//测试activity生命周期监听
         mBinding?.vm = viewModel
-
-//        viewModel.getPatientInfo()
     }
 
     override fun initData() {
@@ -51,7 +50,7 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
         transaction.add(R.id.flContainer, medicFragment)
         transaction.add(R.id.flContainer, mineFragment)
         transaction.commit()
-        showHomeFragment()
+//        showHomeFragment()
 
         tvHome.setOnClickListener{
             showHomeFragment()
@@ -72,7 +71,10 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
             ToastUtils.showShort(viewModel.name.value)
         })
 
-
+        viewModel.mPatientInfo.observe(this, Observer {
+            LogUtils.e(">>>>>>>>>>>>>>>>>>")
+        })
+        viewModel.getPatientInfo()
     }
 
 

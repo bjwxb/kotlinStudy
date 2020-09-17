@@ -26,6 +26,7 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
     }
 
     override fun initData() {
+        val str = btnLogin.text
         btnLogin.setOnClickListener {
             val map: MutableMap<String, String> = HashMap()
             map["grant_type"] = "password"
@@ -33,7 +34,6 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
             map["username"] = "13651269612"
             map["password"] = "123456"
             map["device_type"] = "android"
-
             viewModel.getLoginToken(map).observe(this, Observer {
                 jump2Main()
             })
@@ -48,6 +48,6 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
     private fun jump2Main(){
 //        MainActivity.actionStart(this)
         MainActivityV2.actionStart(this)
-        finish()
+//        finish()
     }
 }
