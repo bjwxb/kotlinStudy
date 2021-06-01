@@ -30,6 +30,6 @@ class App : Application() {
         super.onCreate()
         app = this;
         registerActivityLifecycleCallbacks(ActivityManager.getInstance())
-        //RetrofitUtils.init()
+//        RetrofitUtils.init()
     }
 }

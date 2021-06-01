@@ -13,10 +13,11 @@ import okhttp3.Response
 class HeaderInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val original = chain.request()
-        if (original.url().toString().contains("v0/oauth/token")) {
+        if (original.url().toString().contains("user/token")) {
             val request = original.newBuilder()
                     //Basic ZG9jdG9yX3dlYjo= 醫生端
-                .addHeader("Authorization", "Basic cGF0aWVudF9hcHA6")
+//                .addHeader("Authorization", "Basic cGF0aWVudF9hcHA6")
+                .addHeader("xzl-client-id", "xzl-android-patient")
                 .build()
             return chain.proceed(request)
         } else if (original.url().toString().contains("v0/")) {
@@ -25,9 +26,10 @@ class HeaderInterceptor : Interceptor {
             val request = original.newBuilder()
                 .addHeader("Connection", "Keep-Alive")
                 .addHeader("relationRef", "")
+                .addHeader("xzl-client-id", "xzl-android-patient")
                 .addHeader(
                     "Authorization",
-                    "Bearer " + loginTokenDao.getAccessToken().access_token
+                    "Bearer " + "loginTokenDao.getAccessToken().access_token"
                 )
                 .build()
             return chain.proceed(request)

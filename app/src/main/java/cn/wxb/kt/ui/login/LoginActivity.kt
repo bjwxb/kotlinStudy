@@ -6,10 +6,14 @@ import androidx.lifecycle.Observer
 import cn.wxb.kt.R
 import cn.wxb.kt.databinding.ActivityLoginBinding
 import cn.wxb.kt.mvvm.base.BaseActivity
-import cn.wxb.kt.ui.MainActivity
 import cn.wxb.kt.ui.home.activity.MainActivityV2
+import com.blankj.utilcode.util.LogUtils
 import kotlinx.android.synthetic.main.activity_login.*
+import okhttp3.MediaType
+import okhttp3.RequestBody
+import org.json.JSONObject
 import java.util.*
+
 
 /**
  * 描述: 登录页面
@@ -29,13 +33,19 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
         val str = btnLogin.text
         btnLogin.setOnClickListener {
             val map: MutableMap<String, String> = HashMap()
-            map["grant_type"] = "password"
-            map["device_token"] = "1111111111111111111"
-            map["username"] = "13651269612"
+            map["deviceToken"] = "1111111111111111111"
+            map["account"] = "13651269612"
             map["password"] = "123456"
-            map["device_type"] = "android"
-            viewModel.getLoginToken(map).observe(this, Observer {
-                jump2Main()
+            map["deviceType"] = "ANDROID"
+            map["authType"] = "password_type"
+            val requestBody = RequestBody.create(
+                MediaType.parse("application/json; charset=utf-8"),
+                JSONObject(map).toString()
+            )
+
+            viewModel.getLoginToken(requestBody).observe(this, Observer {
+                LogUtils.e(it)
+//                jump2Main()
             })
         }
 

@@ -7,21 +7,17 @@ package cn.wxb.kt.common
  * 日期: 2020/4/30 16:30
  */
 object Constant {
-    const val BASE_URL = "https://api.test.xzlcorp.com/v0/"
+    const val BASE_URL = "https://napi.xinzhili.cn/"
 
     object URL {
         //login token
-        const val OAUTH_TOKEN = "oauth/token"
+        const val OAUTH_TOKEN = "user/token"
         //获取患者信息
         const val PATIENT_INFO = "patient/init"
         //CRO临床试验列表
         const val PATIENT_CRO_LIST = "patient/clinical/project"
         //我的订单列表
         const val MINE_ORDER_LIST = "patient/business/order"
-        //获取患者列表
-        const val DOCTOR_PATIENT_LIST = "doctor/user/patient"
-        //临床试验项目列表
-        const val DOCTOR_CRO_PROJECT_LIST = "doctor/clinical/project/doctor/{userId}"
     }
 
     object HttpCode {

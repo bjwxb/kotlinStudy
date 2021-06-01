@@ -1,9 +1,6 @@
 package cn.wxb.kt.data.repo
 
 import cn.wxb.kt.app.base.BaseResult
-import cn.wxb.kt.data.db.dao.LoginTokenDao
-import cn.wxb.kt.data.db.dao.PatientInfoDao
-import cn.wxb.kt.data.http.LoginNetwork
 import cn.wxb.kt.data.http.PatientCroNetwork
 import cn.wxb.kt.mvvm.base.BaseModel
 import cn.wxb.kt.network.entity.PatientCroBean

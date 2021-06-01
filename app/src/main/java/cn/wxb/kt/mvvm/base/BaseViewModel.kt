@@ -53,7 +53,6 @@ open class BaseViewModel : AndroidViewModel(Utils.getApp()), LifecycleObserver{
             isShowDialog: Boolean = true
     ) {
         if (isShowDialog) {
-            LogUtils.e("-----------------------")
             defUI.showDialog.call()
         }
         launchUI {
@@ -63,7 +62,6 @@ open class BaseViewModel : AndroidViewModel(Utils.getApp()), LifecycleObserver{
                     },
                     { error(it) },
                     {
-                        LogUtils.e("22222222222222222222")
                         defUI.dismissDialog.call()
                         complete()
                     }

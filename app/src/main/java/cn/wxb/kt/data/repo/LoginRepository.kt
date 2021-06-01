@@ -11,6 +11,7 @@ import cn.wxb.kt.network.entity.DoctorBean
 import cn.wxb.kt.network.entity.LoginToken
 import cn.wxb.kt.network.entity.PatientInfo
 import com.blankj.utilcode.util.LogUtils
+import okhttp3.RequestBody
 
 /**
  * 描述:
@@ -22,11 +23,11 @@ class LoginRepository(private val netWork: LoginNetwork,
                       private val loginTokenLocalData : LoginTokenDao,
                       private val patientInfoLocalData :PatientInfoDao):BaseModel() {
 
-    suspend fun getLoginToken(map:Map<String, String>): LoginToken {
-        val token = netWork.getLoginToken(map)
+    suspend fun getLoginToken(body: RequestBody): BaseResult<LoginToken> {
+        val ret = netWork.getLoginToken(body)
         loginTokenLocalData.deleteAll()
-        loginTokenLocalData.insertData(token)
-        return token
+        loginTokenLocalData.insertData(ret.data)
+        return ret
     }
 
     suspend fun getPatientInfo(): BaseResult<PatientInfo> {

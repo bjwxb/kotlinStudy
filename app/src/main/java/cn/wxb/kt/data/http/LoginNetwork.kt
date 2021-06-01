@@ -3,6 +3,7 @@ package cn.wxb.kt.data.http
 import cn.wxb.kt.network.api.HomeService
 import cn.wxb.kt.network.api.LoginService
 import cn.wxb.kt.util.RetrofitClient
+import okhttp3.RequestBody
 
 /**
  * 描述:
@@ -13,7 +14,7 @@ import cn.wxb.kt.util.RetrofitClient
 class LoginNetwork {
     private val mService by lazy { RetrofitClient.getInstance().create(LoginService::class.java) }
 
-    suspend fun getLoginToken(map: Map<String, String>) = mService.getToken(map)
+    suspend fun getLoginToken(body: RequestBody) = mService.getToken(body)
 
     suspend fun getPatientInfo() = mService.getPatientInfo()
 

@@ -11,6 +11,7 @@ import cn.wxb.kt.network.entity.PatientInfo
 import cn.wxb.kt.util.InjectorUtil
 import cn.wxb.kt.util.RetrofitClient
 import com.blankj.utilcode.util.LogUtils
+import okhttp3.RequestBody
 
 /**
  * 描述:
@@ -36,15 +37,15 @@ class LoginViewModel : BaseViewModel(){
         InjectorUtil.getLoginRepository()
     }
 
-    private val mLoginToken = MutableLiveData<LoginToken>()
+    private val mLoginToken = MutableLiveData<BaseResult<LoginToken>>()
 
     private val mPatientInfo = MutableLiveData<BaseResult<PatientInfo>>()
 
-    fun getLoginToken(map:Map<String, String>):MutableLiveData<BaseResult<PatientInfo>>{
+    fun getLoginToken(body: RequestBody):MutableLiveData<BaseResult<LoginToken>>{
         launchGo({
-            mLoginToken.value = loginRepository.getLoginToken(map)
-            mPatientInfo.value = loginRepository.getPatientInfo()
+            mLoginToken.value = loginRepository.getLoginToken(body)
+//            mPatientInfo.value = loginRepository.getPatientInfo()
         }, isShowDialog = true)
-        return mPatientInfo
+        return mLoginToken
     }
 }

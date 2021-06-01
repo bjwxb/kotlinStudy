@@ -7,10 +7,8 @@ import cn.wxb.kt.network.entity.DoctorBean
 import cn.wxb.kt.network.entity.LoginToken
 import cn.wxb.kt.network.entity.PatientInfo
 import io.reactivex.rxjava3.core.Observable
-import retrofit2.http.FieldMap
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.GET
-import retrofit2.http.POST
+import okhttp3.RequestBody
+import retrofit2.http.*
 
 /**
  * 描述:
@@ -20,9 +18,8 @@ import retrofit2.http.POST
  */
 interface LoginService {
     //获取授权token
-    @FormUrlEncoded
     @POST(Constant.URL.OAUTH_TOKEN)
-    suspend fun getToken(@FieldMap map: Map<String, String>): LoginToken
+    suspend fun getToken(@Body body: RequestBody): BaseResult<LoginToken>
 
     //获取授权token
     @FormUrlEncoded

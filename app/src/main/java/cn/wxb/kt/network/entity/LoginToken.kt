@@ -12,7 +12,7 @@ import androidx.room.PrimaryKey
  */
 @Entity(tableName = "LoginToken")
 data class LoginToken(
-    var access_token : String,
+    var accessToken : String,
     var refresh_token : String,
     var uid : String,
     var error_description : String?
