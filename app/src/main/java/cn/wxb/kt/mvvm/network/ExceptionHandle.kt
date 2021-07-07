@@ -26,7 +26,7 @@ object ExceptionHandle {
             val error = e.response()?.errorBody()?.string()
             if (null != error){
                 val loginToken = Gson().fromJson(error, LoginToken::class.java)
-                val errorDesc = loginToken.error_description
+                val errorDesc = "login error"
                 if (null != errorDesc){
                     ex = ResponseThrowable(errorDesc, e)
                 } else {

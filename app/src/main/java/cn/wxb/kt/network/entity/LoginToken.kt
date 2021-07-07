@@ -12,11 +12,55 @@ import androidx.room.PrimaryKey
  */
 @Entity(tableName = "LoginToken")
 data class LoginToken(
-    var accessToken : String,
-    var refresh_token : String,
-    var uid : String,
-    var error_description : String?
-) {
+    val accessToken: String,
+    val wcl: List<Wcl>,
+    val yxRegister: YxRegister
+){
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0
 }
+
+data class Wcl(
+    val ns: Ns,
+    val roles: List<Role>,
+    val wcId: String
+)
+
+data class YxRegister(
+    val accid: String,
+    val token: String
+)
+
+data class Ns(
+    val id: String
+)
+
+data class Role(
+    val id: String,
+    val interval: Interval,
+    val labels: List<Any>,
+    val rsConfig: RsConfig,
+    val subject: Subject
+)
+
+data class Interval(
+    val start: Long
+)
+
+data class RsConfig(
+    val account: String,
+    val clientId: String,
+    val rscId: String,
+    val status: Int,
+    val swOwnerPricing: Boolean,
+    val swOwnerWm: Boolean
+)
+
+data class Subject(
+    val age: Int,
+    val bmi: String,
+    val id: String,
+    val uuCode: String
+)
+
+

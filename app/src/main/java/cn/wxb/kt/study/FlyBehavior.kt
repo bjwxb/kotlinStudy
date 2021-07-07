@@ -22,3 +22,20 @@ class Bird : FlyBehavior{
     override fun fly() {//重写方法
     }
 }
+
+fun main() {
+    tableSizeFor(17)
+}
+
+//找到大于等于cap的最小的2的幂
+fun tableSizeFor(cap:Int) {
+    var i = cap - 1;
+
+    i = i or (i ushr 1)
+    i = i or (i ushr 2)
+    i = i or (i ushr 4)
+    i = i or (i ushr 8)
+    i = i or (i ushr 16)
+
+    print("---------- ${i+1}")
+}

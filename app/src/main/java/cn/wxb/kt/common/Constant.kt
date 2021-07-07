@@ -13,7 +13,7 @@ object Constant {
         //login token
         const val OAUTH_TOKEN = "user/token"
         //获取患者信息
-        const val PATIENT_INFO = "patient/init"
+        const val PATIENT_INFO = "user/wcl_details"
         //CRO临床试验列表
         const val PATIENT_CRO_LIST = "patient/clinical/project"
         //我的订单列表

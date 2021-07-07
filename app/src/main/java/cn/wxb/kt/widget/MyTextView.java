@@ -30,6 +30,7 @@ public class MyTextView extends androidx.appcompat.widget.AppCompatTextView {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
+
         LogUtils.e("x = " + event.getX() + " , y = " + event.getY()
            + "  , rawX = " + event.getRawX() + " , rawY = " + event.getRawY() + " " +
                 ">> getTranslationX = "  +  getTranslationX() + " , getTranslationY = " +getTranslationY());

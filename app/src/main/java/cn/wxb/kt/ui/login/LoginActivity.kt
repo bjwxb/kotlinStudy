@@ -6,6 +6,7 @@ import androidx.lifecycle.Observer
 import cn.wxb.kt.R
 import cn.wxb.kt.databinding.ActivityLoginBinding
 import cn.wxb.kt.mvvm.base.BaseActivity
+import cn.wxb.kt.network.bean.request.LoginRequestBean
 import cn.wxb.kt.ui.home.activity.MainActivityV2
 import com.blankj.utilcode.util.LogUtils
 import kotlinx.android.synthetic.main.activity_login.*
@@ -43,9 +44,15 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
                 JSONObject(map).toString()
             )
 
+            val bean = LoginRequestBean()
+            bean.deviceToken = "11111111111"
+            bean.account = "13651269612"
+            bean.password = "123456"
+            bean.deviceType = "ANDROID"
+
             viewModel.getLoginToken(requestBody).observe(this, Observer {
                 LogUtils.e(it)
-//                jump2Main()
+                jump2Main()
             })
         }
 

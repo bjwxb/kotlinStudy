@@ -158,7 +158,6 @@ open class BaseViewModel : AndroidViewModel(Utils.getApp()), LifecycleObserver{
                 error(ExceptionHandle.handleException(e))
             } finally {
                 complete()
-                LogUtils.e("3333333333333333333333333")
                 defUI.dismissDialog.call()
             }
         }

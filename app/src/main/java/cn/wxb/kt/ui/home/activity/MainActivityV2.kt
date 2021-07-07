@@ -68,7 +68,7 @@ class MainActivityV2 : BaseActivity<MainViewModel, ViewDataBinding>() {
         vpContent.registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
-                LogUtils.e(">>>>>>>>>>> position = " + position)
+                LogUtils.e(">>>>>>>>>>> position = $position")
             }
         })
 
