@@ -5,11 +5,11 @@ import androidx.lifecycle.Observer
 import cn.wxb.kt.R
 import cn.wxb.kt.databinding.FragmentHomeBinding
 import cn.wxb.kt.mvvm.base.BaseFragment
-import cn.wxb.kt.ui.home.activity.PatientListActivity
 import cn.wxb.kt.ui.home.viewmodel.MainViewModel
 import cn.wxb.kt.ui.mine.activity.MineOrderActivity
 import com.blankj.utilcode.util.LogUtils
 import com.google.gson.Gson
+import io.flutter.embedding.android.FlutterActivity
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
@@ -54,7 +54,12 @@ class HomeFragment : BaseFragment<MainViewModel, FragmentHomeBinding>() {
 
         tvContent.setOnClickListener {
 //            PatientListActivity.actionStart(activity!!)
-            MineOrderActivity.actionStart(activity!!)
+//            MineOrderActivity.actionStart(activity!!)
+            startActivity(
+                FlutterActivity.withNewEngine()
+                    .initialRoute("route2")
+                    .build(mContext)
+            )
         }
     }
 

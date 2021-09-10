@@ -2,6 +2,8 @@ package cn.wxb.kt
 
 import android.app.Activity
 import android.app.Application
+import androidx.lifecycle.ProcessLifecycleOwner
+import androidx.lifecycle.lifecycleScope
 import cn.wxb.manager.ActivityManager
 
 /**
@@ -29,6 +31,8 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         app = this;
+        //ProcessLifecycleOwner 可以实现监听app前后台切换同等效果
+        //ProcessLifecycleOwner.get().lifecycle.addObserver(CustomLifecycleObserver());
         registerActivityLifecycleCallbacks(ActivityManager.getInstance())
 //        RetrofitUtils.init()
     }

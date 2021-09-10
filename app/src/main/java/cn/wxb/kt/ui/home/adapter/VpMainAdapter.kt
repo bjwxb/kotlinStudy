@@ -3,10 +3,7 @@ package cn.wxb.kt.ui.home.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import cn.wxb.kt.ui.home.fragment.HealthFragment
-import cn.wxb.kt.ui.home.fragment.HomeFragment
-import cn.wxb.kt.ui.home.fragment.MedicFragment
-import cn.wxb.kt.ui.home.fragment.MineFragment
+import cn.wxb.kt.ui.home.fragment.*
 
 /**
  * 描述:
@@ -18,7 +15,7 @@ class VpMainAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(f
 
     private var mFragmentList: List<Fragment> = listOf(
         HomeFragment.newInstance(),
-        MedicFragment.newInstance(),
+        BlankFragment.newInstance(),
         HealthFragment.newInstance(),
         MineFragment.newInstance()
     )

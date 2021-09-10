@@ -32,7 +32,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [MineFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class MineFragment : Fragment() {
+open class MineFragment : Fragment() {
 
     private lateinit var viewModel:MineViewModel
     private lateinit var mBinding:FragmentMineBinding

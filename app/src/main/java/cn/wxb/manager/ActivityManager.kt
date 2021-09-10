@@ -4,6 +4,9 @@ import android.app.Activity
 import android.app.Application
 import android.os.Bundle
 import com.blankj.utilcode.util.LogUtils
+import okhttp3.HttpUrl
+import okhttp3.OkHttpClient
+import retrofit2.Retrofit
 import java.util.*
 
 /**
@@ -49,6 +52,7 @@ class ActivityManager : Application.ActivityLifecycleCallbacks{
         for (a in activities){
             a.finish()
         }
+
         activities.clear()
     }
 
