@@ -4,6 +4,7 @@ import android.app.Activity
 import android.app.Application
 import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.lifecycle.lifecycleScope
+import cn.wxb.kt.widget.AppObserver
 import cn.wxb.manager.ActivityManager
 
 /**
@@ -35,5 +36,8 @@ class App : Application() {
         //ProcessLifecycleOwner.get().lifecycle.addObserver(CustomLifecycleObserver());
         registerActivityLifecycleCallbacks(ActivityManager.getInstance())
 //        RetrofitUtils.init()
+
+        ProcessLifecycleOwner.get().lifecycle.addObserver(AppObserver());
+
     }
 }

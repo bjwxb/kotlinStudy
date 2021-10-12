@@ -1,6 +1,8 @@
 package cn.wxb.kt.app
 
+import androidx.lifecycle.ProcessLifecycleOwner
 import cn.wxb.kt.mvvm.base.BaseApplication
+import cn.wxb.kt.widget.AppObserver
 import com.blankj.utilcode.util.LogUtils
 
 /**
@@ -17,5 +19,5 @@ class MyApp : BaseApplication() {
 //            isLogSwitch = .DEBUG
             setSingleTagSwitch(true)
         }
-    }
+   }
 }
