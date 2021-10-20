@@ -84,6 +84,7 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
         val transaction = fm.beginTransaction()
         transaction.show(homeFragment)
         transaction.commit()
+
     }
 
     fun showMedicFragment(){
@@ -109,10 +110,6 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
         transaction.hide(medicFragment)
         transaction.hide(mineFragment)
         transaction.commit()
-    }
-
-    override fun onStop() {
-        super.onStop()
     }
 
     override fun onDestroy() {

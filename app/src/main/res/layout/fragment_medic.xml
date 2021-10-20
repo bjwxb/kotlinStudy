@@ -12,8 +12,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/c_f6f6f6"
+        android:background="@color/c_999999"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:gravity="center"
+            android:textColor="@color/red_ff5f4b"
+            android:text="@{vm.name}" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvList"

@@ -33,6 +33,7 @@ abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompa
         super.onCreate(savedInstanceState)
         initViewDataBinding()
         lifecycle.addObserver(viewModel)
+//        lastNonConfigurationInstance
         //注册 UI事件
         registorDefUIChange()
         initView(savedInstanceState)

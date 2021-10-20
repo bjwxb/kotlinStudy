@@ -51,6 +51,10 @@ class MainActivityV2 : BaseActivity<MainViewModel, ViewDataBinding>() {
     override fun layoutId() = R.layout.activity_main_v2
 
     override fun initView(savedInstanceState: Bundle?) {
+//        delegate.createView()
+//        layoutInflater.factory
+//        layoutInflater.factory2
+//        setContentView()
         initVp();
     }
 
@@ -69,6 +73,7 @@ class MainActivityV2 : BaseActivity<MainViewModel, ViewDataBinding>() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 LogUtils.e(">>>>>>>>>>> position = $position")
+//                viewModel.name.value = "activity modify value$position"
             }
         })
 

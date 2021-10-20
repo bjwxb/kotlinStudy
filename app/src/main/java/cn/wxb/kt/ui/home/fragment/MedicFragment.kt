@@ -1,11 +1,13 @@
 package cn.wxb.kt.ui.home.fragment
 
 import android.os.Bundle
+import android.view.View
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import cn.wxb.kt.R
+import cn.wxb.kt.databinding.FragmentMedicBinding
 import cn.wxb.kt.mvvm.base.BaseFragment
 import cn.wxb.kt.mvvm.base.NoViewModel
 import cn.wxb.kt.ui.home.viewmodel.MainViewModel
@@ -18,7 +20,7 @@ import kotlinx.android.synthetic.main.fragment_medic.*
  * 邮箱: wuxiaobo@xinzhili.cn
  * 日期: 2020/6/5 11:02
  */
-class MedicFragment : BaseFragment<NoViewModel, ViewDataBinding>() {
+class MedicFragment : BaseFragment<MainViewModel, FragmentMedicBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,13 +28,20 @@ class MedicFragment : BaseFragment<NoViewModel, ViewDataBinding>() {
         }
     }
 
+    override fun isShareVM(): Boolean {
+        return true;
+    }
 
     override fun layoutId() = R.layout.fragment_medic
 
 
     override fun initView(savedInstanceState: Bundle?) {
+        mBinding?.vm = viewModel
         initRv()
 
+        tvContent.setOnClickListener(View.OnClickListener {
+            viewModel.name.value = "medic modify value"
+        })
     }
 
     private fun initRv(){

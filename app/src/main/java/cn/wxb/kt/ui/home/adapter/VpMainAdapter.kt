@@ -15,7 +15,8 @@ class VpMainAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(f
 
     private var mFragmentList: List<Fragment> = listOf(
         HomeFragment.newInstance(),
-        BlankFragment.newInstance(),
+        MedicFragment.newInstance(),
+//        BlankFragment.newInstance(),
         HealthFragment.newInstance(),
         MineFragment.newInstance()
     )

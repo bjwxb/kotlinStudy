@@ -1,5 +1,6 @@
 package cn.wxb.kt.ui.home.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider
 
 import cn.wxb.kt.R
 import cn.wxb.kt.databinding.FragmentMineBinding
+import cn.wxb.kt.service.TestService
 import cn.wxb.kt.ui.home.viewmodel.MineViewModel
 import cn.wxb.kt.ui.mine.activity.PatientCroListActivity
 import cn.wxb.kt.widget.CustomObserver
@@ -66,6 +68,7 @@ open class MineFragment : Fragment() {
         }
         tvTitle.setOnClickListener {
             viewModel.updateTitle("python")
+            TestService.enqueueWork(context, Intent())
         }
         viewModel.title.observe(viewLifecycleOwner, Observer {
             //ToastUtils.showShort(viewModel.title.value)
