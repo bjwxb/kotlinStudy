@@ -32,8 +32,11 @@ android {
         generateStubs = true
     }
 
-    dataBinding {
-        enabled = true
+//    dataBinding {
+//        enabled = true
+//    }
+    buildFeatures{
+        dataBinding = true
     }
 
     compileOptions {
@@ -84,7 +87,7 @@ dependencies {
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
 
     //kotlin 协程
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3'
     implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
 
     //图片框架
