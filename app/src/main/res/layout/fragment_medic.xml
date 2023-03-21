@@ -14,6 +14,14 @@
         android:layout_height="match_parent"
         android:background="@color/c_999999"
         android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvVideo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:gravity="center"
+            android:background="@color/bg_f0f0f0"
+            android:textColor="@color/red_ff5f4b"
+            android:text="download video" />
 
         <TextView
             android:id="@+id/tvContent"
@@ -21,13 +29,20 @@
             android:layout_height="@dimen/dp_100"
             android:gravity="center"
             android:textColor="@color/red_ff5f4b"
-            android:text="@{vm.name}" />
+            android:text="@{vm.student.name}" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvList"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="200dp"
             android:visibility="gone"/>
+        <cn.wxb.kt.ui.home.fragment.webview.DWebView
+            android:id="@+id/dWebView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </cn.wxb.kt.ui.home.fragment.webview.DWebView>
 
     </LinearLayout>
 </layout>

@@ -1,6 +1,12 @@
 package cn.wxb.kt.ui.login
 
+import android.content.Intent
+import android.graphics.drawable.AnimatedImageDrawable
+import android.graphics.drawable.BitmapDrawable
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
+import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import cn.wxb.kt.R
@@ -8,7 +14,9 @@ import cn.wxb.kt.databinding.ActivityLoginBinding
 import cn.wxb.kt.mvvm.base.BaseActivity
 import cn.wxb.kt.network.bean.request.LoginRequestBean
 import cn.wxb.kt.ui.home.activity.MainActivityV2
+import com.blankj.utilcode.util.GsonUtils
 import com.blankj.utilcode.util.LogUtils
+import com.blankj.utilcode.util.ScreenUtils
 import kotlinx.android.synthetic.main.activity_login.*
 import okhttp3.MediaType
 import okhttp3.RequestBody
@@ -41,7 +49,7 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
             map["authType"] = "password_type"
             val requestBody = RequestBody.create(
                 MediaType.parse("application/json; charset=utf-8"),
-                JSONObject(map).toString()
+                GsonUtils.toJson(map)
             )
 
             val bean = LoginRequestBean()
@@ -50,10 +58,10 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
             bean.password = "123456"
             bean.deviceType = "ANDROID"
 
-            viewModel.getLoginToken(requestBody).observe(this, Observer {
-                LogUtils.e(it)
+//            viewModel.getLoginToken(requestBody).observe(this, Observer {
+//                LogUtils.e(it)
                 jump2Main()
-            })
+//            })
         }
 
         etPhone.addTextChangedListener{
@@ -66,5 +74,53 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
 //        MainActivity.actionStart(this)
         MainActivityV2.actionStart(this)
 //        finish()
+//        val list = ArrayList<Int>()
+//        val gifName = "ic_short_video_sticker_gif1"
+//        val gifId: Int = resources.getIdentifier(gifName, "drawable", packageName)
+//        val drawable = resources.getDrawable(gifId)
+//        LogUtils.e("wxb", ">>>> $drawable")
+//        mBinding?.ivGif?.setImageDrawable(drawable)
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+//            if(drawable is AnimatedImageDrawable){
+////                drawable.repeatCount = 1
+////                drawable.start()
+//                drawable as BitmapDrawable
+//            }
+//        }
+//        LogUtils.e(">>>>>navigationHeight = ${getNavigationHeight()} <<<")
     }
+
+    private fun getNavigationHeight():Int {
+        //decorview = statusBar + content + navigationBar
+        val decorViewHeight: Int = window.decorView.height
+
+        val rootView = findViewById<ViewGroup>(android.R.id.content)
+        val contentHeight: Int = rootView.height
+
+        var height = 0
+        val resourceId = applicationContext.resources.getIdentifier("status_bar_height", "dimen", "android")
+        if (resourceId > 0) {
+            height = applicationContext.resources.getDimensionPixelSize(resourceId)
+        }
+
+        LogUtils.e(">>>> decorViewHeight = $decorViewHeight, contentH = $contentHeight, statusBarH = $height")
+        return decorViewHeight - contentHeight - height
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        LogUtils.e("---------------- $requestCode >>>> $resultCode")
+    }
+
+    var time = 0L
+    override fun onPause() {
+        super.onPause()
+        time = System.currentTimeMillis()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        LogUtils.e(">>>>>> time = ${System.currentTimeMillis() - time}")
+    }
+
 }

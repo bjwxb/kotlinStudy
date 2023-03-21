@@ -78,10 +78,10 @@ class ActivityManager : Application.ActivityLifecycleCallbacks{
         _count--
     }
 
-    override fun onActivityDestroyed(activity: Activity) {
-        removeActivity(activity)
+    override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {
     }
 
-    override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle?) {
+    override fun onActivityDestroyed(activity: Activity) {
+        removeActivity(activity)
     }
 }

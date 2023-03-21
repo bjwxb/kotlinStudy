@@ -1,12 +1,31 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
+
+    <!--圆形进度条-->
+    <declare-styleable name="CircleProgressBar">
+        <attr name="max" format="integer" />
+        <attr name="progress" format="integer" />
+        <attr name="startAngle" format="float" />
+        <attr name="reverse" format="boolean" />
+        <attr name="roundCap" format="boolean" />
+        <attr name="ringWidth" format="dimension" />
+        <attr name="ringColor" format="color" />
+        <attr name="ringBackgroungColor" format="color" />
+        <attr name="innerBackgroundColor" format="color" />
+        <attr name="descText" format="string" />
+        <attr name="descTextSize" format="dimension" />
+        <attr name="descTextColor" format="color" />
+        <attr name="percentTextSize" format="dimension" />
+        <attr name="percentTextColor" format="color" />
+    </declare-styleable>
 
     <!--splash theme-->
     <style name="MainTheme" parent="AppTheme">

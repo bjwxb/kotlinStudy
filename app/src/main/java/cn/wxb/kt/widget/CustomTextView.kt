@@ -15,11 +15,13 @@ import com.blankj.utilcode.util.LogUtils
  * 邮箱: wuxiaobo@xinzhili.cn
  * 日期: 2020/6/22 9:51
  */
-class CustomTextView(context:Context, attributes: AttributeSet, def:Int) :
-    AppCompatTextView(context, attributes, def) {
+class CustomTextView @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null
+) : AppCompatTextView(context, attrs) {
 
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
+        LogUtils.e("wxb", "textView onTouchEvent >>>>>>>> ${event?.action}")
         var x = 0f
         var y = 0f
         var lastX = 0f
@@ -30,21 +32,30 @@ class CustomTextView(context:Context, attributes: AttributeSet, def:Int) :
                 MotionEvent.ACTION_DOWN->{
                     x = event.x
                     y = event.y
+                    LogUtils.d("wxb_tv", ">>>>>> down")
                 }
                 MotionEvent.ACTION_MOVE ->{
                     lastX = x
                     lastY = y
+                    LogUtils.d("wxb_tv", ">>>>>> move move")
                 }
                 MotionEvent.ACTION_UP->{
-
+                    LogUtils.d("wxb_tv", "======== up")
+                }
+                MotionEvent.ACTION_CANCEL -> {
+                    LogUtils.d("wxb_tv", ">>>>>>>   cancel <<<<<<<")
                 }
             }
-            LogUtils.e("x = $x, y = $y,  lastX = $lastX, lastY = $lastY")
+            LogUtils.d("x = $x, y = $y,  lastX = $lastX, lastY = $lastY")
         }
         return super.onTouchEvent(event)
+//        return true//消费事件，不会向上冒泡
     }
 
     override fun dispatchTouchEvent(event: MotionEvent?): Boolean {
+        LogUtils.e("wxb",">>>> TextView dispatchTouchEvent <<<<<<")
         return super.dispatchTouchEvent(event)
+//        return true//消费事件
+//        return false//交给viewGroup的onTouchEvent
     }
 }

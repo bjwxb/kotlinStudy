@@ -45,5 +45,11 @@
             android:text="@{vm.phone}"
             android:layout_height="wrap_content"/>
 
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivGif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
     </LinearLayout>
 </layout>

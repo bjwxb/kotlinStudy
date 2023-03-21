@@ -14,11 +14,16 @@ import cn.wxb.kt.network.entity.PatientInfo
  */
 class MainViewModel : BaseViewModel(){
     val name:MutableLiveData<String> = MutableLiveData()
+    val student:MutableLiveData<Student> = MutableLiveData()
 
     val mPatientInfo:MutableLiveData<PatientInfo> = MutableLiveData()
 
     init {
         name.value = "Hello World"
+        student.value = Student().apply {
+            this.age = 11
+            this.name = "July"
+        }
     }
 
     val mainRepository by lazy {
@@ -35,4 +40,9 @@ class MainViewModel : BaseViewModel(){
     override fun onCleared() {
         super.onCleared()
     }
+}
+
+class Student{
+    var name = ""
+    var age = 10
 }

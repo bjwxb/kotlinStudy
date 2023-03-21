@@ -4,13 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent">
+    android:background="@color/bg_f4f4f4"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/tvContent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="@dimen/sp_20"
-        android:gravity="center"/>
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="click"
+        android:textSize="@dimen/sp_20" />
+
+    <cn.wxb.kt.widget.CircleProgressBar
+        android:id="@+id/progress"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        app:ringColor="@color/red_ff5f4b"
+        app:ringWidth="8dp"
+        app:ringBackgroungColor="@color/c_e0e0e0"
+        app:innerBackgroundColor="@color/white"
+        app:descTextColor="@color/red_ff5f4b"
+        app:descText="完成进度"
+        app:roundCap="false"
+        app:startAngle="270"
+        app:descTextSize="@dimen/text_size_12sp"
+        app:percentTextColor="@color/black"
+        app:percentTextSize="40sp"
+        />
 
 </LinearLayout>

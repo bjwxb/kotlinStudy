@@ -134,7 +134,7 @@ abstract class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> : Fragment
     /**
      * 打开等待框
      */
-    private fun showLoading() {
+    fun showLoading() {
         if (dialog == null) {
             dialog = context?.let {
                 MaterialDialog(it)
@@ -151,7 +151,7 @@ abstract class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> : Fragment
     /**
      * 关闭等待框
      */
-    private fun dismissLoading() {
+    fun dismissLoading() {
         dialog?.run { if (isShowing) dismiss() }
     }
 

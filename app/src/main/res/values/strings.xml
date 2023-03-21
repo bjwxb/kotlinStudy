@@ -7,6 +7,14 @@
     <!--<string name="app_name">心之力</string>-->
     <string name="app_home_name">心之力</string>
 
+    <string name="header_to_refresh">松开获取最新数据</string>
+    <string name="header_refreshing_text">正在刷新</string>
+    <string name="header_finish_text_">刷新完成</string>
+    <string name="footer_to_load">上拉加载</string>
+    <string name="footer_loading_text">正在加载</string>
+    <string name="footer_finish_text">加载完成</string>
+    <string name="footer_finish_no_more_text">没有更多数据了</string>
+
     <string name="tab_chat">对话</string>
     <string name="tab_home">首页</string>
     <string name="tab_medicine">服药</string>

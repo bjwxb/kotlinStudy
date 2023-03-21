@@ -11,6 +11,7 @@ import cn.wxb.kt.network.entity.PatientInfo
 import cn.wxb.kt.util.InjectorUtil
 import cn.wxb.kt.util.RetrofitClient
 import com.blankj.utilcode.util.LogUtils
+import kotlinx.coroutines.delay
 import okhttp3.RequestBody
 
 /**
@@ -43,6 +44,7 @@ class LoginViewModel : BaseViewModel(){
 
     fun getLoginToken(body: RequestBody):MutableLiveData<BaseResult<LoginToken>>{
         launchGo({
+            delay(2000)
             mLoginToken.value = loginRepository.getLoginToken(body)
 //            mPatientInfo.value = loginRepository.getPatientInfo()
         }, isShowDialog = true)

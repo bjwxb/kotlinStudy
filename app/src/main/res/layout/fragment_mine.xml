@@ -9,7 +9,7 @@
             type="cn.wxb.kt.ui.home.viewmodel.MineViewModel" />
     </data>
 
-    <LinearLayout
+    <cn.wxb.kt.widget.CustomLinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/md_divider_light_theme"
@@ -23,6 +23,32 @@
             android:gravity="center"
             android:text="@{vm.title}" />
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_alipay"/>
+
+        <TextView
+            android:id="@+id/tvVideo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/space_10dp"
+            android:background="@color/red_ff5f4b"
+            android:text="webView video" />
+
+        <TextView
+            android:id="@+id/tvVideoV2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/space_10dp"
+            android:background="@color/red_ff5f4b"
+            android:text="webView video v2" />
+
         <cn.wxb.kt.widget.MyTextView
             android:id="@+id/tvMineContent"
             android:layout_width="wrap_content"
@@ -30,5 +56,22 @@
             android:gravity="center"
             android:text="Hello World"/>
 
-    </LinearLayout>
+        <cn.wxb.kt.widget.CustomTextView
+            android:id="@+id/tvTouch"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="test touch event"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:background="#680010"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+    </cn.wxb.kt.widget.CustomLinearLayout>
 </layout>

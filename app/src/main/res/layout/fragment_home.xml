@@ -20,9 +20,23 @@
         <TextView
             android:id="@+id/tvContent"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
             android:gravity="center"
             android:text="@{vm.name}" />
+
+        <ImageView
+            android:id="@+id/ivTestWH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/red_ff5f4b"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHome"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
 
     </LinearLayout>
 </layout>

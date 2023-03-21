@@ -1,10 +1,13 @@
 package cn.wxb.kt.ui.home.activity
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.MotionEvent
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import cn.wxb.kt.R
@@ -18,10 +21,13 @@ import cn.wxb.kt.ui.home.fragment.HomeFragment
 import cn.wxb.kt.ui.home.fragment.MedicFragment
 import cn.wxb.kt.ui.home.fragment.MineFragment
 import cn.wxb.kt.ui.home.viewmodel.MainViewModel
+import cn.wxb.kt.widget.CustomObserver
 import com.blankj.utilcode.util.LogUtils
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_main_v2.*
+import kotlinx.coroutines.launch
+import java.lang.RuntimeException
 
 /**
  * 描述: mainActivity(viewPage2 + fragment + tabLayout)
@@ -29,7 +35,7 @@ import kotlinx.android.synthetic.main.activity_main_v2.*
  * 邮箱: wuxiaobo@xinzhili.cn
  * 日期: 2020/6/2 11:26
  */
-class MainActivityV2 : BaseActivity<MainViewModel, ViewDataBinding>() {
+public class MainActivityV2 : BaseActivity<MainViewModel, ViewDataBinding>() {
 
     private var mMenuList: List<String> = listOf(
         "首页", "服药", "健康", "我的"
@@ -43,8 +49,8 @@ class MainActivityV2 : BaseActivity<MainViewModel, ViewDataBinding>() {
     )
 
     companion object {
-        fun actionStart(context: Context) {
-            context.startActivity(Intent(context, MainActivityV2::class.java))
+        fun actionStart(context: Activity) {
+            context.startActivityForResult(Intent(context, MainActivityV2::class.java), 1)
         }
     }
 
@@ -55,6 +61,9 @@ class MainActivityV2 : BaseActivity<MainViewModel, ViewDataBinding>() {
 //        layoutInflater.factory
 //        layoutInflater.factory2
 //        setContentView()
+//        lifecycle.addObserver(CustomObserver())
+//        lifecycleScope.launch()
+
         initVp();
     }
 
@@ -83,5 +92,26 @@ class MainActivityV2 : BaseActivity<MainViewModel, ViewDataBinding>() {
 
     override fun initData() {
         viewModel.getPatientInfo()
+    }
+
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+//        LogUtils.e("wxb",">> activity dispatchTouchEvent")
+        return super.dispatchTouchEvent(ev)
+    }
+
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        LogUtils.e("wxb", "======= activity onTouchEvent")
+        return super.onTouchEvent(event)
+    }
+
+    var time = 0L
+    override fun onPause() {
+        super.onPause()
+        time = System.currentTimeMillis()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        LogUtils.e(">>>>>> time = ${System.currentTimeMillis() - time}")
     }
 }

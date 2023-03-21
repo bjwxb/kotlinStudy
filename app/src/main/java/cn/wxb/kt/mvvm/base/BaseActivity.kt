@@ -38,6 +38,7 @@ abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompa
         registorDefUIChange()
         initView(savedInstanceState)
         initData()
+
     }
 
     abstract fun layoutId(): Int

@@ -13,9 +13,12 @@ import cn.wxb.kt.ui.home.fragment.MineFragment
 import cn.wxb.kt.ui.home.viewmodel.MainViewModel
 import cn.wxb.kt.widget.CustomObserver
 import com.blankj.utilcode.util.LogUtils
+import com.blankj.utilcode.util.TimeUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main.*
+import java.lang.RuntimeException
+import java.util.*
 
 /**
  * 描述: 首页-包含数个fragment
