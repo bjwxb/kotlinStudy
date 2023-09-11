@@ -5,9 +5,11 @@ import kotlin.math.max
 
 /**
  * @desc:
+ *      26. 删除有序数组中的重复项
  *      27. 移除元素
  *      35. 搜索插入位置
  *      59. 螺旋矩阵II
+ *      80. 删除有序数组中的重复项 II
  *      88. 合并两个有序数组
  *      209.长度最小的子数组
  *      704. 二分查找
@@ -29,14 +31,21 @@ fun getWeekOfDate(dt: Date): String {
 }
 
 fun main(){
+//    test26()
 //    test27()
 //    test35()
 //    test59()
+//    test80()
 //    test88()
 //    test209()
 //    test704()
-    test977()
-//    test2357()
+//    test977()
+    test2357()
+}
+
+fun test26(){
+    val nums = intArrayOf(1,2,2,2,2,3,4,4,5)
+    println(removeDuplicates(nums))
 }
 
 fun test27(){
@@ -67,8 +76,13 @@ fun test59(){
     }
 }
 
-fun test88(){
+fun test80(){
+    val arr = intArrayOf(1, 1, 1, 2, 2, 2, 3, 3, 4, 5)
+    println(removeDuplicates80(arr))
+    println(arr.toList())
+}
 
+fun test88(){
     val arr1 = intArrayOf(0)
     val m = 0
     val arr2 = intArrayOf(1)
@@ -80,7 +94,7 @@ fun test88(){
 
 fun test209(){
     val nums = intArrayOf(2,3,1,2,4,3)
-    val target = 77
+    val target = 7
     println(minSubArrayLen(target, nums))
 }
 
@@ -100,6 +114,26 @@ fun test2357(){
     println(minimumOperations(nums))
 }
 
+/** 26 start **/
+/**
+ * 26. 删除有序数组中的重复项
+ * 给你一个 升序排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次
+ * ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致 。
+ * @param nums IntArray
+ * @return Int
+ */
+fun removeDuplicates(nums: IntArray): Int {
+    var slow = 0
+    var fast = 1
+    while (fast < nums.size){
+        if(nums[fast] != nums[slow]){
+            nums[++slow] = nums[fast]
+        }
+        fast++
+    }
+    return ++slow
+}
+/** 26 end **/
 
 /**
  * 27. 移除元素
@@ -254,6 +288,34 @@ fun generateMatrix2(n: Int): Array<IntArray> {
     return matrix
 }
 
+
+/** 80 start **/
+/**
+ * 给你一个有序数组 nums ，请你 原地 删除重复出现的元素，使得出现次数超过两次的元素只出现两次 ，返回删除后数组的新长度。
+ * 不要使用额外的数组空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。
+ *
+ * 输入：nums = [1,1,1,2,2,3]
+ * 输出：5, nums = [1,1,2,2,3]
+ * 解释：函数应返回新长度 length = 5, 并且原数组的前五个元素被修改为 1, 1, 2, 2, 3 。 不需要考虑数组中超出新长度后面的元素。
+ * @param nums IntArray
+ * @return Int
+ */
+fun removeDuplicates80(nums: IntArray): Int {
+    val len = nums.size
+    if(len < 3){
+        return len
+    }
+    var slow = 2
+    var fast = 2
+    while (fast < len){
+        if(nums[slow-2] != nums[fast]){
+            nums[slow++] = nums[fast]
+        }
+        fast++
+    }
+    return slow
+}
+/** 80 end **/
 /**
  * 88
  * 给你两个按 非递减顺序 排列的整数数组nums1 和 nums2，另有两个整数 m 和 n ，分别表示 nums1 和 nums2 中的元素数目。
@@ -391,38 +453,16 @@ fun sortedSquares(nums: IntArray): IntArray {
  */
 fun minimumOperations(nums: IntArray): Int {
     var ret = 0
-    do {
-        var min = nums[0]
-        //1. 找到最小的非零元素
-        for((index, i) in nums.withIndex()){
-            if(i < min){
-                if(i != 0){
-                    min = i
-                }
-            }
-        }
-
-        if(min > 0){
+    val len = nums.size
+    nums.sort()
+    for((i, v) in nums.withIndex()){
+        if(v > 0){
             ret++
-            for((index, i) in nums.withIndex()){
-                if(i > 0){
-                    nums[index] = nums[index] - min
-                }
+            for(j in i until len){
+                nums[j] = nums[j] - v
             }
         }
-
-        var isAllNumZero = true
-        for (i in nums){
-            if(i > 0){
-                isAllNumZero = false
-                break
-            }
-        }
-
-        if(isAllNumZero){
-            min = 0
-        }
-    }while(min > 0)
+    }
 
     return ret
 }

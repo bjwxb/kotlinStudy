@@ -3,6 +3,10 @@ package cn.wxb.kt.ui.home.fragment
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import cn.wxb.kt.R
+import com.blankj.utilcode.util.ClickUtils
+import com.blankj.utilcode.util.DebouncingUtils
+import com.blankj.utilcode.util.FileUtils
+
 /**
  * @desc:
  * @author: wuxiaobo
@@ -17,6 +21,7 @@ class TitleAdapter(list:MutableList<String>) : BaseQuickAdapter<String, BaseView
 class ContentAdapter(list:MutableList<String>) : BaseQuickAdapter<String, BaseViewHolder>(R.layout.rv_item_content, list) {
 
     override fun convert(holder: BaseViewHolder, item: String) {
+        
     }
 }
 

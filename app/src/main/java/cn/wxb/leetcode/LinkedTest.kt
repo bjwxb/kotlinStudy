@@ -5,7 +5,9 @@ import java.util.*
 /**
  * @desc: 链表相关
  * 面试题 02.07. 链表相交
+ * 21. 合并两个有序链表
  * 24. 两两交换链表中的节点
+ * 83. 删除排序链表中的重复元素
  * 142. 环形链表 II
  *
  * @author: wuxiaobo
@@ -16,10 +18,26 @@ class LinkedTest {
 
 fun main() {
 //    test0207()
+//    test21()
 //    test24()
-    test142()
-//    test203()
+    test82()
+//    test83()
+//    test142()
+    test203()
 //    test206()
+}
+
+fun test21(){
+    val headA = ListNode(1)
+    headA.next = ListNode(2)
+    headA.next!!.next = ListNode(4)
+
+    val headB = ListNode(1)
+    headB.next = ListNode(3)
+    headB.next!!.next = ListNode(4)
+
+    val ret = mergeTwoLists(headA, headB)
+    print(ret)
 }
 
 fun test24(){
@@ -30,10 +48,37 @@ fun test24(){
 //    var ret = swapPairs(headA)
     var ret = swapPairs2(headA)
     while (ret != null){
-        print("${ret.value} ")
+        print("${ret.`val`} ")
         ret = ret.next
     }
 }
+
+fun test82(){
+    val headA = ListNode(1)
+    headA.next = ListNode(1)
+    headA.next!!.next = ListNode(1)
+    headA.next!!.next!!.next = ListNode(3)
+    headA.next!!.next!!.next!!.next = ListNode(5)
+    var ret = deleteDuplicates82(headA)
+    while(ret != null){
+        print("${ret.`val`} ")
+        ret = ret.next
+    }
+}
+
+fun test83(){
+    val headA = ListNode(1)
+    headA.next = ListNode(1)
+    headA.next!!.next = ListNode(2)
+    headA.next!!.next!!.next = ListNode(4)
+    headA.next!!.next!!.next!!.next = ListNode(4)
+    var ret = deleteDuplicates(headA)
+    while(ret != null){
+        print("${ret.`val`} ")
+        ret = ret.next
+    }
+}
+
 
 fun test142(){
     val head = ListNode(1)
@@ -46,7 +91,7 @@ fun test142(){
     cyc.next?.next?.next?.next?.next = cyc
 
     val ret = detectCycle(head)
-    print("${ret?.value} ")
+    print("${ret?.`val`} ")
 }
 
 fun test0207(){
@@ -62,7 +107,7 @@ fun test0207(){
 
     var ret = getIntersectionNode(headA, headB)
     while(ret!=null){
-        print("${ret.value} ")
+        print("${ret.`val`} ")
         ret = ret.next
     }
 }
@@ -133,6 +178,39 @@ fun getIntersectionNode(headA: ListNode?, headB: ListNode?): ListNode? {
 }
 /** 0207 end **/
 
+/** 21 start **/
+/**
+ * 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+ * @param list1 ListNode?
+ * @param list2 ListNode?
+ * @return ListNode?
+ */
+fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
+    if(null == list1 && null == list2){
+        return null
+    }
+    var l1 = list1
+    var l2 = list2
+    val dummy = ListNode(-1)
+    var tmp:ListNode? = dummy
+    while(l1 != null && l2 != null){
+        val n1 = l1.`val`
+        val n2 = l2.`val`
+        if(n1 < n2){
+            tmp?.next = ListNode(n1)
+            l1 = l1.next
+        } else {
+            tmp?.next = ListNode(n2)
+            l2 = l2.next
+        }
+        tmp = tmp?.next
+    }
+    tmp?.next = l1 ?: l2
+
+    return dummy.next
+}
+/** 21 end **/
+
 /** 24 start **/
 /**
  * 24. 两两交换链表中的节点
@@ -178,3 +256,58 @@ fun swapPairs2(head: ListNode?): ListNode? {
     return next
 }
 /** 24 end **/
+
+/** 82 start **/
+/**
+ * 82. 删除排序链表中的重复元素 II
+ * 给定一个已排序的链表的头 head ， 删除原始链表中所有重复数字的节点，只留下不同的数字 。返回 已排序的链表 。
+ * 输入：head = [1,2,3,3,4,4,5]   输出：[1,2,5]
+ * 输入：head = [1,1,1,2,3]  输出：[2,3]
+ * @param head ListNode?
+ * @return ListNode?
+ */
+fun deleteDuplicates82(head: ListNode?): ListNode? {
+    if(null == head){
+        return null
+    }
+    val dummy = ListNode(-1)
+    var cur:ListNode? = dummy
+    dummy.next = head
+    while(cur?.next != null && cur.next?.next != null){
+        //如果后两个节点值相同，则将当前节点的next指向重复节点的下一个节点
+        if(cur.next!!.`val` == cur.next!!.next!!.`val`){
+            val x = cur.next!!.`val`
+            while(cur.next != null && x == cur.next!!.`val`){
+                cur.next = cur.next?.next
+            }
+        } else {
+            cur = cur.next
+        }
+    }
+
+    return dummy.next
+}
+/** 82 end **/
+
+/** 83 start **/
+/**
+ * 83. 删除排序链表中的重复元素
+ * 给定一个已排序的链表的头 head ， 删除所有重复的元素，使每个元素只出现一次 。返回 已排序的链表 。
+ * 输入：head = [1,1,2]  输出：[1,2]
+ * 输入：head = [1,1,2,3,3]  输出：[1,2,3]
+ */
+fun deleteDuplicates(head: ListNode?): ListNode? {
+    if(head == null){
+        return null
+    }
+    var curr = head
+    while (curr != null){
+        if(curr.`val` == curr.next?.`val`){
+            curr.next = curr.next?.next
+        } else {
+            curr = curr.next
+        }
+    }
+    return head
+}
+/** 83 end **/

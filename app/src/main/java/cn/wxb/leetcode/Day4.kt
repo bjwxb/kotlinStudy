@@ -13,6 +13,13 @@ class Day4 {
 }
 
 fun main() {
+    val a = 13
+    if(a and 1 == 1){
+        println("$a 是奇数")
+    } else {
+        println("$a 是偶数")
+    }
+    println(a and 1 == 0)
     test19()
 //    test203()
 //    test206()
@@ -26,7 +33,7 @@ fun test19(){
     l1.next?.next?.next = ListNode(7)
     var ln = removeNthFromEnd(l1, 1)
     while (ln != null) {
-        print(" ${ln.value} ")
+        print(" ${ln.`val`} ")
         ln = ln.next
     }
 }
@@ -70,7 +77,7 @@ fun test203(){
     l1.next?.next?.next = ListNode(7)
     var ln = removeElements(l1, 7)
     while (ln != null) {
-        print(" ${ln.value} ")
+        print(" ${ln.`val`} ")
         ln = ln.next
     }
 }
@@ -93,7 +100,7 @@ fun removeElements(head: ListNode?, `val`: Int): ListNode? {
     pre.next = head
     var cur:ListNode? = pre
     while (cur?.next != null) {
-        if(cur.next?.value == `val`){
+        if(cur.next?.`val` == `val`){
             cur.next = cur.next?.next
         } else {
             cur = cur.next
@@ -110,7 +117,7 @@ fun test206(){
     l1.next?.next?.next = ListNode(7)
     var ln = reverseList(l1)
     while (ln != null) {
-        print(" ${ln.value} ")
+        print(" ${ln.`val`} ")
         ln = ln.next
     }
 }

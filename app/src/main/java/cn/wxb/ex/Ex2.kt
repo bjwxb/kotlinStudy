@@ -23,13 +23,13 @@ fun main() {
 
 fun testPlus(){
     val list = mutableListOf<Int>(0, 1, 2, 3, 4, 5, 6, 7)
-    var i = 1
+//    var i = 1
 //    val a = i++ // a = 1, i=2
 //    i = i++ //i = 1
 //    val j = i+(2 * i++)
 
-    i = i++ * ++i
-    println(i)
+//    i = i++ * ++i
+//    println(i)
     kotlin.runCatching {
         println(">>>>>>> 1")
         throw NullPointerException()
@@ -48,19 +48,21 @@ fun testPlus(){
     //不论是前++还是后++，它们的共同点就是先自增
     var m = 1
     var n = 1
+    //
     val ret =m++ + ++m + ++n + n++ //8
     println(ret)
 
-//    val arr = Array(10){0}
-//    var i = 1
-//    arr[i++] = i //arr[0] = 2, i=2
-//    arr[++i] = i //arr[3] = 3
-//
-//    arr[i] = i++ //arr[3] = 3
-//    arr[i] = ++i //arr[4] = 5
-//    arr.forEach {
-//        println(it)
-//    }
+    val arr = Array(10){0}
+    var i = 1
+    arr[i++] = i //arr[1] = 2, i=2
+    arr[++i] = i //arr[3] = 3
+
+    arr[i] = i++ //arr[3] = 3
+    arr[i] = ++i //arr[4] = 5
+    println("====================")
+    arr.forEach {
+        println(it)
+    }
 }
 
 fun testFlowOf() = runBlocking() {

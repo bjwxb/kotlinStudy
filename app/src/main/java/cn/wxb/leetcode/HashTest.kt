@@ -13,8 +13,9 @@ class HashTest {
 }
 
 fun main(){
-    test202()
+//    test202()
 //    test242()
+    test349()
 //    test383()
 }
 
@@ -29,6 +30,12 @@ fun test242(){
     println(isAnagram(s, t))
 }
 
+fun test349(){
+    val num1 = intArrayOf(1, 2, 2, 1)
+    val num2 = intArrayOf(2, 2)
+    println(intersection(num1, num2).toList())
+}
+
 fun test383(){
     val s = "aa"
     val t = "aab"
@@ -41,6 +48,17 @@ fun test383(){
  *「快乐数」定义为：对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和，然后重复这个过程直到这个数变为 1，
  * 也可能是 无限循环 但始终变不到 1。如果 可以变为  1，那么这个数就是快乐数。
  * 如果 n 是快乐数就返回 True ；不是，则返回 False 。
+ *
+ * 输入：n = 19
+ * 输出：true
+ * 解释：
+ * 1x1 + 9x9 = 82
+ * 8x8 + 2x2 = 68
+ * 6x6 + 8x8 = 100
+ * 1x1 + 0 + 0 = 1
+ *
+ * 输入：n = 2
+ * 输出：false
  */
 fun isHappy(n: Int): Boolean {
     var slow = n
@@ -62,6 +80,41 @@ private fun getNext(n:Int):Int{
         num /= 10
     }
 
+    return ret
+}
+
+/**
+ * 349 两个数组的交集
+ *
+ * 输入：nums1 = [1,2,2,1], nums2 = [2,2]
+ * 输出：[2]
+ *
+ * 输入：nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+ * 输出：[9,4]
+ * 解释：[4,9] 也是可通过的
+ * @return IntArray
+ */
+fun intersection(nums1: IntArray, nums2: IntArray): IntArray {
+    if(nums1.isEmpty() || nums2.isEmpty()){
+        return intArrayOf()
+    }
+    val hashSet1 = hashSetOf<Int>()
+    val hashSetRet = hashSetOf<Int>()
+    nums1.forEach {
+        hashSet1.add(it)
+    }
+
+    nums2.forEach {
+        if(hashSet1.contains(it)){
+            hashSetRet.add(it)
+        }
+    }
+
+
+    val ret = IntArray(hashSetRet.size)
+    hashSetRet.forEachIndexed { index, i ->
+        ret[index] = i
+    }
     return ret
 }
 

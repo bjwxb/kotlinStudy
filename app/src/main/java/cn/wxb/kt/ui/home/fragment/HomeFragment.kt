@@ -69,8 +69,8 @@ class HomeFragment : BaseFragment<MainViewModel, FragmentHomeBinding>() {
 
         val concatAdapter = ConcatAdapter(titleAdapter, contentAdapter, footerAdapter)
         mBinding?.rvHome?.run {
-            this.layoutManager = LinearLayoutManager(context)
-            this.adapter = concatAdapter
+            this.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+            this.adapter = contentAdapter
         }
 
 

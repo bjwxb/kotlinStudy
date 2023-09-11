@@ -25,21 +25,21 @@ class TreeNode(val `val`:Int){
 }
 
 fun main() {
-//    test94()
+    test94()
 //    test144()
 //    test145()
 
 //    test102()
 //    test107()
-    test99()
+//    test99()
 }
 
 fun test94(){
     val root = TreeNode(1)
     root.right = TreeNode(2)
     root.right?.left = TreeNode(3)
-//    val ret = inorderTraversal(root)//递归
-    val ret = inorderTraversal2(root)//迭代
+    val ret = inorderTraversal(root)//递归
+//    val ret = inorderTraversal2(root)//迭代
     println(ret.toList())
 }
 

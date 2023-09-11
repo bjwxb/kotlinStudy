@@ -11,6 +11,8 @@ import kotlin.math.min
  * 第8题 字符串转换整数（atoi）
  * 第9题 回文数
  * 第11题 盛水最多的容器
+ * 13. 罗马数字转整数
+ * 14. 最长公共前缀
  * 第15题 三数之和
  * 第18题 四数之和
  * 第20题 有效的括号
@@ -27,9 +29,11 @@ fun main() {
 //    test7()
 //    test8()
 //    test11()
+    test13()
+//    test14()
 //    test15()
 //    test18()
-    test20()
+//    test20()
 }
 
 
@@ -54,6 +58,16 @@ fun test7() {
 
 fun test8(){
 
+}
+
+fun test13(){
+    val s = "LVIII"//输出: 58  解释: L = 50, V= 5, III = 3.
+    print(romanToInt(s))
+}
+
+fun test14(){
+    val arr = arrayOf("flower","flow","flight")
+    print(longestCommonPrefix(arr))
 }
 
 fun test18(){
@@ -214,6 +228,7 @@ fun reverse(x: Int): Int {
         //取末位数
         val pop = tmp % 10
         //判断是否大于最大32位整数
+        //2147483647
         if(ret > 214748364 || (ret == 214748364 && pop > 7)){
             return 0
         }
@@ -303,6 +318,7 @@ fun maxArea(height: IntArray): Int {
     var ret = 0
 
     while (i < j){
+        //水的高度为较小边的高度
         val area = (j - i) * Math.min(height[i],height[j])
         ret = Math.max(ret, area)
         if(height[i] < height[j]){
@@ -361,3 +377,78 @@ fun isValid(s: String): Boolean {
 
     return stack.isEmpty()
 }
+
+/** 13 start **/
+/**
+ * 13. 罗马数字转整数
+ * 罗马数字包含以下七种字符: I， V， X， L，C，  D 和 M。
+ *                       1   5   10 50 100 500  1000
+ * @param s String
+ * @return Int
+ */
+fun romanToInt(s: String): Int {
+    var ret = 0
+    val len = s.length
+    for(i in 0 until len){
+        val curNum = getNum(s[i])
+        if(i + 1< len){
+            val nextNum = getNum(s[i+1])
+            if(curNum < nextNum){
+                ret -= curNum
+            } else {
+                ret += curNum
+            }
+        } else {
+            ret += curNum
+        }
+    }
+    return ret
+}
+
+private fun getNum(c:Char):Int{
+    return when(c){
+        'I' -> 1
+        'V' -> 5
+        'X' -> 10
+        'L' -> 50
+        'C' -> 100
+        'D' -> 500
+        'M' -> 1000
+        else -> 0
+    }
+}
+/** 13 end **/
+
+/** 14 start **/
+/**
+ * 14. 最长公共前缀
+ * 编写一个函数来查找字符串数组中的最长公共前缀。如果不存在公共前缀，返回空字符串 ""。
+ * 输入：strs = ["flower","flow","flight"]  输出："fl"
+ *
+ * 输入：strs = ["dog","racecar","car"]  输出：""
+ * @param strs Array<String>
+ * @return String
+ */
+fun longestCommonPrefix(strs: Array<String>): String {
+    if(strs.isEmpty()){
+        return ""
+    }
+    var prefix = strs[0]
+    for (i in 1 until strs.size){
+        prefix = commonPrefix(prefix, strs[i])
+        if(prefix.isEmpty()){
+            break
+        }
+    }
+    return prefix
+}
+
+private fun commonPrefix(str1:String, str2:String):String{
+    var index = 0
+    val len = Math.min(str1.length, str2.length)
+    while(index < len && str1[index] == str2[index]){
+        index++
+    }
+    return str1.substring(0, index)
+}
+/** 14 end **/

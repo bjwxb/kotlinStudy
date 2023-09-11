@@ -19,11 +19,8 @@ import cn.wxb.kt.service.TestService
 import cn.wxb.kt.ui.home.viewmodel.MineViewModel
 import cn.wxb.kt.ui.mine.activity.PatientCroListActivity
 import com.blankj.utilcode.util.LogUtils
-import com.chad.library.adapter.base.BaseQuickAdapter
-import com.chad.library.adapter.base.listener.OnItemClickListener
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_mine.*
-import java.lang.RuntimeException
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
