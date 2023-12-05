@@ -22,7 +22,8 @@ class MainViewModel : BaseViewModel(){
         name.value = "Hello World"
         student.value = Student().apply {
             this.age = 11
-            this.name = "July"
+            this.name = "加湿器 yesorno maybe 是否 西瓜甜不甜 July"
+
         }
     }
 

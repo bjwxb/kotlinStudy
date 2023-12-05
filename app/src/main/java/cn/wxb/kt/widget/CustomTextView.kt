@@ -43,13 +43,14 @@ class CustomTextView @JvmOverloads constructor(
                     LogUtils.d("wxb_tv", "======== up")
                 }
                 MotionEvent.ACTION_CANCEL -> {
+                    //ex: recyclerview item 按下/横向滑动都可以收到down/move事件，上下滑动时，rv接管，tv收到cancel事件
                     LogUtils.d("wxb_tv", ">>>>>>>   cancel <<<<<<<")
                 }
             }
             LogUtils.d("x = $x, y = $y,  lastX = $lastX, lastY = $lastY")
         }
-        return super.onTouchEvent(event)
-//        return true//消费事件，不会向上冒泡
+//        return super.onTouchEvent(event)
+        return true//消费事件，不会向上冒泡
     }
 
     override fun dispatchTouchEvent(event: MotionEvent?): Boolean {

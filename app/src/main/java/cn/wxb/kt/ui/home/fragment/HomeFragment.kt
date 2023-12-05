@@ -1,9 +1,13 @@
 package cn.wxb.kt.ui.home.fragment
 
+import cn.wxb.kt.ui.home.activity.modetest.StandardLaunchModeActivity
 //import io.flutter.embedding.android.FlutterActivity
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.LinearLayout
+import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import cn.wxb.kt.R
@@ -16,6 +20,11 @@ import com.blankj.utilcode.util.ScreenUtils
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.fragment_home.*
 import cn.wxb.kt.ui.home.activity.MainActivityV2
+import com.blankj.utilcode.util.AppUtils
+import com.blankj.utilcode.util.RomUtils
+import kotlinx.coroutines.launch
+
+//import io.flutter.embedding.android.FlutterActivity
 
 
 class HomeFragment : BaseFragment<MainViewModel, FragmentHomeBinding>() {
@@ -37,9 +46,12 @@ class HomeFragment : BaseFragment<MainViewModel, FragmentHomeBinding>() {
         mBinding?.vm = viewModel
         viewModel.name.observe(this, Observer {
             LogUtils.e("============= ${it}")
+//            StandardLaunchModeActivity.actionStart(requireContext())
         })
         testRvContactAdapter()
 
+        mBinding?.rvHome?.post {  }
+        val a = "120 120 120水土 火木金"
 
         LogUtils.getConfig().isLog2FileSwitch  = true
         LogUtils.file("haha")
@@ -91,10 +103,16 @@ class HomeFragment : BaseFragment<MainViewModel, FragmentHomeBinding>() {
             LogUtils.e(Gson().toJson(it))
         })
         btnModifyVmValue.setOnClickListener {
-            viewModel.name.value = "java"
+            viewModel.name.value = null
 //            renderIv()
 //            testGps()
 //            requireActivity().finishAffinity()
+
+//            lifecycle.addObserver()
+            lifecycleScope.launch {
+
+            }
+            RomUtils.isHuawei()
         }
 
         tvContent.setOnClickListener {

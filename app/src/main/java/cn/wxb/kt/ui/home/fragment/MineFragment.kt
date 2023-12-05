@@ -100,6 +100,8 @@ open class MineFragment : Fragment() {
         }
         val contentAdapter = ContentAdapter(list)
         contentAdapter.setOnItemClickListener { _, view, position -> TODO("Not yet implemented") }
+
+
         val footerAdapter = FooterAdapter(mutableListOf("footer"))
 
         val concatAdapter = ConcatAdapter(titleAdapter, contentAdapter, footerAdapter)

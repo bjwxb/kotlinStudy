@@ -7,6 +7,9 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.ViewGroup
+import android.widget.FrameLayout
+import android.widget.LinearLayout
+import android.widget.RelativeLayout
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import cn.wxb.kt.R
@@ -58,18 +61,36 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
             bean.password = "123456"
             bean.deviceType = "ANDROID"
 
+
 //            viewModel.getLoginToken(requestBody).observe(this, Observer {
 //                LogUtils.e(it)
                 jump2Main()
 //            })
+
         }
 
         etPhone.addTextChangedListener{
             viewModel.modifyPhone(it.toString())
         }
 
+        val m = android.graphics.Matrix()
+        val points = floatArrayOf(10f, 10f)
+
+        //pre 从下到上执行， post 从上到下顺序执行， set-跳过之前到设置，相当于reset，之后到设置生效
+        m.preTranslate(8f, 7f)
+        m.preScale(2f, 3f)
+        m.mapPoints(points)
+        println(">>wxb>> ${points[0]}, ${points[1]}")
     }
 
+    /**
+     * 530 40
+     * 380 30
+     *
+     * (530-380)/10
+     *
+     *
+     */
     private fun jump2Main(){
 //        MainActivity.actionStart(this)
         MainActivityV2.actionStart(this)

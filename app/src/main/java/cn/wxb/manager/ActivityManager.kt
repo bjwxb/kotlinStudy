@@ -61,21 +61,26 @@ class ActivityManager : Application.ActivityLifecycleCallbacks{
 
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
         addActivity(activity)
+        LogUtils.e(">>>>>>$activity onActivityCreated <<<<<<<")
     }
 
     override fun onActivityStarted(activity: Activity) {
+        LogUtils.e(">>>>>>$activity onActivityStarted <<<<<<<")
         _count++
     }
 
     override fun onActivityResumed(activity: Activity) {
+        LogUtils.e(">>>>>>$activity onActivityResumed <<<<<<<")
 
     }
 
     override fun onActivityPaused(activity: Activity) {
+        LogUtils.e("======$activity onActivityPaused =======")
     }
 
     override fun onActivityStopped(activity: Activity) {
         _count--
+        LogUtils.e("======$activity onActivityStopped =======")
     }
 
     override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {
@@ -83,5 +88,6 @@ class ActivityManager : Application.ActivityLifecycleCallbacks{
 
     override fun onActivityDestroyed(activity: Activity) {
         removeActivity(activity)
+        LogUtils.e("======$activity onActivityDestroyed =======")
     }
 }

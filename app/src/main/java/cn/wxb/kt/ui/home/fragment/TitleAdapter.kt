@@ -21,7 +21,6 @@ class TitleAdapter(list:MutableList<String>) : BaseQuickAdapter<String, BaseView
 class ContentAdapter(list:MutableList<String>) : BaseQuickAdapter<String, BaseViewHolder>(R.layout.rv_item_content, list) {
 
     override fun convert(holder: BaseViewHolder, item: String) {
-        
     }
 }
 

@@ -1,8 +1,12 @@
 package cn.wxb.ex
 
+import android.opengl.Matrix
+import cn.wxb.kt.ui.home.viewmodel.Student
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 import java.lang.NullPointerException
+import java.util.concurrent.Executors
+import kotlin.system.measureTimeMillis
 
 /**
  * @desc: 协程
@@ -13,12 +17,68 @@ class Ex2 {
 
 }
 
+@Volatile // in Kotlin `volatile` is an annotation
+var counter = 0
+
+
 fun main() {
 //    testCoroutineContext()
 //    testCoroutineStart()
 //    testFlow()
 //    testFlowOf()
-    testPlus()
+//    testPlus()
+    val s = Student().apply {
+        this.name = "Melon"
+        this.age = 22
+    }
+    runBlocking(Dispatchers.IO) {
+        withContext(Dispatchers.IO) {
+            println(">>>> ${s.toString()}")
+
+            testStudent(s)
+            println(">>> ${s.name}, ${s.age}")
+        }
+    }
+    s.age = 33
+
+
+
+
+
+//    loop()
+}
+
+private fun testStudent(stu:Student){
+    println("====== ${stu.toString()}")
+    stu.name = "July"
+    println("-=-=-= ${stu.age}")
+}
+var loopCount = 0
+ fun loop(){
+    while(true){
+        if(loopCount >5){
+            println("******")
+            return
+        }
+        println("======= $loopCount")
+        loopCount++
+    }
+     println("-------- loop over -------")
+}
+
+suspend fun massiveRun(action: suspend () -> Unit) {
+    val n = 100  // number of coroutines to launch
+    val k = 1000 // times an action is repeated by each coroutine
+    val time = measureTimeMillis {
+        coroutineScope { // scope for coroutines
+            repeat(n) {
+                launch {
+                    repeat(k) { action() }
+                }
+            }
+        }
+    }
+    println("Completed ${n * k} actions in $time ms")
 }
 
 fun testPlus(){
@@ -86,6 +146,10 @@ fun testFlowOf() = runBlocking() {
         .collect {
             println(">>>> $it")
         }
+
+    Executors.newSingleThreadExecutor()
+    Executors.newFixedThreadPool(4)
+    Executors.newCachedThreadPool()
 //        .launchIn(this)
 
 }

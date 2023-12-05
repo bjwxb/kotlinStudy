@@ -33,7 +33,7 @@ class App : Application() {
         super.onCreate()
         app = this;
         //ProcessLifecycleOwner 可以实现监听app前后台切换同等效果
-        //ProcessLifecycleOwner.get().lifecycle.addObserver(CustomLifecycleObserver());
+//        ProcessLifecycleOwner.get().lifecycle.addObserver(CustomLifecycleObserver());
         registerActivityLifecycleCallbacks(ActivityManager.getInstance())
 //        RetrofitUtils.init()
 
