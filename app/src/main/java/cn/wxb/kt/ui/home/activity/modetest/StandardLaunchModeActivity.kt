@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import cn.wxb.kt.R
+import com.blankj.utilcode.util.LogUtils
 
 class StandardLaunchModeActivity : AppCompatActivity() {
 
@@ -22,9 +23,15 @@ class StandardLaunchModeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_basic_launch_mode)
 
+        LogUtils.e(">>>> standart launch onCreate")
         val tv = findViewById<TextView>(R.id.tv)
         tv.setOnClickListener {
             TopLaunchModeActivity.actionStart(this)
         }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        LogUtils.e(">>>> standard launch onStop")
     }
 }

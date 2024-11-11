@@ -36,6 +36,10 @@ class LoginRepository(private val netWork: LoginNetwork,
         return netWork.getPatientInfo()
     }
 
+    suspend fun getWonderful():Any{
+        val ret = netWork.getWonderful()
+        return ret
+    }
     companion object{
 
         @Volatile private var INSTANCE: LoginRepository? = null

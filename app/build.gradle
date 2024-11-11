@@ -62,6 +62,7 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
+    implementation 'androidx.activity:activity-ktx:1.1.0'
     //官方支持库
 //    implementation "androidx.recyclerview:recyclerview:1.2.1"
     /**基于okhttp的网络框架*/
@@ -109,6 +110,8 @@ dependencies {
     api "com.scwang.smart:refresh-header-classics:2.0.3"
 
     implementation "androidx.biometric:biometric:1.1.0"
+    implementation 'com.github.GrenderG:Toasty:1.5.2'
+    implementation 'com.github.getActivity:Toaster:12.6'
 //    api 'com.github.wendux:DSBridge-Android:x5-3.0-SNAPSHOT'
 
 //    api rootProject.ext.dependencies["SmartRefreshLayout"]

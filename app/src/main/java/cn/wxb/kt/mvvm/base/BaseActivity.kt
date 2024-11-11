@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewModelScope
 import cn.wxb.kt.R
 import cn.wxb.kt.mvvm.event.Message
 import com.afollestad.materialdialogs.MaterialDialog

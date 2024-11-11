@@ -7,6 +7,7 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ProcessLifecycleOwner
 import com.blankj.utilcode.util.LogUtils
+import com.blankj.utilcode.util.VibrateUtils
 
 /**
  * 描述:
@@ -20,6 +21,7 @@ class AppObserver() : LifecycleObserver {
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun onCreate(){
         LogUtils.w(TAG, "---- onCreate ----")
+        VibrateUtils.vibrate(2)
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)

@@ -45,8 +45,8 @@ class HomeFragment : BaseFragment<MainViewModel, FragmentHomeBinding>() {
     override fun initView(savedInstanceState: Bundle?) {
         mBinding?.vm = viewModel
         viewModel.name.observe(this, Observer {
-            LogUtils.e("============= ${it}")
-//            StandardLaunchModeActivity.actionStart(requireContext())
+//            LogUtils.e("============= ${it}")
+            StandardLaunchModeActivity.actionStart(requireContext())
         })
         testRvContactAdapter()
 

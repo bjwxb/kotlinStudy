@@ -31,7 +31,7 @@ class CustomLinearLayout @JvmOverloads constructor(
 ) : LinearLayout(context, attrs) {
 
     override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
-        LogUtils.e("wxb",">>=====>> ViewGroup dispatchTouchEvent <<<======<<<")
+        LogUtils.i("wxb",">>=====>> ViewGroup dispatchTouchEvent <<<======<<<")
 //        return true//消费事件
 //        return false//不分发事件，交由上级onTouchEvent处理
 //        if(ev?.action != MotionEvent.ACTION_DOWN){
@@ -41,7 +41,7 @@ class CustomLinearLayout @JvmOverloads constructor(
     }
 
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
-        LogUtils.e("wxb","****** ViewGroup onInterceptTouchEvent <<<<<<")
+        LogUtils.i("wxb","****** ViewGroup onInterceptTouchEvent <<<<<<")
 //        return super.onInterceptTouchEvent(ev)
         return false//同super,交给子view的dispatchTouchEvent处理
 //        return true//交给自己的onTouchEvent

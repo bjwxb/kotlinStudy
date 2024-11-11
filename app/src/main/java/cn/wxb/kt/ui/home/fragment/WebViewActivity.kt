@@ -11,11 +11,13 @@ import android.view.View
 import android.view.WindowManager
 import android.webkit.*
 import androidx.databinding.ViewDataBinding
+import androidx.lifecycle.lifecycleScope
 import cn.wxb.kt.R
 import cn.wxb.kt.mvvm.base.BaseActivity
 import cn.wxb.kt.mvvm.base.NoViewModel
 import com.blankj.utilcode.util.LogUtils
 import kotlinx.android.synthetic.main.activity_web_view.*
+import kotlinx.coroutines.launch
 
 
 class WebViewActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
@@ -52,6 +54,7 @@ class WebViewActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
                 view: WebView?,
                 request: WebResourceRequest?
             ): Boolean {
+                LogUtils.e(">>>>> shouldOverrideUrlLoading <<<<<")
                 return false
             }
         }
@@ -88,7 +91,7 @@ class WebViewActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
             }
         }
 
-        val url = "https://www.bilibili.com/video/BV1UW411t7pe/"
+        val url = "https://www.arkui.club/chapter6/6_3_grid.html#_6-3-1-grid%E5%AE%9A%E4%B9%89%E4%BB%8B%E7%BB%8D"
 //        val url = "https://mall-test.saloontech.cn/package-life/pages/productDetail?id=148"
         webView.loadUrl(url)
     }
@@ -98,7 +101,7 @@ class WebViewActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
     override fun onResume() {
         super.onResume()
         // 如果之前处于全屏状态，重新进入后需要再次调用全屏
-        if (fullScreenView != null) fullScreen(fullScreenView!!)
+//        if (fullScreenView != null) fullScreen(fullScreenView!!)
     }
 
 

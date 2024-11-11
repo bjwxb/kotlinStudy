@@ -18,6 +18,8 @@ class LoginNetwork {
 
     suspend fun getPatientInfo() = mService.getPatientInfo()
 
+    suspend fun getWonderful() = mService.getWonderful()
+
     companion object {
         private var network: LoginNetwork? = null
 

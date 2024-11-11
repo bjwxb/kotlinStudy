@@ -139,7 +139,8 @@ open class MineFragment : Fragment() {
         }
 
         tvVideoV2.setOnClickListener{
-            Thread(runnable2).start()
+            WebViewActivity.actionStart(requireContext())
+//            Thread(runnable2).start()
         }
 
         tvTouch.setOnClickListener {

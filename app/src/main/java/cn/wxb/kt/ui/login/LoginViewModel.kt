@@ -50,4 +50,10 @@ class LoginViewModel : BaseViewModel(){
         }, isShowDialog = true)
         return mLoginToken
     }
+
+    fun getWonderful(){
+        launchGo({
+            loginRepository.getWonderful()
+        }, isShowDialog = true)
+    }
 }

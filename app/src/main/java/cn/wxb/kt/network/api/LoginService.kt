@@ -29,4 +29,7 @@ interface LoginService {
     //    //登录后获取医生相关信息
     @GET(Constant.URL.PATIENT_INFO)
     suspend fun getPatientInfo(): BaseResult<PatientInfo>
+
+    @GET("http://rest.apizza.net/mock/489561f5218ac86ec33e71a03c23a938/home/tab")
+    suspend fun getWonderful(): Any
 }

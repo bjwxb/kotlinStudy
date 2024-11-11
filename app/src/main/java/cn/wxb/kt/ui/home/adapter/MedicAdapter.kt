@@ -1,6 +1,7 @@
 package cn.wxb.kt.ui.home.adapter
 
 import cn.wxb.kt.R
+import com.blankj.utilcode.util.KeyboardUtils
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 

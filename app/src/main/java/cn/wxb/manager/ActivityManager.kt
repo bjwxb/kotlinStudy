@@ -3,6 +3,7 @@ package cn.wxb.manager
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
+import com.blankj.utilcode.util.DeviceUtils
 import com.blankj.utilcode.util.LogUtils
 import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
@@ -28,6 +29,7 @@ class ActivityManager : Application.ActivityLifecycleCallbacks{
     }
 
     private fun addActivity(activity: Activity){
+
         activities.add(activity)
     }
 
@@ -61,26 +63,26 @@ class ActivityManager : Application.ActivityLifecycleCallbacks{
 
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
         addActivity(activity)
-        LogUtils.e(">>>>>>$activity onActivityCreated <<<<<<<")
+        LogUtils.i(">>>>>>$activity onActivityCreated <<<<<<<")
     }
 
     override fun onActivityStarted(activity: Activity) {
-        LogUtils.e(">>>>>>$activity onActivityStarted <<<<<<<")
+        LogUtils.i(">>>>>>$activity onActivityStarted <<<<<<<")
         _count++
     }
 
     override fun onActivityResumed(activity: Activity) {
-        LogUtils.e(">>>>>>$activity onActivityResumed <<<<<<<")
+        LogUtils.i(">>>>>>$activity onActivityResumed <<<<<<<")
 
     }
 
     override fun onActivityPaused(activity: Activity) {
-        LogUtils.e("======$activity onActivityPaused =======")
+        LogUtils.i("======$activity onActivityPaused =======")
     }
 
     override fun onActivityStopped(activity: Activity) {
         _count--
-        LogUtils.e("======$activity onActivityStopped =======")
+        LogUtils.i("======$activity onActivityStopped =======")
     }
 
     override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {
@@ -88,6 +90,6 @@ class ActivityManager : Application.ActivityLifecycleCallbacks{
 
     override fun onActivityDestroyed(activity: Activity) {
         removeActivity(activity)
-        LogUtils.e("======$activity onActivityDestroyed =======")
+        LogUtils.i("======$activity onActivityDestroyed =======")
     }
 }

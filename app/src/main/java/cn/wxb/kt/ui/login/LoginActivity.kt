@@ -6,12 +6,15 @@ import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.MotionEvent
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import androidx.core.content.FileProvider
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
+import cn.wxb.ex.log
 import cn.wxb.kt.R
 import cn.wxb.kt.databinding.ActivityLoginBinding
 import cn.wxb.kt.mvvm.base.BaseActivity
@@ -20,10 +23,14 @@ import cn.wxb.kt.ui.home.activity.MainActivityV2
 import com.blankj.utilcode.util.GsonUtils
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ScreenUtils
+import com.blankj.utilcode.util.StringUtils
+import com.blankj.utilcode.util.ToastUtils
+import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.activity_login.*
 import okhttp3.MediaType
 import okhttp3.RequestBody
 import org.json.JSONObject
+import java.io.File
 import java.util.*
 
 
@@ -62,9 +69,27 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
             bean.deviceType = "ANDROID"
 
 
+
+           kotlin.runCatching {
+               val path = "/storage/emulated/0/Pictures/WeiXin/mmexport1717375121362.jpg"
+//                    val path = " /storage/emulated/0/DCIM/Screenshots/Screenshot_2024-06-02-21-05-15-632_com.ss.android.ugc.aweme.jpg"
+//                    val path = "/storage/emulated/0/DCIM/Camera/IMG_20240521_125828.jpg"
+//                    val path = "/storage/emulated/0/Download/1656922438565.jpg"
+
+
+//                    val path = "/storage/emulated/0/Download/v0201ag10000cj323t3c77ufv96d44pg18504928.mp4"
+//                    val path = "/storage/emulated/0/Pictures/WeiXin/mmexport1670762939736.mp4"
+               val file = File(path)
+               val contentUri = FileProvider.getUriForFile(this, "${this.packageName}.fileProvider", file)
+
+               LogUtils.e(">>>>>> ${contentUri.toString()}")
+           }.getOrElse {
+               it.printStackTrace()
+           }
+//            viewModel.getWonderful()
 //            viewModel.getLoginToken(requestBody).observe(this, Observer {
 //                LogUtils.e(it)
-                jump2Main()
+//                jump2Main()
 //            })
 
         }
@@ -92,6 +117,9 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
      *
      */
     private fun jump2Main(){
+//        ToastUtils.showLong("hahhah")
+//        CustomToast.show("hahah")
+//        Toasty.normal(this, "Normal toast ").show();
 //        MainActivity.actionStart(this)
         MainActivityV2.actionStart(this)
 //        finish()
@@ -142,6 +170,16 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
     override fun onDestroy() {
         super.onDestroy()
         LogUtils.e(">>>>>> time = ${System.currentTimeMillis() - time}")
+    }
+
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        LogUtils.e(">>>>> dispatch touch event <<<<<")
+        return false
+    }
+
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        LogUtils.e(">>> onTouch event")
+        return super.onTouchEvent(event)
     }
 
 }

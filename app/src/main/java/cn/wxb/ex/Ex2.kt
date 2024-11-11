@@ -26,6 +26,15 @@ fun main() {
 //    testCoroutineStart()
 //    testFlow()
 //    testFlowOf()
+    val a:String? = null
+    when(a){
+        "1" -> {
+            println(">>>>> 1")
+        }
+        else -> {
+            println(">>>> else")
+        }
+    }
 //    testPlus()
     val s = Student().apply {
         this.name = "Melon"
@@ -40,10 +49,6 @@ fun main() {
         }
     }
     s.age = 33
-
-
-
-
 
 //    loop()
 }
