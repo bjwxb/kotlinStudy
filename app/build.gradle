@@ -11,8 +11,14 @@ android {
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+
+        ndk{
+            abiFilters 'armeabi-v7a'
+        }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+//    ndkVersion '21.0.6113669'
+
 
     buildTypes {
         release {

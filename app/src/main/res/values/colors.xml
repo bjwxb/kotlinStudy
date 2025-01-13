@@ -237,4 +237,7 @@
     <color name="cro_over">#C17272</color>
     <color name="cro_ongoing">#5AAE73</color>
     <color name="cro_over_button">#E64340</color>
+
+    <color name="btn_normal">#325CA7</color>
+    <color name="btn_selected">#E62E2E</color>
 </resources>

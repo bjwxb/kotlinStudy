@@ -75,6 +75,7 @@
         <activity
             android:name=".ui.home.activity.MainActivityV2"
             android:taskAffinity="com.wxb.demo.h" />
+
         <activity android:name=".ui.home.activity.PatientListActivity" />
         <activity android:name=".ui.home.activity.AppRemindActivity" />
         <activity android:name=".ui.login.LoginActivity">

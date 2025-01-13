@@ -6,6 +6,7 @@
     <!--通用文案-->
     <!--<string name="app_name">心之力</string>-->
     <string name="app_home_name">心之力</string>
+    <string name="game_view_content_description">Game view</string>
 
     <string name="header_to_refresh">松开获取最新数据</string>
     <string name="header_refreshing_text">正在刷新</string>

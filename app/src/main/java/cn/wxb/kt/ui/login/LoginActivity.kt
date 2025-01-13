@@ -89,7 +89,7 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
 //            viewModel.getWonderful()
 //            viewModel.getLoginToken(requestBody).observe(this, Observer {
 //                LogUtils.e(it)
-//                jump2Main()
+                jump2Main()
 //            })
 
         }
@@ -174,7 +174,7 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
 
     override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
         LogUtils.e(">>>>> dispatch touch event <<<<<")
-        return false
+        return super.dispatchTouchEvent(ev)
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {

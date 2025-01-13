@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="cn.wxb.kt.ui.home.viewmodel.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/flContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#eaebec" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDoorLeftFront"
+                style="@style/Web3dMainTextStyle"
+                android:text="打开左前门"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvDoorLeftBack"
+                style="@style/Web3dMainTextStyle"
+                android:text="打开左后门"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvDoorRightFront"
+                style="@style/Web3dMainTextStyle"
+                android:text="打开右前门"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvDoorRightBack"
+                style="@style/Web3dMainTextStyle"
+                android:text="打开右后门"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvWindowRoof"
+                style="@style/Web3dMainTextStyle"
+                android:text="打开天窗"
+                tools:ignore="HardcodedText" />
+
+
+            <TextView
+                android:id="@+id/tvDoorTail"
+                style="@style/Web3dMainTextStyle"
+                android:text="打开后备箱"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvFrameMinus"
+                style="@style/Web3dMainTextStyle"
+                android:text="修改帧率 -10"
+                android:visibility="visible"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvFrame"
+                style="@style/Web3dMainTextStyle"
+                android:text="当前帧率60"
+                android:visibility="visible"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvFramePlus"
+                style="@style/Web3dMainTextStyle"
+                android:text="帧率 +10"
+                android:visibility="visible"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
